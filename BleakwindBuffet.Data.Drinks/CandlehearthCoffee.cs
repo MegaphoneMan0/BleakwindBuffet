@@ -8,35 +8,35 @@ namespace BleakwindBuffet.Data.Drinks
 {
     /*
      * Author: John Solomon
-     * Class name: SailorSoda
-     * Purpose: To track sailor soda
+     * Class name: CandlehearthCoffee.cs
+     * Purpose: To track Candlehearth Coffee
      */
-    class SailorSoda
+    class CandlehearthCoffee
     {
 
-        //standard
-        private double smallPrice = 1.42;
-        private double mediumPrice = 1.74;
-        private double largePrice = 2.07;
 
-        private uint smallCalories = 117;
-        private uint mediumCalories = 153;
-        private uint largeCalories = 205;
+
+        //standard
+        private double smallPrice = 0.75;
+        private double mediumPrice = 1.25;
+        private double largePrice = 1.75;
+
+        private uint smallCalories = 7;
+        private uint mediumCalories = 10;
+        private uint largeCalories = 20;
 
         private List<string> specialInstructions;
-
-        
-
 
 
 
 
         //unique
 
-        private bool ice = true;
+        private bool ice = false;
+        private bool roomForCream = false;
+        private bool decaf = false;
+        
         private Size size = Size.Small;
-        private SodaFlavor flavor = SodaFlavor.Cherry;
-
 
 
         public bool getIce()
@@ -47,42 +47,39 @@ namespace BleakwindBuffet.Data.Drinks
         public void setIce(bool b)
         {
             ice = b;
-            if (ice == false)
+            if (ice == true)
             {
-                specialInstructions.Add("Hold ice");
+                specialInstructions.Add("Add ice");
             }
         }
 
 
-        public Size getSize()
+        public bool getDecaf()
         {
-            return size;
+            return decaf;
         }
 
-        public void setSize(Size b)
+        public void setDecaf(bool b)
         {
-            size = b;
-           
-        }
-
-
-        public SodaFlavor getFlavor()
-        {
-            return flavor;
-        }
-
-        public void setFlavor(SodaFlavor b)
-        {
-            flavor = b;
+            decaf = b;
             
         }
 
 
 
+        public bool getRoomForCream()
+        {
+            return roomForCream;
+        }
 
-
-
-
+        public void setRoomForCream(bool b)
+        {
+            roomForCream = b;
+            if (roomForCream == true)
+            {
+                specialInstructions.Add("Add cream");
+            }
+        }
 
 
 
@@ -98,7 +95,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 return mediumPrice;
             }
-            else 
+            else
             {
                 return largePrice;
             }
@@ -127,8 +124,15 @@ namespace BleakwindBuffet.Data.Drinks
 
         public override string ToString()
         {
-            return (size.ToString() + " " + flavor + " Sailor Soda");
+            return (size.ToString() + " Candlehearth Coffee");
         }
+
+
+
+
+
+
+
 
 
 

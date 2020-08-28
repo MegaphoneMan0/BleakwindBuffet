@@ -8,35 +8,30 @@ namespace BleakwindBuffet.Data.Drinks
 {
     /*
      * Author: John Solomon
-     * Class name: SailorSoda
-     * Purpose: To track sailor soda
+     * Class name: AretinoAppleJuice.cs
+     * Purpose: To track Aretino Apple Juice
      */
-    class SailorSoda
+    class AretinoAppleJuice
     {
 
         //standard
-        private double smallPrice = 1.42;
-        private double mediumPrice = 1.74;
-        private double largePrice = 2.07;
+        private double smallPrice = 0.62;
+        private double mediumPrice = 0.87;
+        private double largePrice = 1.01;
 
-        private uint smallCalories = 117;
-        private uint mediumCalories = 153;
-        private uint largeCalories = 205;
+        private uint smallCalories = 44;
+        private uint mediumCalories = 88;
+        private uint largeCalories = 132;
 
         private List<string> specialInstructions;
-
-        
-
 
 
 
 
         //unique
 
-        private bool ice = true;
+        private bool ice = false;
         private Size size = Size.Small;
-        private SodaFlavor flavor = SodaFlavor.Cherry;
-
 
 
         public bool getIce()
@@ -47,45 +42,11 @@ namespace BleakwindBuffet.Data.Drinks
         public void setIce(bool b)
         {
             ice = b;
-            if (ice == false)
+            if (ice == true)
             {
-                specialInstructions.Add("Hold ice");
+                specialInstructions.Add("Add ice");
             }
         }
-
-
-        public Size getSize()
-        {
-            return size;
-        }
-
-        public void setSize(Size b)
-        {
-            size = b;
-           
-        }
-
-
-        public SodaFlavor getFlavor()
-        {
-            return flavor;
-        }
-
-        public void setFlavor(SodaFlavor b)
-        {
-            flavor = b;
-            
-        }
-
-
-
-
-
-
-
-
-
-
 
 
         public double getPrice()
@@ -98,7 +59,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 return mediumPrice;
             }
-            else 
+            else
             {
                 return largePrice;
             }
@@ -127,8 +88,10 @@ namespace BleakwindBuffet.Data.Drinks
 
         public override string ToString()
         {
-            return (size.ToString() + " " + flavor + " Sailor Soda");
+            return (size.ToString() + " Aretino Apple Juice");
         }
+
+
 
 
 

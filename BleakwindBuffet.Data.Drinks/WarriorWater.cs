@@ -3,30 +3,31 @@ using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
-
 namespace BleakwindBuffet.Data.Drinks
 {
     /*
      * Author: John Solomon
-     * Class name: SailorSoda
-     * Purpose: To track sailor soda
+     * Class name: WarriorWater.cs
+     * Purpose: To track Warrior Water
      */
-    class SailorSoda
+    class WarriorWater
     {
 
-        //standard
-        private double smallPrice = 1.42;
-        private double mediumPrice = 1.74;
-        private double largePrice = 2.07;
 
-        private uint smallCalories = 117;
-        private uint mediumCalories = 153;
-        private uint largeCalories = 205;
+
+
+
+
+        //standard
+        private double smallPrice =0;
+        private double mediumPrice = 0;
+        private double largePrice = 0;
+
+        private uint smallCalories = 0;
+        private uint mediumCalories = 0;
+        private uint largeCalories = 0;
 
         private List<string> specialInstructions;
-
-        
-
 
 
 
@@ -34,9 +35,8 @@ namespace BleakwindBuffet.Data.Drinks
         //unique
 
         private bool ice = true;
+        private bool lemon = false;
         private Size size = Size.Small;
-        private SodaFlavor flavor = SodaFlavor.Cherry;
-
 
 
         public bool getIce()
@@ -54,35 +54,19 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
 
-        public Size getSize()
+        public bool getLemon()
         {
-            return size;
+            return lemon;
         }
 
-        public void setSize(Size b)
+        public void setLemon(bool b)
         {
-            size = b;
-           
+            lemon = b;
+            if (lemon == true)
+            {
+                specialInstructions.Add("Add lemon");
+            }
         }
-
-
-        public SodaFlavor getFlavor()
-        {
-            return flavor;
-        }
-
-        public void setFlavor(SodaFlavor b)
-        {
-            flavor = b;
-            
-        }
-
-
-
-
-
-
-
 
 
 
@@ -98,7 +82,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 return mediumPrice;
             }
-            else 
+            else
             {
                 return largePrice;
             }
@@ -127,8 +111,12 @@ namespace BleakwindBuffet.Data.Drinks
 
         public override string ToString()
         {
-            return (size.ToString() + " " + flavor + " Sailor Soda");
+            return (size.ToString() + " Warrior Water");
         }
+
+
+
+
 
 
 
