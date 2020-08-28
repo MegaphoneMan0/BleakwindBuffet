@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Enums;
 
 
 namespace BleakwindBuffet.Data.Drinks
@@ -24,7 +25,9 @@ namespace BleakwindBuffet.Data.Drinks
 
         private List<string> specialInstructions;
 
-        private Enums.Size Size = Small;
+        private bool ice = true;
+        private Size Size = Size.Small;
+
 
 
 
