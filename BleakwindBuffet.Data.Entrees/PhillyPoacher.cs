@@ -41,6 +41,62 @@ namespace BleakwindBuffet.Data.Entrees
 
 
 
+        private bool sirloin = true;
+        private bool onion = true;
+        private bool roll = true;
+
+        public bool getSirloin()
+        {
+            return sirloin;
+        }
+
+        public void setSirloin(bool b)
+        {
+            sirloin = b;
+            if (sirloin == false)
+            {
+                specialInstructions.Add("Hold sirloin");
+            }
+        }
+
+
+        public bool getOnion()
+        {
+            return onion;
+        }
+
+        public void setOnion(bool b)
+        {
+            onion = b;
+            if (onion == false)
+            {
+                specialInstructions.Add("Hold onion");
+            }
+        }
+
+
+
+        public bool getRoll()
+        {
+            return roll;
+        }
+
+        public void setRoll(bool b)
+        {
+            roll = b;
+            if (roll == false)
+            {
+                specialInstructions.Add("Hold roll");
+            }
+        }
+
+
+
+
+
+
+
+
 
 
 
