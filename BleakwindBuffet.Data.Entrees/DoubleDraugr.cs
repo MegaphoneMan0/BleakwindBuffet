@@ -7,16 +7,16 @@ namespace BleakwindBuffet.Data.Entrees
 
     /*
      * Author: John Solomon
-     * Class name: BriarheartBurger
-     * Purpose: To track briarheart burgers: Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.
+     * Class name: DoubleDraugr
+     * Purpose: To track Double Draugr burgers: Double patty burger on a brioche bun. Comes with ketchup, mustard, pickle, cheese, tomato, lettuce, and mayo.
      */
-    class BriarheartBurger
+    class DoubleDraugr
     {
 
         //standard
 
-        private double price = 6.32;
-        private uint calories = 743;
+        private double price = 7.32;
+        private uint calories = 843;
         private List<String> specialInstructions;
 
         public double getPrice()
@@ -34,10 +34,12 @@ namespace BleakwindBuffet.Data.Entrees
             return specialInstructions;
         }
 
-        public override string ToString() 
+        public override string ToString()
         {
-            return "Briarheart Burger";
+            return "Double Draugr";
         }
+
+
 
 
 
@@ -49,6 +51,10 @@ namespace BleakwindBuffet.Data.Entrees
         private bool mustard = true;
         private bool pickle = true;
         private bool cheese = true;
+        private bool tomato = true;
+        private bool lettuce = true;
+        private bool mayo = true;
+
 
 
         public bool getBun()
@@ -59,7 +65,7 @@ namespace BleakwindBuffet.Data.Entrees
         public void setBun(bool b)
         {
             bun = b;
-            if(bun == false)
+            if (bun == false)
             {
                 specialInstructions.Add("Hold bun");
             }
@@ -137,21 +143,51 @@ namespace BleakwindBuffet.Data.Entrees
 
 
 
+        public bool getTomato()
+        {
+            return tomato;
+        }
+
+        public void setTomato(bool b)
+        {
+            tomato = b;
+            if (tomato == false)
+            {
+                specialInstructions.Add("Hold tomato");
+            }
+        }
 
 
 
+        public bool getLettuce()
+        {
+            return lettuce;
+        }
+
+        public void setLettuce(bool b)
+        {
+            lettuce = b;
+            if (lettuce == false)
+            {
+                specialInstructions.Add("Hold lettuce");
+            }
+        }
 
 
 
+        public bool getMayo()
+        {
+            return mayo;
+        }
 
-
-
-
-
-
-
-
-
+        public void setMayo(bool b)
+        {
+            mayo = b;
+            if (mayo == false)
+            {
+                specialInstructions.Add("Hold mayo");
+            }
+        }
 
 
 
