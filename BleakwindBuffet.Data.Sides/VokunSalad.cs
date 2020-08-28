@@ -4,48 +4,45 @@ using System.Text;
 using BleakwindBuffet.Data.Enums;
 
 
-namespace BleakwindBuffet.Data.Drinks
+namespace BleakwindBuffet.Data.Sides
 {
     /*
      * Author: John Solomon
-     * Class name: AretinoAppleJuice.cs
-     * Purpose: To track Aretino Apple Juice
+     * Class name: VokunSalad.cs
+     * Purpose: To track Vokun Salad
      */
-    class AretinoAppleJuice
+    class VokunSalad
     {
 
+
         //standard
-        private double smallPrice = 0.62;
-        private double mediumPrice = 0.87;
-        private double largePrice = 1.01;
+        private double smallPrice = 0.98;
+        private double mediumPrice = 1.28;
+        private double largePrice = 1.82;
 
-        private uint smallCalories = 44;
-        private uint mediumCalories = 88;
-        private uint largeCalories = 132;
+        private uint smallCalories = 41;
+        private uint mediumCalories = 52;
+        private uint largeCalories = 73;
 
+        private Size size = Size.Small;
         private List<string> specialInstructions;
 
 
-
-
-        //unique
-
-        private bool ice = false;
-        private Size size = Size.Small;
-
-
-        public bool getIce()
+        public override string ToString()
         {
-            return ice;
+            return (size.ToString() + " Vokun Salad");
         }
 
-        public void setIce(bool b)
+
+
+        public Size getSize()
         {
-            ice = b;
-            if (ice == true)
-            {
-                specialInstructions.Add("Add ice");
-            }
+            return size;
+        }
+
+        public void setSize(Size s)
+        {
+            size = s;
         }
 
 
@@ -64,8 +61,6 @@ namespace BleakwindBuffet.Data.Drinks
                 return largePrice;
             }
         }
-
-
 
         public uint getCalories()
         {
@@ -88,24 +83,18 @@ namespace BleakwindBuffet.Data.Drinks
             return specialInstructions;
         }
 
-        public override string ToString()
-        {
-            return (size.ToString() + " Aretino Apple Juice");
-        }
 
 
 
 
 
-        public Size getSize()
-        {
-            return size;
-        }
 
-        public void setSize(Size s)
-        {
-            size = s;
-        }
+
+
+
+
+
+
 
 
 

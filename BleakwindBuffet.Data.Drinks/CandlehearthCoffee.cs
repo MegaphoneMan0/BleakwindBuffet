@@ -83,6 +83,16 @@ namespace BleakwindBuffet.Data.Drinks
 
 
 
+        public Size getSize()
+        {
+            return size;
+        }
+
+        public void setSize(Size s)
+        {
+            size = s;
+        }
+
 
 
         public double getPrice()
@@ -100,6 +110,8 @@ namespace BleakwindBuffet.Data.Drinks
                 return largePrice;
             }
         }
+
+        
 
         public uint getCalories()
         {

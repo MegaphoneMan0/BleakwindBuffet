@@ -4,47 +4,43 @@ using System.Text;
 using BleakwindBuffet.Data.Enums;
 
 
-namespace BleakwindBuffet.Data.Drinks
+namespace BleakwindBuffet.Data.Sides
 {
     /*
      * Author: John Solomon
-     * Class name: MarkarthMilk
-     * Purpose: To track Markarth Milk
+     * Class name: MadOtarGrits.cs
+     * Purpose: To track Mad Otar Grits
      */
-    class MarkarthMilk
+    class MadOtarGrits
     {
         //standard
-        private double smallPrice = 1.05;
-        private double mediumPrice = 1.11;
-        private double largePrice = 1.22;
+        private double smallPrice = 1.22;
+        private double mediumPrice = 1.58;
+        private double largePrice = 1.93;
 
-        private uint smallCalories = 56;
-        private uint mediumCalories = 72;
-        private uint largeCalories = 93;
+        private uint smallCalories = 105;
+        private uint mediumCalories = 142;
+        private uint largeCalories = 179;
 
+        private Size size = Size.Small;
         private List<string> specialInstructions;
 
 
-
-
-        //unique
-
-        private bool ice = false;
-        private Size size = Size.Small;
-
-
-        public bool getIce()
+        public override string ToString()
         {
-            return ice;
+            return (size.ToString() + " Mad Otar Grits");
         }
 
-        public void setIce(bool b)
+
+
+        public Size getSize()
         {
-            ice = b;
-            if (ice == true)
-            {
-                specialInstructions.Add("Add ice");
-            }
+            return size;
+        }
+
+        public void setSize(Size s)
+        {
+            size = s;
         }
 
 
@@ -84,26 +80,6 @@ namespace BleakwindBuffet.Data.Drinks
         {
             return specialInstructions;
         }
-
-        public override string ToString()
-        {
-            return (size.ToString() + " Markarth Milk");
-        }
-
-
-
-
-        public Size getSize()
-        {
-            return size;
-        }
-
-        public void setSize(Size s)
-        {
-            size = s;
-        }
-
-
 
     }
 }

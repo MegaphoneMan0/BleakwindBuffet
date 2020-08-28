@@ -132,7 +132,15 @@ namespace BleakwindBuffet.Data.Drinks
 
 
 
+        public Size getSize()
+        {
+            return size;
+        }
 
+        public void setSize(Size s)
+        {
+            size = s;
+        }
 
 
 
