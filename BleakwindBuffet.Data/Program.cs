@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace BleakwindBuffet.Data.Sides
+namespace BleakwindBuffet.Data
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {

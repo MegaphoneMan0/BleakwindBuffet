@@ -3,13 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BleakwindBuffet.Data.Enums", "BleakwindBuffet.Data.Enums\BleakwindBuffet.Data.Enums.csproj", "{9A2E1202-6D70-45C8-BDBA-DBF38B284CE3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BleakwindBuffet.Data.Entrees", "BleakwindBuffet.Data.Entrees\BleakwindBuffet.Data.Entrees.csproj", "{9ACCACCC-AD14-4A74-89C3-54CA4223A573}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BleakwindBuffet.Data.Drinks", "BleakwindBuffet.Data.Drinks\BleakwindBuffet.Data.Drinks.csproj", "{5FAF4A33-8A49-4245-856B-CA723E87C06F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BleakwindBuffet.Data.Sides", "BleakwindBuffet.Data.Sides\BleakwindBuffet.Data.Sides.csproj", "{AC17DDAB-428B-4D93-B83D-881F38BBEBA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BleakwindBuffet.Data", "BleakwindBuffet.Data\BleakwindBuffet.Data.csproj", "{AC67CF22-8263-496D-B52B-B3FA57303AFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9A2E1202-6D70-45C8-BDBA-DBF38B284CE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A2E1202-6D70-45C8-BDBA-DBF38B284CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A2E1202-6D70-45C8-BDBA-DBF38B284CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A2E1202-6D70-45C8-BDBA-DBF38B284CE3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9ACCACCC-AD14-4A74-89C3-54CA4223A573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9ACCACCC-AD14-4A74-89C3-54CA4223A573}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9ACCACCC-AD14-4A74-89C3-54CA4223A573}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9ACCACCC-AD14-4A74-89C3-54CA4223A573}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5FAF4A33-8A49-4245-856B-CA723E87C06F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FAF4A33-8A49-4245-856B-CA723E87C06F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FAF4A33-8A49-4245-856B-CA723E87C06F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FAF4A33-8A49-4245-856B-CA723E87C06F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC17DDAB-428B-4D93-B83D-881F38BBEBA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC17DDAB-428B-4D93-B83D-881F38BBEBA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC17DDAB-428B-4D93-B83D-881F38BBEBA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC17DDAB-428B-4D93-B83D-881F38BBEBA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC67CF22-8263-496D-B52B-B3FA57303AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC67CF22-8263-496D-B52B-B3FA57303AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC67CF22-8263-496D-B52B-B3FA57303AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC67CF22-8263-496D-B52B-B3FA57303AFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
