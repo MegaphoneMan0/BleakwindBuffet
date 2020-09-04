@@ -10,7 +10,7 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: BriarheartBurger
      * Purpose: To track briarheart burgers: Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.
      */
-    class BriarheartBurger
+    public class BriarheartBurger
     {
 
         //standard

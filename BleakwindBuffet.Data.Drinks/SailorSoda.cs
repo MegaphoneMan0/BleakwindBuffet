@@ -11,7 +11,7 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: SailorSoda
      * Purpose: To track sailor soda
      */
-    class SailorSoda
+    public class SailorSoda
     {
 
         //standard

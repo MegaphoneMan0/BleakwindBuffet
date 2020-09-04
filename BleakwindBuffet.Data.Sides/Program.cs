@@ -2,7 +2,7 @@
 
 namespace BleakwindBuffet.Data.Sides
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

@@ -11,7 +11,7 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: MarkarthMilk
      * Purpose: To track Markarth Milk
      */
-    class MarkarthMilk
+    public class MarkarthMilk
     {
         //standard
         private double smallPrice = 1.05;

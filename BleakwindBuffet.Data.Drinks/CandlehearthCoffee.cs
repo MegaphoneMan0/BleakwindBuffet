@@ -11,7 +11,7 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: CandlehearthCoffee.cs
      * Purpose: To track Candlehearth Coffee
      */
-    class CandlehearthCoffee
+    public class CandlehearthCoffee
     {
 
 

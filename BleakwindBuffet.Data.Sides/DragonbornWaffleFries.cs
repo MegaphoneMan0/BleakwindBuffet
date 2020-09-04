@@ -11,7 +11,7 @@ namespace BleakwindBuffet.Data.Sides
      * Class name: DragonbornWaffleFries.cs
      * Purpose: To track Dragonborn Waffle Fries
      */
-    class DragonbornWaffleFries
+    public class DragonbornWaffleFries
     {
         //standard
         private double smallPrice = 0.42;

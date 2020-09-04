@@ -10,7 +10,7 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: DoubleDraugr
      * Purpose: To track Double Draugr burgers: Double patty burger on a brioche bun. Comes with ketchup, mustard, pickle, cheese, tomato, lettuce, and mayo.
      */
-    class DoubleDraugr
+    public class DoubleDraugr
     {
 
         //standard

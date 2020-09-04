@@ -11,7 +11,7 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: AretinoAppleJuice.cs
      * Purpose: To track Aretino Apple Juice
      */
-    class AretinoAppleJuice
+    public class AretinoAppleJuice
     {
 
         //standard

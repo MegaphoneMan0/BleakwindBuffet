@@ -11,7 +11,7 @@ namespace BleakwindBuffet.Data.Sides
      * Class name: MadOtarGrits.cs
      * Purpose: To track Mad Otar Grits
      */
-    class MadOtarGrits
+    public class MadOtarGrits
     {
         //standard
         private double smallPrice = 1.22;

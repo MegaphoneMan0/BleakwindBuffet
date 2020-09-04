@@ -10,7 +10,7 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: ThugsTBone.cs
      * Purpose: To track Thugs T-Bones: Juicy T-Bone not much else to say.
      */
-    class ThugsTBone
+    public class ThugsTBone
     {
 
 

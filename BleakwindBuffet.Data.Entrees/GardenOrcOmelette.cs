@@ -9,7 +9,7 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: GardenOrcOmelette.cs
      * Purpose: To track Garden Orc Omelette: Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese.
      */
-    class GardenOrcOmelette
+    public class GardenOrcOmelette
     {
 
         //standard

@@ -10,7 +10,7 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: WarriorWater.cs
      * Purpose: To track Warrior Water
      */
-    class WarriorWater
+    public class WarriorWater
     {
 
 

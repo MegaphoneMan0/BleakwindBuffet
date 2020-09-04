@@ -9,7 +9,7 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: PhillyPoacher.cs
      * Purpose: To track Philly Poacher: Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll.
      */
-    class PhillyPoacher
+    public class PhillyPoacher
     {
 
 

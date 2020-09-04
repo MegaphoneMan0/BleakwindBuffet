@@ -11,7 +11,7 @@ namespace BleakwindBuffet.Data.Sides
      * Class name: VokunSalad.cs
      * Purpose: To track Vokun Salad
      */
-    class VokunSalad
+    public class VokunSalad
     {
 
 
