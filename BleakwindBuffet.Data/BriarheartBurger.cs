@@ -14,7 +14,7 @@ namespace BleakwindBuffet.Data.Entrees
     {
 
         /// <summary>
-        /// The special instuctions for Aretino Apple Juice
+        /// The special instuctions for Briarheart Burger
         /// </summary>
         public List<String> SpecialInstructions { get; }//SpecialInstructions
 
