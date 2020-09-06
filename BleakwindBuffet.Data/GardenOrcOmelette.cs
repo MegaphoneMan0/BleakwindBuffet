@@ -13,14 +13,24 @@ namespace BleakwindBuffet.Data.Entrees
     {
 
 
-        //special instructions
-
-        private List<String> specialInstructions;
-
-        public List<String> getSpecialInstructions()
+        /// <summary>
+        /// The special instuctions for the Garden Orc Omelette
+        /// </summary>
+        public List<String> SpecialInstructions
         {
-            return specialInstructions;
-        }
+            get
+            {
+                List<String> instructions = new List<String>();
+                if (!Broccoli) instructions.Add("Hold broccoli");
+                if (!Mushrooms) instructions.Add("Hold mushrooms");
+                if (!Tomato) instructions.Add("Hold tomato");
+                if (!Cheddar) instructions.Add("Hold cheddar");
+
+                return instructions;
+            }//get
+
+        }//SpecialInstructions
+
 
 
 
@@ -31,91 +41,40 @@ namespace BleakwindBuffet.Data.Entrees
         //properties
 
 
-        //standard
-
-        private double price = 4.57;
-        private uint calories = 404;
-
-        public double getPrice()
-        {
-            return price;
-        }
-
-        public uint getCalories()
-        {
-            return calories;
-        }
-
-        
-
-        
+        /// <summary>
+        /// Price of the Garden Orc Omelette
+        /// </summary>
+        public double Price { get; } = 4.57;
 
 
-
-        private bool broccoli = true;
-        private bool mushrooms = true;
-        private bool tomato = true;
-        private bool cheddar = true;
-
-        public bool getBroccoli()
-        {
-            return broccoli;
-        }
-
-        public void setBroccoli(bool b)
-        {
-            broccoli = b;
-            if (broccoli == false)
-            {
-                specialInstructions.Add("Hold broccoli");
-            }
-        }
+        /// <summary>
+        /// Calories of the Garden Orc Omelette
+        /// </summary>
+        public uint Calories { get; } = 404;
 
 
-
-        public bool getMushrooms()
-        {
-            return mushrooms;
-        }
-
-        public void setMushrooms(bool b)
-        {
-            mushrooms = b;
-            if (mushrooms == false)
-            {
-                specialInstructions.Add("Hold mushrooms");
-            }
-        }
-
-        public bool getTomato()
-        {
-            return tomato;
-        }
-
-        public void setTomato(bool b)
-        {
-            tomato = b;
-            if (tomato == false)
-            {
-                specialInstructions.Add("Hold tomato");
-            }
-        }
+        /// <summary>
+        /// Boolean which indicates if there is broccoli on the order
+        /// </summary>
+        private bool Broccoli { get; set; } = true;
 
 
-        public bool getCheddar()
-        {
-            return cheddar;
-        }
+        /// <summary>
+        /// Boolean which indicates if there are mushrooms on the order
+        /// </summary>
+        private bool Mushrooms { get; set; } = true;
 
-        public void setCheddar(bool b)
-        {
-            cheddar = b;
-            if (cheddar == false)
-            {
-                specialInstructions.Add("Hold cheddar");
-            }
-        }
 
+        /// <summary>
+        /// Boolean which indicates if there is a tomato on the order
+        /// </summary>
+        private bool Tomato { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is a cheddar on the order
+        /// </summary>
+        private bool Cheddar { get; set; } = true;
 
 
 
@@ -125,7 +84,10 @@ namespace BleakwindBuffet.Data.Entrees
         //to string
 
 
-
+        /// <summary>
+        /// toString override for Garden Orc Omelette
+        /// </summary>
+        /// <returns>Garden Orc Omelette string</returns>
         public override string ToString()
         {
             return "Garden Orc Omelette";

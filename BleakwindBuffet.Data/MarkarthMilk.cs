@@ -15,13 +15,25 @@ namespace BleakwindBuffet.Data.Drinks
     {
 
 
-        //special instructions
-        private List<string> specialInstructions;
+        //Special Instructions
 
-        public List<String> getSpecialInstructions()
+
+        /// <summary>
+        /// The special instuctions for Markarth Milk
+        /// </summary>
+        public List<String> SpecialInstructions
         {
-            return specialInstructions;
-        }
+            get
+            {
+                List<String> instructions = new List<String>();
+                if (Ice) instructions.Add("Add Ice");
+
+                return instructions;
+            }//get
+
+        }//SpecialInstructions
+
+
 
 
 
@@ -32,91 +44,59 @@ namespace BleakwindBuffet.Data.Drinks
 
         //properties
 
+        /// <summary>
+        /// The size of the Markarth Milk
+        /// </summary>
+        public Size Size { get; set; } = Size.Small;//Size
 
+        /// <summary>
+        /// If there is or is not Ice in the Markarth Milk
+        /// </summary>
+        public bool Ice { get; set; } = false;//setter
 
-
-        //standard
-        private double smallPrice = 1.05;
-        private double mediumPrice = 1.11;
-        private double largePrice = 1.22;
-
-        private uint smallCalories = 56;
-        private uint mediumCalories = 72;
-        private uint largeCalories = 93;
-
-
-
-
-
-        //unique
-
-        private bool ice = false;
-        private Size size = Size.Small;
-
-
-        public bool getIce()
+        /// <summary>
+        /// The Price of the Markarth Milk
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the price for the size is not known 
+        /// </exception>
+        public double Price
         {
-            return ice;
-        }
+            get
+            {
+                switch (Size)
+                {
+                    case Size.Small: return 1.05;
+                    case Size.Medium: return 1.11;
+                    case Size.Large: return 1.22;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }
+            }//getter
 
-        public void setIce(bool b)
+        }//price
+
+
+        /// <summary>
+        /// The amount of calories in Markarth Milk
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the calories for the size is not known 
+        /// </exception>
+        public uint Calories
         {
-            ice = b;
-            if (ice == true)
+            get
             {
-                specialInstructions.Add("Add ice");
-            }
-        }
+                switch (Size)
+                {
+                    case Size.Small: return 56;
+                    case Size.Medium: return 72;
+                    case Size.Large: return 93;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }
+            }//getter
+        }//calories
 
-
-        public double getPrice()
-        {
-            if (size == Size.Small)
-            {
-                return smallPrice;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumPrice;
-            }
-            else
-            {
-                return largePrice;
-            }
-        }
-
-        public uint getCalories()
-        {
-            if (size == Size.Small)
-            {
-                return smallCalories;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumCalories;
-            }
-            else
-            {
-                return largeCalories;
-            }
-        }
-
-        
-
-        
-
-
-
-
-        public Size getSize()
-        {
-            return size;
-        }
-
-        public void setSize(Size s)
-        {
-            size = s;
-        }
+      
 
 
 
@@ -130,7 +110,7 @@ namespace BleakwindBuffet.Data.Drinks
         //to string
         public override string ToString()
         {
-            return (size.ToString() + " Markarth Milk");
+            return (Size.ToString() + " Markarth Milk");
         }
 
 
