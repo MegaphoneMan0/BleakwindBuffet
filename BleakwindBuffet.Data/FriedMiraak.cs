@@ -18,7 +18,7 @@ namespace BleakwindBuffet.Data.Sides
 
 
         /// <summary>
-        /// The special instuctions for Dragonborn Waffle Fries
+        /// The special instuctions for Fried Miraak
         /// </summary>
         public List<String> SpecialInstructions
         {
@@ -41,13 +41,13 @@ namespace BleakwindBuffet.Data.Sides
         
 
         /// <summary>
-        /// The size of the Dragonborn Waffle Fries
+        /// The size of the Fried Miraak
         /// </summary>
         public Size Size { get; set; } = Size.Small;//Size
 
 
         /// <summary>
-        /// The Price of the Dragonborn Waffle Fries
+        /// The Price of the Fried Miraak
         /// </summary>
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known 
@@ -69,7 +69,7 @@ namespace BleakwindBuffet.Data.Sides
 
 
         /// <summary>
-        /// The amount of calories in the Dragonborn Waffle Fries
+        /// The amount of calories in the Fried Miraak
         /// </summary>
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the calories for the size is not known 
