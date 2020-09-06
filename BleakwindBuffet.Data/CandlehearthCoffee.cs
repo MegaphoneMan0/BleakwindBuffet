@@ -19,7 +19,21 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The special instuctions for Candlehearth Coffee
         /// </summary>
-        public List<String> SpecialInstructions { get; }//SpecialInstructions
+        public List<String> SpecialInstructions
+        {
+            get
+            {
+                List<String> instructions = new List<String>();
+                if (Ice) instructions.Add("Add Ice");
+                if (RoomForCream) instructions.Add("Add Cream");
+
+                return instructions;
+            }//get
+
+        }//SpecialInstructions
+
+
+        //properties
 
         /// <summary>
         /// The size of the Candlehearth Coffee
@@ -32,55 +46,16 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Decaf { get; set; } = false;//decaf
 
 
-        //unique
-
-        private bool ice = false;
-        private bool roomForCream = false;
-
-
-        
-
-
         /// <summary>
         /// If there is or is not Ice in the Candlehearth Coffee
         /// </summary>
-        public bool Ice
-        {
-            get { return ice; }//getter
-            set
-            {
-                ice = value;
-                if (ice == true)
-                {
-                    SpecialInstructions.Add("Add ice");
-                }//if
-            }//setter
-        }//Ice
-
-        
-
-
+        public bool Ice { get; set; } = false;//Ice
 
 
         /// <summary>
         /// Indicates if there is or is not room for cream in the coffee
         /// </summary>
-        public bool RoomForCream
-        {
-            get { return roomForCream; }//getter
-            set 
-            { 
-                roomForCream = value;
-                if (roomForCream == true)
-                {
-                    SpecialInstructions.Add("Add cream");
-                }//if
-            }//setter
-        }//cream
-
-
-
-
+        public bool RoomForCream { get; set; } = false;//cream
 
 
         /// <summary>
@@ -89,7 +64,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known 
         /// </exception>
-
         public double Price
         {
             get
@@ -104,7 +78,6 @@ namespace BleakwindBuffet.Data.Drinks
             }//getter
 
         }//price
-
 
 
         /// <summary>
@@ -128,6 +101,10 @@ namespace BleakwindBuffet.Data.Drinks
         }//calories
 
 
+
+
+        //toString
+
         /// <summary>
         /// To string override for candlehearth coffee
         /// </summary>
@@ -138,18 +115,5 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-}
+    }//class
+}//namespace
