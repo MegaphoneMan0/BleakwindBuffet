@@ -13,31 +13,29 @@ namespace BleakwindBuffet.Data.Entrees
     public class BriarheartBurger
     {
 
-        //standard
+        /// <summary>
+        /// The special instuctions for Aretino Apple Juice
+        /// </summary>
+        public List<String> SpecialInstructions { get; }//SpecialInstructions
 
-        private double price = 6.32;
-        private uint calories = 743;
-        private List<String> specialInstructions;
+        /// <summary>
+        /// Price of the Briarheart Burger
+        /// </summary>
+        public double Price { get; } = 6.32;
 
-        public double getPrice()
-        {
-            return price;
-        }
+        /// <summary>
+        /// Calories of the Briarheart Burger
+        /// </summary>
+        public uint Calories { get; } = 743;
 
-        public uint getCalories()
-        {
-            return calories;
-        }
-
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
-
+        /// <summary>
+        /// To String override
+        /// </summary>
+        /// <returns></returns>
         public override string ToString() 
         {
             return "Briarheart Burger";
-        }
+        }//toString
 
 
 
@@ -50,89 +48,115 @@ namespace BleakwindBuffet.Data.Entrees
         private bool pickle = true;
         private bool cheese = true;
 
-
-        public bool getBun()
+        /// <summary>
+        /// Boolean which indicates if there is a bun on the order
+        /// </summary>
+        public bool Bun
         {
-            return bun;
-        }
-
-        public void setBun(bool b)
-        {
-            bun = b;
-            if(bun == false)
+            get
             {
-                specialInstructions.Add("Hold bun");
-            }
-        }
-
-
-
-
-        public bool getKetchup()
-        {
-            return ketchup;
-
-        }
-
-        public void setKetchup(bool b)
-        {
-            ketchup = b;
-            if (ketchup == false)
+                return bun;
+            }//get
+            set
             {
-                specialInstructions.Add("Hold ketchup");
-            }
-        }
+                bun = value;
+                if (bun == false)
+                {
+                    SpecialInstructions.Add("Hold bun");
+                }//if
+            }//set
+        }//bun
+
+        
 
 
 
-
-        public bool getMustard()
+        /// <summary>
+        /// Boolean which indicates if there is ketchup on the order
+        /// </summary>
+        public bool Ketchup
         {
-            return mustard;
-        }
-
-        public void setMustard(bool b)
-        {
-            mustard = b;
-            if (mustard == false)
+            get
             {
-                specialInstructions.Add("Hold mustard");
-            }
-        }
-
-
-
-
-        public bool getPickle()
-        {
-            return pickle;
-        }
-
-        public void setPickle(bool b)
-        {
-            pickle = b;
-            if (pickle == false)
+                return ketchup;
+            }//get
+            set
             {
-                specialInstructions.Add("Hold pickle");
-            }
-        }
+                ketchup = value;
+                if (ketchup == false)
+                {
+                    SpecialInstructions.Add("Hold ketchup");
+                }//if
+            }//set
+        }//ketchup
 
 
 
 
-        public bool getCheese()
+
+
+        /// <summary>
+        /// Boolean which indicates if there is mustard on the order
+        /// </summary>
+        public bool Mustard
         {
-            return cheese;
-        }
-
-        public void setCheese(bool b)
-        {
-            cheese = b;
-            if (cheese == false)
+            get
             {
-                specialInstructions.Add("Hold cheese");
-            }
-        }
+                return mustard;
+            }//get
+            set
+            {
+                mustard = value;
+                if (mustard == false)
+                {
+                    SpecialInstructions.Add("Hold mustard");
+                }//if
+            }//set
+        }//mustard
+
+
+
+
+        /// <summary>
+        /// Boolean which indicates if there is pickle on the order
+        /// </summary>
+        public bool Pickle
+        {
+            get
+            {
+                return pickle;
+            }//get
+            set
+            {
+                pickle = value;
+                if (pickle == false)
+                {
+                    SpecialInstructions.Add("Hold pickle");
+                }//if
+            }//set
+        }//pickle
+
+
+
+
+        /// <summary>
+        /// Boolean which indicates if there is cheese on the order
+        /// </summary>
+        public bool Cheese
+        {
+            get
+            {
+                return cheese;
+            }//get
+            set
+            {
+                cheese = value;
+                if (cheese == false)
+                {
+                    SpecialInstructions.Add("Hold cheese");
+                }//if
+            }//set
+        }//cheese
 
 
 

@@ -6,6 +6,9 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+
+
+
     /*
      * Author: John Solomon
      * Class name: AretinoAppleJuice.cs
@@ -15,100 +18,97 @@ namespace BleakwindBuffet.Data.Drinks
     {
 
         //standard
-        private double smallPrice = 0.62;
-        private double mediumPrice = 0.87;
-        private double largePrice = 1.01;
-
-        private uint smallCalories = 44;
-        private uint mediumCalories = 88;
-        private uint largeCalories = 132;
-
-        private List<string> specialInstructions;
 
 
+        /// <summary>
+        /// The special instuctions for Aretino Apple Juice
+        /// </summary>
+        public List<String> SpecialInstructions { get; }//SpecialInstructions
 
+        /// <summary>
+        /// The size of the Aretino Apple juice
+        /// </summary>
+        public Size Size { get; set; } = Size.Small;//Size
 
         //unique
 
         private bool ice = false;
-        private Size size = Size.Small;
 
-
-        public bool getIce()
+        /// <summary>
+        /// If there is or is not Ice in the Aretino Apple Juice
+        /// </summary>
+        public bool Ice
         {
-            return ice;
-        }
+            get { return ice; }//getter
+            set { ice = value;
+                if (ice == true)
+                {
+                    SpecialInstructions.Add("Add ice");
+                }//if
+            }//setter
+        }//Ice
 
-        public void setIce(bool b)
+        /// <summary>
+        /// The Price of the Aretino Apple Juice
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the price for the size is not known 
+        /// </exception>
+        public double Price
         {
-            ice = b;
-            if (ice == true)
+            get
             {
-                specialInstructions.Add("Add ice");
-            }
-        }
+                switch (Size)
+                {
+                    case Size.Small: return 0.62;
+                    case Size.Medium: return 0.87;
+                    case Size.Large: return 1.01;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }
+            }//getter
+            
+        }//price
 
 
-        public double getPrice()
+        /// <summary>
+        /// The amount of calories in Aretino Apple Juice
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the calories for the size is not known 
+        /// </exception>
+        public uint Calories
         {
-            if (size == Size.Small)
+            get
             {
-                return smallPrice;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumPrice;
-            }
-            else
-            {
-                return largePrice;
-            }
-        }
+                switch (Size)
+                {
+                    case Size.Small: return 44;
+                    case Size.Medium: return 88;
+                    case Size.Large: return 132;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }
+            }//getter
+        }//calories
 
 
 
-        public uint getCalories()
-        {
-            if (size == Size.Small)
-            {
-                return smallCalories;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumCalories;
-            }
-            else
-            {
-                return largeCalories;
-            }
-        }
 
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
-
+        /// <summary>
+        /// ToString() override
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
-            return (size.ToString() + " Aretino Apple Juice");
-        }
+            return (Size.ToString() + " Aretino Apple Juice");
+        }//ToString
+
+
+
+        
 
 
 
 
 
-        public Size getSize()
-        {
-            return size;
-        }
-
-        public void setSize(Size s)
-        {
-            size = s;
-        }
-
-
-
-
-    }
-}
+    }//aretinoAppleJuice
+}//BleakwindBuffet.Data.Drinks
