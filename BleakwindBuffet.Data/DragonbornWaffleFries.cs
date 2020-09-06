@@ -13,72 +13,94 @@ namespace BleakwindBuffet.Data.Sides
      */
     public class DragonbornWaffleFries
     {
-        //standard
-        private double smallPrice = 0.42;
-        private double mediumPrice = 0.76;
-        private double largePrice = 0.96;
-
-        private uint smallCalories = 77;
-        private uint mediumCalories = 89;
-        private uint largeCalories = 100;
-
-        private Size size = Size.Small;
-        private List<string> specialInstructions;
 
 
+        //special instructions
+
+
+        /// <summary>
+        /// The special instuctions for Dragonborn Waffle Fries
+        /// </summary>
+        public List<String> SpecialInstructions
+        {
+            get
+            {
+                List<String> instructions = new List<String>();
+                return instructions;
+            }//get
+
+        }//SpecialInstructions
+
+
+
+
+        //properties
+
+
+        /// <summary>
+        /// The size of the Dragonborn Waffle Fries
+        /// </summary>
+        public Size Size { get; set; } = Size.Small;//Size
+
+
+        /// <summary>
+        /// The Price of the Dragonborn Waffle Fries
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the price for the size is not known 
+        /// </exception>
+        public double Price
+        {
+            get
+            {
+                switch (Size)
+                {
+                    case Size.Small: return 0.42;
+                    case Size.Medium: return 0.76;
+                    case Size.Large: return 0.96;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }
+            }//getter
+
+        }//price
+
+
+        /// <summary>
+        /// The amount of calories in the Dragonborn Waffle Fries
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the calories for the size is not known 
+        /// </exception>
+        public uint Calories
+        {
+            get
+            {
+                switch (Size)
+                {
+                    case Size.Small: return 77;
+                    case Size.Medium: return 89;
+                    case Size.Large: return 100;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }
+            }//getter
+        }//calories
+
+
+
+        //toString
+
+
+        /// <summary>
+        /// ToString override for Dragonborn Waffle Fries
+        /// </summary>
+        /// <returns>Dragonborn Waffle Fries string</returns>
         public override string ToString()
         {
-            return (size.ToString() + " Dragonborn Waffle Fries");
+            return (Size.ToString() + " Dragonborn Waffle Fries");
         }
 
 
 
-        public Size getSize()
-        {
-            return size;
-        }
-
-        public void setSize(Size s)
-        {
-            size = s;
-        }
-
-
-        public double getPrice()
-        {
-            if (size == Size.Small)
-            {
-                return smallPrice;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumPrice;
-            }
-            else
-            {
-                return largePrice;
-            }
-        }
-
-        public uint getCalories()
-        {
-            if (size == Size.Small)
-            {
-                return smallCalories;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumCalories;
-            }
-            else
-            {
-                return largeCalories;
-            }
-        }
-
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
+       
     }
 }

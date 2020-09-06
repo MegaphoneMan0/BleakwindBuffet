@@ -16,7 +16,7 @@ namespace BleakwindBuffet.Data.Entrees
         //specialInstructions
 
         /// <summary>
-        /// The special instuctions for Briarheart Burger
+        /// The special instuctions for the Double Draugr
         /// </summary>
         public List<String> SpecialInstructions
         {

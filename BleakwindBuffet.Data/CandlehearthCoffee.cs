@@ -108,7 +108,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// To string override for candlehearth coffee
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Candlehearth Coffee string</returns>
         public override string ToString()
         {
             return (Size.ToString() + " Candlehearth Coffee");
