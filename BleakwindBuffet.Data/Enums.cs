@@ -2,6 +2,10 @@
 
 namespace BleakwindBuffet.Data.Enums
 {
+
+    /// <summary>
+    /// Enum for the size of various dishes
+    /// </summary>
     public enum Size
     {
         Small,
@@ -9,6 +13,9 @@ namespace BleakwindBuffet.Data.Enums
         Large
     }
 
+    /// <summary>
+    /// Enum for the various flavors of soda
+    /// </summary>
     public enum SodaFlavor
     {
         Blackberry,

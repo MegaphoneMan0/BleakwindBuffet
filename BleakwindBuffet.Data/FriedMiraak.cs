@@ -14,81 +14,96 @@ namespace BleakwindBuffet.Data.Sides
     public class FriedMiraak
     {
 
+        //special instructions
 
 
-        //standard
-        private double smallPrice = 1.78;
-        private double mediumPrice = 2.01;
-        private double largePrice = 2.88;
+        /// <summary>
+        /// The special instuctions for Dragonborn Waffle Fries
+        /// </summary>
+        public List<String> SpecialInstructions
+        {
+            get
+            {
+                List<String> instructions = new List<String>();
+                return instructions;
+            }//get
 
-        private uint smallCalories = 151;
-        private uint mediumCalories = 236;
-        private uint largeCalories = 306;
-
-        private Size size = Size.Small;
-        private List<string> specialInstructions;
+        }//SpecialInstructions
 
 
+
+
+
+
+        //properties
+
+
+        
+
+        /// <summary>
+        /// The size of the Dragonborn Waffle Fries
+        /// </summary>
+        public Size Size { get; set; } = Size.Small;//Size
+
+
+        /// <summary>
+        /// The Price of the Dragonborn Waffle Fries
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the price for the size is not known 
+        /// </exception>
+        public double Price
+        {
+            get
+            {
+                switch (Size)
+                {
+                    case Size.Small: return 1.78;
+                    case Size.Medium: return 2.01;
+                    case Size.Large: return 2.88;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }
+            }//getter
+
+        }//price
+
+
+        /// <summary>
+        /// The amount of calories in the Dragonborn Waffle Fries
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the calories for the size is not known 
+        /// </exception>
+        public uint Calories
+        {
+            get
+            {
+                switch (Size)
+                {
+                    case Size.Small: return 151;
+                    case Size.Medium: return 236;
+                    case Size.Large: return 306;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }
+            }//getter
+        }//calories
+
+
+
+
+
+
+
+        //to string
+
+        /// <summary>
+        /// ToString override for Fried Miraak
+        /// </summary>
+        /// <returns>Fried Miraak string</returns>
         public override string ToString()
         {
-            return (size.ToString() + " Fried Miraak");
+            return (Size.ToString() + " Fried Miraak");
         }
-
-
-
-        public Size getSize()
-        {
-            return size;
-        }
-
-        public void setSize(Size s)
-        {
-            size = s;
-        }
-
-
-        public double getPrice()
-        {
-            if (size == Size.Small)
-            {
-                return smallPrice;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumPrice;
-            }
-            else
-            {
-                return largePrice;
-            }
-        }
-
-        public uint getCalories()
-        {
-            if (size == Size.Small)
-            {
-                return smallCalories;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumCalories;
-            }
-            else
-            {
-                return largeCalories;
-            }
-        }
-
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
-
-
-
-
-
-
 
 
     }
