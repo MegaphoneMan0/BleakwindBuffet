@@ -14,12 +14,25 @@ namespace BleakwindBuffet.Data.Entrees
 
 
         //special instructions
-        private List<String> specialInstructions;
-
-        public List<String> getSpecialInstructions()
+        /// <summary>
+        /// The special instuctions for the Philly Poacher
+        /// </summary>
+        public List<String> SpecialInstructions
         {
-            return specialInstructions;
-        }
+            get
+            {
+                List<String> instructions = new List<String>();
+                if (!Sirloin) instructions.Add("Hold sirloin");
+                if (!Onion) instructions.Add("Hold onion");
+                if (!Roll) instructions.Add("Hold roll");
+
+                return instructions;
+            }//get
+
+        }//SpecialInstructions
+
+
+
 
 
 
@@ -31,82 +44,52 @@ namespace BleakwindBuffet.Data.Entrees
 
 
 
+        /// <summary>
+        /// Price of the Philly Poacher
+        /// </summary>
+        public double Price { get; } = 7.23;
 
-        //standard
 
-        private double price = 7.23;
-        private uint calories = 784;
+        /// <summary>
+        /// Calories of the Philly Poacher
+        /// </summary>
+        public uint Calories { get; } = 784;
 
-        public double getPrice()
-        {
-            return price;
-        }
 
-        public uint getCalories()
-        {
-            return calories;
-        }
+        /// <summary>
+        /// Boolean which indicates if there is sirloin on the order
+        /// </summary>
+        private bool Sirloin { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is onion on the order
+        /// </summary>
+        private bool Onion { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is roll on the order
+        /// </summary>
+        private bool Roll { get; set; } = true;
 
         
 
-        
+
+       
 
 
-
-        private bool sirloin = true;
-        private bool onion = true;
-        private bool roll = true;
-
-        public bool getSirloin()
-        {
-            return sirloin;
-        }
-
-        public void setSirloin(bool b)
-        {
-            sirloin = b;
-            if (sirloin == false)
-            {
-                specialInstructions.Add("Hold sirloin");
-            }
-        }
-
-
-        public bool getOnion()
-        {
-            return onion;
-        }
-
-        public void setOnion(bool b)
-        {
-            onion = b;
-            if (onion == false)
-            {
-                specialInstructions.Add("Hold onion");
-            }
-        }
-
-
-
-        public bool getRoll()
-        {
-            return roll;
-        }
-
-        public void setRoll(bool b)
-        {
-            roll = b;
-            if (roll == false)
-            {
-                specialInstructions.Add("Hold roll");
-            }
-        }
 
 
 
 
         //to string
 
+
+        /// <summary>
+        /// Overriden ToString() method
+        /// </summary>
+        /// <returns>Philly Poacher as a string</returns>
         public override string ToString()
         {
             return "Philly Poacher";

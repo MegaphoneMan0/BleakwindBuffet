@@ -14,29 +14,30 @@ namespace BleakwindBuffet.Data.Drinks
     public class SailorSoda
     {
 
-        //special instuctions
-        private List<string> specialInstructions;
-        public List<String> getSpecialInstructions()
+        /// <summary>
+        /// The special instuctions for Sailor Soda
+        /// </summary>
+        public List<String> SpecialInstructions
         {
-            return specialInstructions;
-        }
+            get
+            {
+                List<String> instructions = new List<String>();
+                if (Ice) instructions.Add("Add Ice");
+
+                return instructions;
+            }//get
+
+        }//SpecialInstructions
+
+
+
+
+
+
 
 
 
         //properties
-
-
-        //standard
-        private double smallPrice = 1.42;
-        private double mediumPrice = 1.74;
-        private double largePrice = 2.07;
-
-        private uint smallCalories = 117;
-        private uint mediumCalories = 153;
-        private uint largeCalories = 205;
-
-
-        
 
 
 
@@ -44,94 +45,68 @@ namespace BleakwindBuffet.Data.Drinks
 
         //unique
 
-        private bool ice = true;
-        private Size size = Size.Small;
-        private SodaFlavor flavor = SodaFlavor.Cherry;
+        /// <summary>
+        /// The size of the Sailor Soda
+        /// </summary>
+        private SodaFlavor Flavor { get; set; } = SodaFlavor.Cherry;
 
 
+        /// <summary>
+        /// The size of the Sailor Soda
+        /// </summary>
+        public Size Size { get; set; } = Size.Small;//Size
 
-        public bool getIce()
+
+        /// <summary>
+        /// If there is or is not Ice in the Sailor Soda
+        /// </summary>
+        public bool Ice { get; set; } = false;//setter
+
+
+        /// <summary>
+        /// The Price of the Sailor Soda
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the price for the size is not known 
+        /// </exception>
+        public double Price
         {
-            return ice;
-        }
-
-        public void setIce(bool b)
-        {
-            ice = b;
-            if (ice == false)
+            get
             {
-                specialInstructions.Add("Hold ice");
-            }
-        }
+                switch (Size)
+                {
+                    case Size.Small: return 1.42;
+                    case Size.Medium: return 1.74;
+                    case Size.Large: return 2.07;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }
+            }//getter
+
+        }//price
 
 
-        public Size getSize()
+        /// <summary>
+        /// The amount of calories in Sailor Soda
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the calories for the size is not known 
+        /// </exception>
+        public uint Calories
         {
-            return size;
-        }
-
-        public void setSize(Size b)
-        {
-            size = b;
-           
-        }
-
-
-        public SodaFlavor getFlavor()
-        {
-            return flavor;
-        }
-
-        public void setFlavor(SodaFlavor b)
-        {
-            flavor = b;
-            
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-        public double getPrice()
-        {
-            if (size == Size.Small)
+            get
             {
-                return smallPrice;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumPrice;
-            }
-            else 
-            {
-                return largePrice;
-            }
-        }
+                switch (Size)
+                {
+                    case Size.Small: return 117;
+                    case Size.Medium: return 153;
+                    case Size.Large: return 205;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }
+            }//getter
+        }//calories
 
-        public uint getCalories()
-        {
-            if (size == Size.Small)
-            {
-                return smallCalories;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumCalories;
-            }
-            else
-            {
-                return largeCalories;
-            }
-        }
 
-        
+
 
 
 
@@ -141,10 +116,13 @@ namespace BleakwindBuffet.Data.Drinks
 
 
         //tostring
-
+        /// <summary>
+        /// Overriden ToString()
+        /// </summary>
+        /// <returns>Sailor Soda string</returns>
         public override string ToString()
         {
-            return (size.ToString() + " " + flavor + " Sailor Soda");
+            return (Size.ToString() + " " + Flavor + " Sailor Soda");
         }
 
 
