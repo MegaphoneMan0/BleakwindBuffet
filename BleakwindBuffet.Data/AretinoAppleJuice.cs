@@ -17,36 +17,33 @@ namespace BleakwindBuffet.Data.Drinks
     public class AretinoAppleJuice
     {
 
-        //standard
-
-
         /// <summary>
         /// The special instuctions for Aretino Apple Juice
         /// </summary>
-        public List<String> SpecialInstructions { get; }//SpecialInstructions
+        public List<String> SpecialInstructions
+        {
+            get
+            {
+                List<String> instructions = new List<String>();
+                if (Ice) instructions.Add("Add Ice");
+
+                return instructions;
+            }//get
+
+        }//SpecialInstructions
+
+
+        //properties
 
         /// <summary>
         /// The size of the Aretino Apple juice
         /// </summary>
         public Size Size { get; set; } = Size.Small;//Size
 
-        //unique
-
-        private bool ice = false;
-
         /// <summary>
         /// If there is or is not Ice in the Aretino Apple Juice
         /// </summary>
-        public bool Ice
-        {
-            get { return ice; }//getter
-            set { ice = value;
-                if (ice == true)
-                {
-                    SpecialInstructions.Add("Add ice");
-                }//if
-            }//setter
-        }//Ice
+        public bool Ice { get; set; } = false;//setter
 
         /// <summary>
         /// The Price of the Aretino Apple Juice
@@ -91,6 +88,9 @@ namespace BleakwindBuffet.Data.Drinks
         }//calories
 
 
+
+
+        //toString
 
 
         /// <summary>
