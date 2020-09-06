@@ -12,11 +12,29 @@ namespace BleakwindBuffet.Data.Entrees
     public class GardenOrcOmelette
     {
 
+
+        //special instructions
+
+        private List<String> specialInstructions;
+
+        public List<String> getSpecialInstructions()
+        {
+            return specialInstructions;
+        }
+
+
+
+
+
+
+
+        //properties
+
+
         //standard
 
         private double price = 4.57;
         private uint calories = 404;
-        private List<String> specialInstructions;
 
         public double getPrice()
         {
@@ -28,15 +46,9 @@ namespace BleakwindBuffet.Data.Entrees
             return calories;
         }
 
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
+        
 
-        public override string ToString()
-        {
-            return "Garden Orc Omelette";
-        }
+        
 
 
 
@@ -105,6 +117,19 @@ namespace BleakwindBuffet.Data.Entrees
         }
 
 
+
+
+
+
+
+        //to string
+
+
+
+        public override string ToString()
+        {
+            return "Garden Orc Omelette";
+        }
 
 
 

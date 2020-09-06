@@ -13,6 +13,28 @@ namespace BleakwindBuffet.Data.Drinks
      */
     public class MarkarthMilk
     {
+
+
+        //special instructions
+        private List<string> specialInstructions;
+
+        public List<String> getSpecialInstructions()
+        {
+            return specialInstructions;
+        }
+
+
+
+
+
+
+
+
+        //properties
+
+
+
+
         //standard
         private double smallPrice = 1.05;
         private double mediumPrice = 1.11;
@@ -22,7 +44,6 @@ namespace BleakwindBuffet.Data.Drinks
         private uint mediumCalories = 72;
         private uint largeCalories = 93;
 
-        private List<string> specialInstructions;
 
 
 
@@ -80,15 +101,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
+        
 
-        public override string ToString()
-        {
-            return (size.ToString() + " Markarth Milk");
-        }
+        
 
 
 
@@ -101,6 +116,21 @@ namespace BleakwindBuffet.Data.Drinks
         public void setSize(Size s)
         {
             size = s;
+        }
+
+
+
+
+
+
+
+
+
+
+        //to string
+        public override string ToString()
+        {
+            return (size.ToString() + " Markarth Milk");
         }
 
 

@@ -13,7 +13,30 @@ namespace BleakwindBuffet.Data.Sides
      */
     public class VokunSalad
     {
+        //special instructions
 
+        private List<string> specialInstructions;
+
+        public List<String> getSpecialInstructions()
+        {
+            return specialInstructions;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //properties
 
         //standard
         private double smallPrice = 0.98;
@@ -25,13 +48,9 @@ namespace BleakwindBuffet.Data.Sides
         private uint largeCalories = 73;
 
         private Size size = Size.Small;
-        private List<string> specialInstructions;
 
 
-        public override string ToString()
-        {
-            return (size.ToString() + " Vokun Salad");
-        }
+        
 
 
 
@@ -78,19 +97,20 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        public List<String> getSpecialInstructions()
+
+
+
+
+
+
+
+
+
+        //tostring
+        public override string ToString()
         {
-            return specialInstructions;
+            return (size.ToString() + " Vokun Salad");
         }
-
-
-
-
-
-
-
-
-
 
 
 

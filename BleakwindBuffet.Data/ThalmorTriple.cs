@@ -11,11 +11,31 @@ namespace BleakwindBuffet.Data.Entrees
      */
     public class ThalmorTriple
     {
+
+        //special instructions
+        private List<String> specialInstructions;
+
+        public List<String> getSpecialInstructions()
+        {
+            return specialInstructions;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        //properties
+
         //standard
 
         private double price = 8.32;
         private uint calories = 943;
-        private List<String> specialInstructions;
 
         public double getPrice()
         {
@@ -27,20 +47,7 @@ namespace BleakwindBuffet.Data.Entrees
             return calories;
         }
 
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
-
-        public override string ToString()
-        {
-            return "Thalmor Triple";
-        }
-
-
-
-
-
+        
 
 
         //unique
@@ -223,6 +230,19 @@ namespace BleakwindBuffet.Data.Entrees
 
 
 
+
+
+
+
+
+
+
+        //tostring
+
+        public override string ToString()
+        {
+            return "Thalmor Triple";
+        }
 
 
 

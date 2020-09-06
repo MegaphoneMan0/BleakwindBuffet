@@ -13,11 +13,36 @@ namespace BleakwindBuffet.Data.Entrees
     {
 
 
+        //special instructions
+        private List<String> specialInstructions;
+
+
+        public List<String> getSpecialInstructions()
+        {
+            return specialInstructions;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //properties
+
+
+
         //standard
 
         private double price = 5.62;
         private uint calories = 602;
-        private List<String> specialInstructions;
 
         public double getPrice()
         {
@@ -29,17 +54,7 @@ namespace BleakwindBuffet.Data.Entrees
             return calories;
         }
 
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
-
-        public override string ToString()
-        {
-            return "Smokehouse Skeleton";
-        }
-
-
+        
 
 
         //unique
@@ -118,6 +133,19 @@ namespace BleakwindBuffet.Data.Entrees
 
 
 
+
+
+
+
+
+
+
+        //tostring
+
+        public override string ToString()
+        {
+            return "Smokehouse Skeleton";
+        }
 
 
 

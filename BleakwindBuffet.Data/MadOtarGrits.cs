@@ -13,6 +13,21 @@ namespace BleakwindBuffet.Data.Sides
      */
     public class MadOtarGrits
     {
+
+        //special instructions
+        private List<string> specialInstructions;
+
+        public List<String> getSpecialInstructions()
+        {
+            return specialInstructions;
+        }
+
+
+
+
+
+
+
         //standard
         private double smallPrice = 1.22;
         private double mediumPrice = 1.58;
@@ -23,13 +38,9 @@ namespace BleakwindBuffet.Data.Sides
         private uint largeCalories = 179;
 
         private Size size = Size.Small;
-        private List<string> specialInstructions;
 
 
-        public override string ToString()
-        {
-            return (size.ToString() + " Mad Otar Grits");
-        }
+        
 
 
 
@@ -76,10 +87,21 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        public List<String> getSpecialInstructions()
+        
+
+
+
+
+
+
+
+
+        //to string
+        public override string ToString()
         {
-            return specialInstructions;
+            return (size.ToString() + " Mad Otar Grits");
         }
+
 
     }
 }

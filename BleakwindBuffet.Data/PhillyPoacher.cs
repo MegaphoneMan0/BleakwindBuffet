@@ -13,11 +13,29 @@ namespace BleakwindBuffet.Data.Entrees
     {
 
 
+        //special instructions
+        private List<String> specialInstructions;
+
+        public List<String> getSpecialInstructions()
+        {
+            return specialInstructions;
+        }
+
+
+
+
+
+
+
+        //properties
+
+
+
+
         //standard
 
         private double price = 7.23;
         private uint calories = 784;
-        private List<String> specialInstructions;
 
         public double getPrice()
         {
@@ -29,15 +47,9 @@ namespace BleakwindBuffet.Data.Entrees
             return calories;
         }
 
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
+        
 
-        public override string ToString()
-        {
-            return "Philly Poacher";
-        }
+        
 
 
 
@@ -93,8 +105,12 @@ namespace BleakwindBuffet.Data.Entrees
 
 
 
+        //to string
 
-
+        public override string ToString()
+        {
+            return "Philly Poacher";
+        }
 
 
 

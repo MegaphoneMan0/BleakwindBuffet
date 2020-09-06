@@ -12,11 +12,29 @@ namespace BleakwindBuffet.Data.Drinks
      */
     public class WarriorWater
     {
+        //special instructions
+        private List<string> specialInstructions;
+
+        public List<String> getSpecialInstructions()
+        {
+            return specialInstructions;
+        }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+        //properties
 
         //standard
         private double smallPrice =0;
@@ -27,7 +45,6 @@ namespace BleakwindBuffet.Data.Drinks
         private uint mediumCalories = 0;
         private uint largeCalories = 0;
 
-        private List<string> specialInstructions;
 
 
 
@@ -104,20 +121,7 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
-
-        public override string ToString()
-        {
-            return (size.ToString() + " Warrior Water");
-        }
-
-
-
-
-
+        
 
         public Size getSize()
         {
@@ -130,6 +134,25 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //tostring
+        public override string ToString()
+        {
+            return (size.ToString() + " Warrior Water");
+        }
 
 
 

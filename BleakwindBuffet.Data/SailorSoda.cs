@@ -14,6 +14,18 @@ namespace BleakwindBuffet.Data.Drinks
     public class SailorSoda
     {
 
+        //special instuctions
+        private List<string> specialInstructions;
+        public List<String> getSpecialInstructions()
+        {
+            return specialInstructions;
+        }
+
+
+
+        //properties
+
+
         //standard
         private double smallPrice = 1.42;
         private double mediumPrice = 1.74;
@@ -23,7 +35,6 @@ namespace BleakwindBuffet.Data.Drinks
         private uint mediumCalories = 153;
         private uint largeCalories = 205;
 
-        private List<string> specialInstructions;
 
         
 
@@ -120,10 +131,16 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        public List<String> getSpecialInstructions()
-        {
-            return specialInstructions;
-        }
+        
+
+
+
+
+
+
+
+
+        //tostring
 
         public override string ToString()
         {
