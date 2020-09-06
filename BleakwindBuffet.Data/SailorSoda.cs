@@ -48,7 +48,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Sailor Soda
         /// </summary>
-        private SodaFlavor Flavor { get; set; } = SodaFlavor.Cherry;
+        public SodaFlavor Flavor { get; set; } = SodaFlavor.Cherry;
 
 
         /// <summary>

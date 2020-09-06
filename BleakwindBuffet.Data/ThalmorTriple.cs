@@ -12,14 +12,32 @@ namespace BleakwindBuffet.Data.Entrees
     public class ThalmorTriple
     {
 
-        //special instructions
-        private List<String> specialInstructions;
+        //specialInstructions
 
-        public List<String> getSpecialInstructions()
+        /// <summary>
+        /// The special instuctions for the Thalmor Triple
+        /// </summary>
+        public List<String> SpecialInstructions
         {
-            return specialInstructions;
-        }
+            get
+            {
+                List<String> instructions = new List<String>();
+                if (!Bun) instructions.Add("Hold bun");
+                if (!Ketchup) instructions.Add("Hold ketchup");
+                if (!Mustard) instructions.Add("Hold mustard");
+                if (!Pickle) instructions.Add("Hold pickle");
+                if (!Cheese) instructions.Add("Hold cheese");
+                if (!Tomato) instructions.Add("Hold tomato");
+                if (!Lettuce) instructions.Add("Hold lettuce");
+                if (!Mayo) instructions.Add("Hold mayo");
+                if (!Bacon) instructions.Add("Hold bacon");
+                if (!Egg) instructions.Add("Hold egg");
 
+
+                return instructions;
+            }//get
+
+        }//SpecialInstructions
 
 
 
@@ -32,200 +50,80 @@ namespace BleakwindBuffet.Data.Entrees
 
         //properties
 
-        //standard
 
-        private double price = 8.32;
-        private uint calories = 943;
+        /// <summary>
+        /// Price of the Thalmor Triple
+        /// </summary>
+        public double Price { get; } = 8.32;
 
-        public double getPrice()
-        {
-            return price;
-        }
+        /// <summary>
+        /// Calories of the Thalmor Triple
+        /// </summary>
+        public uint Calories { get; } = 943;
 
-        public uint getCalories()
-        {
-            return calories;
-        }
+
+        /// <summary>
+        /// Boolean which indicates if there is a bun on the order
+        /// </summary>
+        public bool Bun { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is ketchup on the order
+        /// </summary>
+        public bool Ketchup { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is mustard on the order
+        /// </summary>
+        public bool Mustard { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is pickle on the order
+        /// </summary>
+        public bool Pickle { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is cheese on the order
+        /// </summary>
+        public bool Cheese { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is tomato on the order
+        /// </summary>
+        public bool Tomato { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is Lettuce on the order
+        /// </summary>
+        public bool Lettuce { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is Mayo on the order
+        /// </summary>
+        public bool Mayo { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is bacon on the order
+        /// </summary>
+        public bool Bacon { get; set; } = true;
+
+
+        /// <summary>
+        /// Boolean which indicates if there is egg on the order
+        /// </summary>
+        public bool Egg { get; set; } = true;
+
+
 
         
-
-
-        //unique
-        private bool bun = true;
-        private bool ketchup = true;
-        private bool mustard = true;
-        private bool pickle = true;
-        private bool cheese = true;
-        private bool tomato = true;
-        private bool lettuce = true;
-        private bool mayo = true;
-        private bool bacon = true;
-        private bool egg = true;
-
-
-
-        public bool getBun()
-        {
-            return bun;
-        }
-
-        public void setBun(bool b)
-        {
-            bun = b;
-            if (bun == false)
-            {
-                specialInstructions.Add("Hold bun");
-            }
-        }
-
-
-
-
-        public bool getKetchup()
-        {
-            return ketchup;
-
-        }
-
-        public void setKetchup(bool b)
-        {
-            ketchup = b;
-            if (ketchup == false)
-            {
-                specialInstructions.Add("Hold ketchup");
-            }
-        }
-
-
-
-
-        public bool getMustard()
-        {
-            return mustard;
-        }
-
-        public void setMustard(bool b)
-        {
-            mustard = b;
-            if (mustard == false)
-            {
-                specialInstructions.Add("Hold mustard");
-            }
-        }
-
-
-
-
-        public bool getPickle()
-        {
-            return pickle;
-        }
-
-        public void setPickle(bool b)
-        {
-            pickle = b;
-            if (pickle == false)
-            {
-                specialInstructions.Add("Hold pickle");
-            }
-        }
-
-
-
-
-        public bool getCheese()
-        {
-            return cheese;
-        }
-
-        public void setCheese(bool b)
-        {
-            cheese = b;
-            if (cheese == false)
-            {
-                specialInstructions.Add("Hold cheese");
-            }
-        }
-
-
-
-
-        public bool getTomato()
-        {
-            return tomato;
-        }
-
-        public void setTomato(bool b)
-        {
-            tomato = b;
-            if (tomato == false)
-            {
-                specialInstructions.Add("Hold tomato");
-            }
-        }
-
-
-
-        public bool getLettuce()
-        {
-            return lettuce;
-        }
-
-        public void setLettuce(bool b)
-        {
-            lettuce = b;
-            if (lettuce == false)
-            {
-                specialInstructions.Add("Hold lettuce");
-            }
-        }
-
-
-
-        public bool getMayo()
-        {
-            return mayo;
-        }
-
-        public void setMayo(bool b)
-        {
-            mayo = b;
-            if (mayo == false)
-            {
-                specialInstructions.Add("Hold mayo");
-            }
-        }
-
-
-
-        public bool getBacon()
-        {
-            return bacon;
-        }
-
-        public void setBacon(bool b)
-        {
-            bacon = b;
-            if (bacon == false)
-            {
-                specialInstructions.Add("Hold bacon");
-            }
-        }
-
-        public bool getEgg()
-        {
-            return egg;
-        }
-
-        public void setEgg(bool b)
-        {
-            egg = b;
-            if (egg == false)
-            {
-                specialInstructions.Add("Hold egg");
-            }
-        }
-
 
 
 
@@ -239,6 +137,10 @@ namespace BleakwindBuffet.Data.Entrees
 
         //tostring
 
+        /// <summary>
+        /// Overrides toString
+        /// </summary>
+        /// <returns>returns Thalmor Triple as a string</returns>
         public override string ToString()
         {
             return "Thalmor Triple";

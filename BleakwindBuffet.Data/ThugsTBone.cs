@@ -13,14 +13,20 @@ namespace BleakwindBuffet.Data.Entrees
     public class ThugsTBone
     {
 
-        //standard instuctions
-        private List<String> specialInstructions;
-
-        public List<String> getSpecialInstructions()
+        //special instuctions
+        /// <summary>
+        /// The special instuctions for Thugs T-Bone
+        /// </summary>
+        public List<String> SpecialInstructions
         {
-            return specialInstructions;
-        }
+            get
+            {
+                List<String> instructions = new List<String>();
 
+                return instructions;
+            }//get
+
+        }//SpecialInstructions
 
 
 
@@ -37,19 +43,16 @@ namespace BleakwindBuffet.Data.Entrees
 
         //standard
 
-        private double price = 6.44;
-        private uint calories = 982;
+        /// <summary>
+        /// price of ThugsTBone
+        /// </summary>
+        public double Price { get; set; } = 6.44;
+        /// <summary>
+        /// calories in ThugsTBone
+        /// </summary>
+        public uint Calories { get; set; } = 982;
 
-        public double getPrice()
-        {
-            return price;
-        }
-
-        public uint getCalories()
-        {
-            return calories;
-        }
-
+       
         
 
 
@@ -67,7 +70,10 @@ namespace BleakwindBuffet.Data.Entrees
 
         //tostring
 
-
+        /// <summary>
+        /// ToString override for Thugs T-Bone
+        /// </summary>
+        /// <returns>Thugs T-Bone as a string</returns>
         public override string ToString()
         {
             return "Thugs T-Bone";

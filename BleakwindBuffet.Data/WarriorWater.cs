@@ -13,19 +13,22 @@ namespace BleakwindBuffet.Data.Drinks
     public class WarriorWater
     {
         //special instructions
-        private List<string> specialInstructions;
-
-        public List<String> getSpecialInstructions()
+        /// <summary>
+        /// The special instuctions for Warrior Water
+        /// </summary>
+        public List<String> SpecialInstructions
         {
-            return specialInstructions;
-        }
+            get
+            {
+                List<String> instructions = new List<String>();
+                if (!Ice) instructions.Add("Hold Ice");
+                if (Lemon) instructions.Add("Add Ice");
 
 
+                return instructions;
+            }//get
 
-
-
-
-
+        }//SpecialInstructions
 
 
 
@@ -36,111 +39,48 @@ namespace BleakwindBuffet.Data.Drinks
 
         //properties
 
-        //standard
-        private double smallPrice =0;
-        private double mediumPrice = 0;
-        private double largePrice = 0;
-
-        private uint smallCalories = 0;
-        private uint mediumCalories = 0;
-        private uint largeCalories = 0;
-
-
-
-
-
-        //unique
-
-        private bool ice = true;
-        private bool lemon = false;
-        private Size size = Size.Small;
-
-
-        public bool getIce()
-        {
-            return ice;
-        }
-
-        public void setIce(bool b)
-        {
-            ice = b;
-            if (ice == false)
-            {
-                specialInstructions.Add("Hold ice");
-            }
-        }
-
-
-        public bool getLemon()
-        {
-            return lemon;
-        }
-
-        public void setLemon(bool b)
-        {
-            lemon = b;
-            if (lemon == true)
-            {
-                specialInstructions.Add("Add lemon");
-            }
-        }
-
-
-
-
-
-        public double getPrice()
-        {
-            if (size == Size.Small)
-            {
-                return smallPrice;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumPrice;
-            }
-            else
-            {
-                return largePrice;
-            }
-        }
-
-        public uint getCalories()
-        {
-            if (size == Size.Small)
-            {
-                return smallCalories;
-            }
-            else if (size == Size.Medium)
-            {
-                return mediumCalories;
-            }
-            else
-            {
-                return largeCalories;
-            }
-        }
-
         
 
-        public Size getSize()
+
+        private bool Ice { get; set; } = true;
+        private bool Lemon { get; set; } = false;
+
+
+        /// <summary>
+        /// The size of the Warrior Water
+        /// </summary>
+        public Size Size { get; set; } = Size.Small;//Size
+
+
+        /// <summary>
+        /// The Price of the Warrior Water
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the price for the size is not known 
+        /// </exception>
+        public double Price
         {
-            return size;
-        }
+            get
+            {
+                return 0;
+            }//getter
 
-        public void setSize(Size s)
+        }//price
+
+
+        /// <summary>
+        /// The amount of calories in Warrior Water
+        /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the calories for the size is not known 
+        /// </exception>
+        public uint Calories
         {
-            size = s;
-        }
-
-
-
-
-
-
-
-
-
+            get
+            {
+                return 0;
+            }//getter
+        }//calories
 
 
 
@@ -149,9 +89,15 @@ namespace BleakwindBuffet.Data.Drinks
 
 
         //tostring
+
+
+        /// <summary>
+        /// ToString override
+        /// </summary>
+        /// <returns>Warrior Water String</returns>
         public override string ToString()
         {
-            return (size.ToString() + " Warrior Water");
+            return (Size.ToString() + " Warrior Water");
         }
 
 

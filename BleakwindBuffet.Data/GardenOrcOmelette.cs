@@ -56,25 +56,25 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is broccoli on the order
         /// </summary>
-        private bool Broccoli { get; set; } = true;
+        public bool Broccoli { get; set; } = true;
 
 
         /// <summary>
         /// Boolean which indicates if there are mushrooms on the order
         /// </summary>
-        private bool Mushrooms { get; set; } = true;
+        public bool Mushrooms { get; set; } = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is a tomato on the order
         /// </summary>
-        private bool Tomato { get; set; } = true;
+        public bool Tomato { get; set; } = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is a cheddar on the order
         /// </summary>
-        private bool Cheddar { get; set; } = true;
+        public bool Cheddar { get; set; } = true;
 
 
 

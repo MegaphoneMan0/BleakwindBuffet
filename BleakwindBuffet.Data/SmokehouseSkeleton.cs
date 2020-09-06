@@ -14,18 +14,24 @@ namespace BleakwindBuffet.Data.Entrees
 
 
         //special instructions
-        private List<String> specialInstructions;
 
-
-        public List<String> getSpecialInstructions()
+        /// <summary>
+        /// The special instuctions for the Smokehouse Skeleton
+        /// </summary>
+        public List<String> SpecialInstructions
         {
-            return specialInstructions;
-        }
+            get
+            {
+                List<String> instructions = new List<String>();
+                if (!SausageLink) instructions.Add("Hold sausage link");
+                if (!Egg) instructions.Add("Hold egg");
+                if (!HashBrowns) instructions.Add("Hold hash browns");
+                if (!Pancake) instructions.Add("Hold pancakes");
 
+                return instructions;
+            }//get
 
-
-
-
+        }//SpecialInstructions
 
 
 
@@ -38,91 +44,40 @@ namespace BleakwindBuffet.Data.Entrees
         //properties
 
 
-
-        //standard
-
-        private double price = 5.62;
-        private uint calories = 602;
-
-        public double getPrice()
-        {
-            return price;
-        }
-
-        public uint getCalories()
-        {
-            return calories;
-        }
-
-        
+        /// <summary>
+        /// Price of the Smokehouse Skeleton
+        /// </summary>
+        public double Price { get; } = 5.62;
 
 
-        //unique
-
-        private bool sausageLink = true;
-        private bool egg = true;
-        private bool hashBrowns = true;
-        private bool pancake = true;
+        /// <summary>
+        /// Calories of the Smokehouse Skeleton
+        /// </summary>
+        public uint Calories { get; } = 602;
 
 
-
-        public bool getSausageLink()
-        {
-            return sausageLink;
-        }
-
-        public void setSausageLink(bool b)
-        {
-            sausageLink = b;
-            if (sausageLink == false)
-            {
-                specialInstructions.Add("Hold sausage link");
-            }
-        }
+        /// <summary>
+        /// Boolean which indicates if there is sausage on the order
+        /// </summary>
+        public bool SausageLink { get; set; } = true;
 
 
-        public bool getEgg()
-        {
-            return egg;
-        }
-
-        public void setEgg(bool b)
-        {
-            egg = b;
-            if (egg == false)
-            {
-                specialInstructions.Add("Hold egg");
-            }
-        }
-
-        public bool getHashBrowns()
-        {
-            return hashBrowns;
-        }
-
-        public void setHashBrowns(bool b)
-        {
-            hashBrowns = b;
-            if (hashBrowns == false)
-            {
-                specialInstructions.Add("Hold hash browns");
-            }
-        }
+        /// <summary>
+        /// Boolean which indicates if there is egg on the order
+        /// </summary>
+        public bool Egg { get; set; } = true;
 
 
-        public bool getPancake()
-        {
-            return pancake;
-        }
+        /// <summary>
+        /// Boolean which indicates if there is hash browns on the order
+        /// </summary>
+        public bool HashBrowns { get; set; } = true;
 
-        public void setPancake(bool b)
-        {
-            pancake = b;
-            if (pancake == false)
-            {
-                specialInstructions.Add("Hold pancakes");
-            }
-        }
+
+        /// <summary>
+        /// Boolean which indicates if there is pancake on the order
+        /// </summary>
+        public bool Pancake { get; set; } = true;
 
 
 
@@ -137,11 +92,13 @@ namespace BleakwindBuffet.Data.Entrees
 
 
 
+        //to string
 
 
-
-        //tostring
-
+        /// <summary>
+        /// Overriden ToString() method
+        /// </summary>
+        /// <returns>Smokehouse Skeleton as a string</returns>
         public override string ToString()
         {
             return "Smokehouse Skeleton";
@@ -151,6 +108,5 @@ namespace BleakwindBuffet.Data.Entrees
 
 
 
-
-    }
-}
+    }//class
+}//namespace
