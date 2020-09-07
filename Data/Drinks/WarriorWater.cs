@@ -22,7 +22,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 List<String> instructions = new List<String>();
                 if (!Ice) instructions.Add("Hold Ice");
-                if (Lemon) instructions.Add("Add Ice");
+                if (Lemon) instructions.Add("Add Lemon");
 
 
                 return instructions;
@@ -34,16 +34,13 @@ namespace BleakwindBuffet.Data.Drinks
 
 
 
-
-
-
         //properties
 
         
 
 
-        private bool Ice { get; set; } = true;
-        private bool Lemon { get; set; } = false;
+        public bool Ice { get; set; } = true;
+        public bool Lemon { get; set; } = false;
 
 
         /// <summary>
