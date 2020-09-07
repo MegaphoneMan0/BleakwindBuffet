@@ -28,26 +28,26 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         }
 
         [Theory]
-        [InlineData(Size.Small, 1.22)]
-        [InlineData(Size.Medium, 1.58)]
-        [InlineData(Size.Large, 1.93)]
-        public void ShouldReturnCorrectPriceBasedOnSize(Size size, double price)
+        [InlineData(Enums.Small, 1.22)]
+        [InlineData(Enums.Medium, 1.58)]
+        [InlineData(Enums.Large, 1.93)]
+        public void ShouldReturnCorrectPriceBasedOnSize(Enums size, double price)
         {
         }
 
         [Theory]
-        [InlineData(Size.Small, 105)]
-        [InlineData(Size.Medium, 142)]
-        [InlineData(Size.Large, 179)]
-        public void ShouldReturnCorrectCaloriesBasedOnSize(Size size, uint calories)
+        [InlineData(Enums.Small, 105)]
+        [InlineData(Enums.Medium, 142)]
+        [InlineData(Enums.Large, 179)]
+        public void ShouldReturnCorrectCaloriesBasedOnSize(Enums size, uint calories)
         {
         }
 
         [Theory]
-        [InlineData(Size.Small, "Small Mad Otar Grits")]
-        [InlineData(Size.Medium, "Medium Mad Otar Grits")]
-        [InlineData(Size.Large, "Large Mad Otar Grits")]
-        public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
+        [InlineData(Enums.Small, "Small Mad Otar Grits")]
+        [InlineData(Enums.Medium, "Medium Mad Otar Grits")]
+        [InlineData(Enums.Large, "Large Mad Otar Grits")]
+        public void ShouldReturnCorrectToStringBasedOnSize(Enums size, string name)
         {
         }
     }

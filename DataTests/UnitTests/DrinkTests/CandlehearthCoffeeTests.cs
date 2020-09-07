@@ -53,18 +53,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         }
 
         [Theory]
-        [InlineData(Size.Small, 0.75)]
-        [InlineData(Size.Medium, 1.25)]
-        [InlineData(Size.Large, 1.75)]
-        public void ShouldHaveCorrectPriceForSize(Size size, double price)
+        [InlineData(Enums.Small, 0.75)]
+        [InlineData(Enums.Medium, 1.25)]
+        [InlineData(Enums.Large, 1.75)]
+        public void ShouldHaveCorrectPriceForSize(Enums size, double price)
         {
         }
 
         [Theory]
-        [InlineData(Size.Small, 7)]
-        [InlineData(Size.Medium, 10)]
-        [InlineData(Size.Large, 20)]
-        public void ShouldHaveCorrectCaloriesForSize(Size size, uint cal)
+        [InlineData(Enums.Small, 7)]
+        [InlineData(Enums.Medium, 10)]
+        [InlineData(Enums.Large, 20)]
+        public void ShouldHaveCorrectCaloriesForSize(Enums size, uint cal)
         {
         }
 
@@ -78,13 +78,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         }
 
         [Theory]
-        [InlineData(true, Size.Small, "Small Decaf Candlehearth Coffee")]
-        [InlineData(true, Size.Medium, "Medium Decaf Candlehearth Coffee")]
-        [InlineData(true, Size.Large, "Large Decaf Candlehearth Coffee")]
-        [InlineData(false, Size.Small, "Small Candlehearth Coffee")]
-        [InlineData(false, Size.Medium, "Medium Candlehearth Coffee")]
-        [InlineData(false, Size.Large, "Large Candlehearth Coffee")]
-        public void ShouldReturnCorrectToStringBasedOnSize(bool decaf, Size size, string name)
+        [InlineData(true, Enums.Small, "Small Decaf Candlehearth Coffee")]
+        [InlineData(true, Enums.Medium, "Medium Decaf Candlehearth Coffee")]
+        [InlineData(true, Enums.Large, "Large Decaf Candlehearth Coffee")]
+        [InlineData(false, Enums.Small, "Small Candlehearth Coffee")]
+        [InlineData(false, Enums.Medium, "Medium Candlehearth Coffee")]
+        [InlineData(false, Enums.Large, "Large Candlehearth Coffee")]
+        public void ShouldReturnCorrectToStringBasedOnSize(bool decaf, Enums size, string name)
         {
         }
     }

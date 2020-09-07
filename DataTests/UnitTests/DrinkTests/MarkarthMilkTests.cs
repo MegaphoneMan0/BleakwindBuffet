@@ -33,18 +33,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         }
 
         [Theory]
-        [InlineData(Size.Small, 1.05)]
-        [InlineData(Size.Medium, 1.11)]
-        [InlineData(Size.Large, 1.22)]
-        public void ShouldHaveCorrectPriceForSize(Size size, double price)
+        [InlineData(Enums.Small, 1.05)]
+        [InlineData(Enums.Medium, 1.11)]
+        [InlineData(Enums.Large, 1.22)]
+        public void ShouldHaveCorrectPriceForSize(Enums size, double price)
         {
         }
 
         [Theory]
-        [InlineData(Size.Small, 56)]
-        [InlineData(Size.Medium, 72)]
-        [InlineData(Size.Large, 93)]
-        public void ShouldHaveCorrectCaloriesForSize(Size size, uint cal)
+        [InlineData(Enums.Small, 56)]
+        [InlineData(Enums.Medium, 72)]
+        [InlineData(Enums.Large, 93)]
+        public void ShouldHaveCorrectCaloriesForSize(Enums size, uint cal)
         {
         }
 
@@ -56,10 +56,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         }
 
         [Theory]
-        [InlineData(Size.Small, "Small Markarth Milk")]
-        [InlineData(Size.Medium, "Medium Markarth Milk")]
-        [InlineData(Size.Large, "Large Markarth Milk")]
-        public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
+        [InlineData(Enums.Small, "Small Markarth Milk")]
+        [InlineData(Enums.Medium, "Medium Markarth Milk")]
+        [InlineData(Enums.Large, "Large Markarth Milk")]
+        public void ShouldReturnCorrectToStringBasedOnSize(Enums size, string name)
         {
         }
     }

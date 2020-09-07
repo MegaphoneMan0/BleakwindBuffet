@@ -1,5 +1,10 @@
 ﻿using System;
 
+/*
+ * Author: John Solomon
+ * Class name: Enums.cs
+ * Purpose: The class is a collection of enums for use in other classes
+ */
 namespace BleakwindBuffet.Data.Enums
 {
 

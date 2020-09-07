@@ -33,18 +33,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         }
 
         [Theory]
-        [InlineData(Size.Small, 0.62)]
-        [InlineData(Size.Medium, 0.87)]
-        [InlineData(Size.Large, 1.01)]
-        public void ShouldHaveCorrectPriceForSize(Size size, double price)
+        [InlineData(Enums.Small, 0.62)]
+        [InlineData(Enums.Medium, 0.87)]
+        [InlineData(Enums.Large, 1.01)]
+        public void ShouldHaveCorrectPriceForSize(Enums size, double price)
         {
         }
 
         [Theory]
-        [InlineData(Size.Small, 44)]
-        [InlineData(Size.Medium, 88)]
-        [InlineData(Size.Large, 132)]
-        public void ShouldHaveCorrectCaloriesForSize(Size size, uint cal)
+        [InlineData(Enums.Small, 44)]
+        [InlineData(Enums.Medium, 88)]
+        [InlineData(Enums.Large, 132)]
+        public void ShouldHaveCorrectCaloriesForSize(Enums size, uint cal)
         {
         }
 
@@ -56,10 +56,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         }
 
         [Theory]
-        [InlineData(Size.Small, "Small Aretino Apple Juice")]
-        [InlineData(Size.Medium, "Medium Aretino Apple Juice")]
-        [InlineData(Size.Large, "Large Aretino Apple Juice")]
-        public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
+        [InlineData(Enums.Small, "Small Aretino Apple Juice")]
+        [InlineData(Enums.Medium, "Medium Aretino Apple Juice")]
+        [InlineData(Enums.Large, "Large Aretino Apple Juice")]
+        public void ShouldReturnCorrectToStringBasedOnSize(Enums size, string name)
         {
         }
     }
