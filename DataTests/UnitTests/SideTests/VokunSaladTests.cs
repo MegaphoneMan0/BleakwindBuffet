@@ -28,26 +28,26 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         }
 
         [Theory]
-        [InlineData(Enums.Small, 0.93)]
-        [InlineData(Enums.Medium, 1.28)]
-        [InlineData(Enums.Large, 1.82)]
-        public void ShouldReturnCorrectPriceBasedOnSize(Enums size, double price)
+        [InlineData(Size.Small, 0.93)]
+        [InlineData(Size.Medium, 1.28)]
+        [InlineData(Size.Large, 1.82)]
+        public void ShouldReturnCorrectPriceBasedOnSize(Size size, double price)
         {
         }
 
         [Theory]
-        [InlineData(Enums.Small, 41)]
-        [InlineData(Enums.Medium, 52)]
-        [InlineData(Enums.Large, 73)]
-        public void ShouldReturnCorrectCaloriesBasedOnSize(Enums size, uint calories)
+        [InlineData(Size.Small, 41)]
+        [InlineData(Size.Medium, 52)]
+        [InlineData(Size.Large, 73)]
+        public void ShouldReturnCorrectCaloriesBasedOnSize(Size size, uint calories)
         {
         }
 
         [Theory]
-        [InlineData(Enums.Small, "Small Vokun Salad")]
-        [InlineData(Enums.Medium, "Medium Vokun Salad")]
-        [InlineData(Enums.Large, "Large Vokun Salad")]
-        public void ShouldReturnCorrectToStringBasedOnSize(Enums size, string name)
+        [InlineData(Size.Small, "Small Vokun Salad")]
+        [InlineData(Size.Medium, "Medium Vokun Salad")]
+        [InlineData(Size.Large, "Large Vokun Salad")]
+        public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
         }
     }

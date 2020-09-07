@@ -1,5 +1,6 @@
 ﻿/*
  * Author: Zachery Brunner
+ * Editor: John Solomon
  * Class: SmokehouseSkeletonTests.cs
  * Purpose: Test the SmokehouseSkeleton.cs class in the Data library
  */

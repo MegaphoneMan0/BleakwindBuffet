@@ -1,5 +1,6 @@
 ﻿/*
  * Author: Zachery Brunner
+ * Editor: John Solomon
  * Class: SailorSodaTests.cs
  * Purpose: Test the SailorSoda.cs class in the Data library
  */

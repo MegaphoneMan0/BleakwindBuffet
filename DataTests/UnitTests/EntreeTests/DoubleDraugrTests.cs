@@ -1,5 +1,6 @@
 ﻿/*
  * Author: Zachery Brunner
+ * Editor: John Solomon
  * Class: DoubleDraugrTests.cs
  * Purpose: Test the DoubleDraugr.cs class in the Data library
  */
