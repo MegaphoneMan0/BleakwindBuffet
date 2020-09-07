@@ -101,6 +101,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
             if (includeIce) Assert.Contains("Add Ice",AAJ.SpecialInstructions);
 
+
+
+
+            if (!includeIce) Assert.Empty(AAJ.SpecialInstructions);
+
+
         }
 
         [Theory]
