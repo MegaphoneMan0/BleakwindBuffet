@@ -44,6 +44,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public double Price { get; } = 6.32;
 
+
         /// <summary>
         /// Calories of the Briarheart Burger
         /// </summary>
@@ -53,31 +54,35 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is a bun on the order
         /// </summary>
-        public bool Bun { get; set; } = true;//bun
-
+        public bool Bun { get; set; } //bun
+        private bool bun = true;
 
         /// <summary>
         /// Boolean which indicates if there is ketchup on the order
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        public bool Ketchup { get; set; } 
+        private bool ketchup = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is mustard on the order
         /// </summary>
-        public bool Mustard { get; set; } = true;//mustard
+        public bool Mustard { get; set; } //mustard
+        private bool mustard = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is pickle on the order
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle { get; set; } 
+        private bool pickle = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is cheese on the order
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        public bool Cheese { get; set; } 
+        private bool cheese = true;
 
 
 

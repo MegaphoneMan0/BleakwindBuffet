@@ -57,49 +57,57 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is a bun on the order
         /// </summary>
-        public bool Bun { get; set; } = true;
-
+        public bool Bun { get; set; }
+        private bool bun = true;
 
         /// <summary>
         /// Boolean which indicates if there is ketchup on the order
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        public bool Ketchup { get; set; } 
+        private bool ketchup = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is mustard on the order
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        public bool Mustard { get; set; } 
+        private bool mustard = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is pickle on the order
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle { get; set; }
+        private bool pickle = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is cheese on the order
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        public bool Cheese { get; set; }
+        private bool cheese = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is tomato on the order
         /// </summary>
-        public bool Tomato { get; set; } = true;
+        public bool Tomato { get; set; }
+        private bool tomato = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is Lettuce on the order
         /// </summary>
-        public bool Lettuce { get; set; } = true;
+        public bool Lettuce { get; set; }
+        private bool lettuce = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is Mayo on the order
         /// </summary>
-        public bool Mayo { get; set; } = true;
+        public bool Mayo { get; set; }
+        private bool mayo = true;
+
 
 
 

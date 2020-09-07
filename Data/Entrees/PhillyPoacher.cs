@@ -59,24 +59,27 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is sirloin on the order
         /// </summary>
-        public bool Sirloin { get; set; } = true;
+        public bool Sirloin { get; set; }
+        private bool sirloin = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is onion on the order
         /// </summary>
-        public bool Onion { get; set; } = true;
+        public bool Onion { get; set; } 
+        private bool onion = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is roll on the order
         /// </summary>
-        public bool Roll { get; set; } = true;
+        public bool Roll { get; set; } 
+        private bool roll = true;
 
-        
 
 
-       
+
+
 
 
 
