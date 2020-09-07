@@ -50,7 +50,9 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// The size of the Vokun Salad
         /// </summary>
-        public Size Size { get; set; } = Size.Small;//Size
+        public Size Size { get; set; }
+        private Size size = Size.Small;
+
 
 
         /// <summary>
