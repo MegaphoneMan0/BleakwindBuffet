@@ -89,7 +89,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         }
 
         [Fact]
-        public void ShouldBeAbleToSetCheGOOar()
+        public void ShouldBeAbleToSetCheddar()
         {
             GardenOrcOmelette GOO = new GardenOrcOmelette();
 
