@@ -7,6 +7,9 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data.Sides;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -15,37 +18,74 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
+            AretinoAppleJuice AAJ = new AretinoAppleJuice();
+
+            Assert.False(AAJ.Ice);
         }
 
         [Fact]
         public void ShouldBeSmallByDefault()
         {
+            AretinoAppleJuice AAJ = new AretinoAppleJuice();
+
+            Assert.Equal(Size.Small, AAJ.Size);
         }
 
         [Fact]
         public void ShouldBeAbleToSetIce()
         {
+
+            AretinoAppleJuice AAJ = new AretinoAppleJuice();
+
+            AAJ.Ice = true;
+            Assert.True(AAJ.Ice);
+            AAJ.Ice = false;
+            Assert.False(AAJ.Ice);
+
         }
 
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
+
+            AretinoAppleJuice AAJ = new AretinoAppleJuice();
+
+            AAJ.Size = Size.Large;
+            Assert.Equal(AAJ.Size, Size.Large);
+            AAJ.Size = Size.Medium;
+            Assert.Equal(AAJ.Size, Size.Medium);
+            AAJ.Size = Size.Small;
+            Assert.Equal(AAJ.Size, Size.Small);
+
         }
 
         [Theory]
-        [InlineData(Enums.Small, 0.62)]
-        [InlineData(Enums.Medium, 0.87)]
-        [InlineData(Enums.Large, 1.01)]
-        public void ShouldHaveCorrectPriceForSize(Enums size, double price)
+        [InlineData(Size.Small, 0.62)]
+        [InlineData(Size.Medium, 0.87)]
+        [InlineData(Size.Large, 1.01)]
+        public void ShouldHaveCorrectPriceForSize(Size size, double price)
         {
+            AretinoAppleJuice AAJ = new AretinoAppleJuice()
+            {
+                Size = size
+            };
+            Assert.Equal(price, AAJ.Price);
+
         }
 
         [Theory]
-        [InlineData(Enums.Small, 44)]
-        [InlineData(Enums.Medium, 88)]
-        [InlineData(Enums.Large, 132)]
-        public void ShouldHaveCorrectCaloriesForSize(Enums size, uint cal)
+        [InlineData(Size.Small, 44)]
+        [InlineData(Size.Medium, 88)]
+        [InlineData(Size.Large, 132)]
+        public void ShouldHaveCorrectCaloriesForSize(Size size, uint cal)
         {
+
+            AretinoAppleJuice AAJ = new AretinoAppleJuice()
+            {
+                Size = size
+            };
+            Assert.Equal(cal, AAJ.Calories);
+
         }
 
         [Theory]
@@ -53,14 +93,33 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(false)]
         public void ShouldHaveCorrectSpecialInstructions(bool includeIce)
         {
+
+            AretinoAppleJuice AAJ = new AretinoAppleJuice()
+            {
+                Ice = includeIce
+            };
+
+            if (includeIce) Assert.Contains("Add Ice",AAJ.SpecialInstructions);
+
         }
 
         [Theory]
-        [InlineData(Enums.Small, "Small Aretino Apple Juice")]
-        [InlineData(Enums.Medium, "Medium Aretino Apple Juice")]
-        [InlineData(Enums.Large, "Large Aretino Apple Juice")]
-        public void ShouldReturnCorrectToStringBasedOnSize(Enums size, string name)
+        [InlineData(Size.Small, "Small Aretino Apple Juice")]
+        [InlineData(Size.Medium, "Medium Aretino Apple Juice")]
+        [InlineData(Size.Large, "Large Aretino Apple Juice")]
+        public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
-        }
-    }
-}
+
+
+            AretinoAppleJuice AAJ = new AretinoAppleJuice()
+            {
+                Size = size
+            };
+
+            Assert.Equal(AAJ.ToString(),name);
+
+
+
+        }//test
+    }//class
+}//namespace
