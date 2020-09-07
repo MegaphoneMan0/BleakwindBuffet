@@ -151,7 +151,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             GardenOrcOmelette GOO = new GardenOrcOmelette();
 
 
-            Assert.Equal("Garden Orc Omlette", GOO.ToString());
+            Assert.Equal("Garden Orc Omelette", GOO.ToString());
 
 
         }

@@ -65,7 +65,7 @@ namespace BleakwindBuffet.Data.Sides
             {
                 switch (Size)
                 {
-                    case Size.Small: return 0.98;
+                    case Size.Small: return 0.93;
                     case Size.Medium: return 1.28;
                     case Size.Large: return 1.82;
                     default: throw new NotImplementedException($"Unknown size {Size}");

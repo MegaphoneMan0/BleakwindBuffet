@@ -113,9 +113,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             
             };
 
-            if (!includeRoll) Assert.Contains("Hold Roll", PP.SpecialInstructions);
-            if (!includeOnion) Assert.Contains("Hold Onion", PP.SpecialInstructions);
-            if (!includeSirloin) Assert.Contains("Hold Sirloin", PP.SpecialInstructions);
+            if (!includeRoll) Assert.Contains("Hold roll", PP.SpecialInstructions);
+            if (!includeOnion) Assert.Contains("Hold onion", PP.SpecialInstructions);
+            if (!includeSirloin) Assert.Contains("Hold sirloin", PP.SpecialInstructions);
 
             if (includeRoll && includeOnion && includeSirloin) Assert.Empty(PP.SpecialInstructions);
         }

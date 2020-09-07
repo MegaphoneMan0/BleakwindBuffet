@@ -60,7 +60,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// If there is or is not Ice in the Sailor Soda
         /// </summary>
-        public bool Ice { get; set; } = false;//setter
+        public bool Ice { get; set; } = true;//setter
 
 
         /// <summary>
