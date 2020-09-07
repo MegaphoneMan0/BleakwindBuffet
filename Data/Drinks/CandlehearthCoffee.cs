@@ -39,25 +39,27 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Candlehearth Coffee
         /// </summary>
-        public Size Size { get; set; } = Size.Small;//Size
+        public Size Size { get; set; } //Size
+        private Size size = Size.Small;
 
         /// <summary>
         /// If the coffee is or is not decaf
         /// </summary>
-        public bool Decaf { get; set; } = false;//decaf
-
+        public bool Decaf { get; set; } //decaf
+        private bool decaf = false;
 
         /// <summary>
         /// If there is or is not Ice in the Candlehearth Coffee
         /// </summary>
-        public bool Ice { get; set; } = false;//Ice
+        public bool Ice { get; set; } //Ice
+        private bool ice = false;
 
 
         /// <summary>
         /// Indicates if there is or is not room for cream in the coffee
         /// </summary>
-        public bool RoomForCream { get; set; } = false;//cream
-
+        public bool RoomForCream { get; set; } //cream
+        private bool roomForCream = false;
 
         /// <summary>
         /// The Price of the Coffee
