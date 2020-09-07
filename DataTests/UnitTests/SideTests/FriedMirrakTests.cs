@@ -7,6 +7,7 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Sides;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
@@ -15,16 +16,23 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [Fact]
         public void ShouldBeSmallByDefault()
         {
+            FriedMiraak FM = new FriedMiraak();
+            Assert.Equal(Size.Small, FM.Size);
+
         }
 
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
+            FriedMiraak FM = new FriedMiraak();
+            Assert.Equal(Size.Small, FM.Size);
         }
 
         [Fact]
         public void ShouldReturnCorrectSpecialInstructions()
         {
+            FriedMiraak FM = new FriedMiraak();
+            Assert.Empty(FM.SpecialInstructions);
         }
 
         [Theory]
@@ -33,6 +41,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [InlineData(Size.Large, 2.88)]
         public void ShouldReturnCorrectPriceBasedOnSize(Size size, double price)
         {
+            FriedMiraak FM = new FriedMiraak()
+            {
+
+                Size = size
+
+            };
+
+            Assert.Equal(price, FM.Price);
         }
 
         [Theory]
@@ -41,6 +57,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [InlineData(Size.Large, 306)]
         public void ShouldReturnCorrectCaloriesBasedOnSize(Size size, uint calories)
         {
+            FriedMiraak FM = new FriedMiraak()
+            {
+
+                Size = size
+
+            };
+
+            Assert.Equal(calories, FM.Calories);
         }
 
         [Theory]
@@ -49,6 +73,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [InlineData(Size.Large, "Large Fried Miraak")]
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
+            FriedMiraak FM = new FriedMiraak()
+            {
+
+                Size = size
+
+            };
+
+            Assert.Equal(FM.ToString(), name);
         }
     }
 }
