@@ -38,6 +38,7 @@ namespace BleakwindBuffet.Data.Entrees
 
 
         //properties
+        
 
         /// <summary>
         /// Price of the Briarheart Burger
@@ -54,34 +55,34 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is a bun on the order
         /// </summary>
-        public bool Bun { get; set; } //bun
+        public bool Bun { get { return bun; } set { bun = value; } } //bun
         private bool bun = true;
 
         /// <summary>
         /// Boolean which indicates if there is ketchup on the order
         /// </summary>
-        public bool Ketchup { get; set; } 
+        public bool Ketchup { get { return ketchup; } set { ketchup = value; } } 
         private bool ketchup = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is mustard on the order
         /// </summary>
-        public bool Mustard { get; set; } //mustard
+        public bool Mustard { get { return mustard; } set { mustard = value; } } //mustard
         private bool mustard = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is pickle on the order
         /// </summary>
-        public bool Pickle { get; set; } 
+        public bool Pickle { get { return pickle; } set { pickle = value; } } 
         private bool pickle = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is cheese on the order
         /// </summary>
-        public bool Cheese { get; set; } 
+        public bool Cheese { get { return cheese; } set { cheese = value; } } 
         private bool cheese = true;
 
 

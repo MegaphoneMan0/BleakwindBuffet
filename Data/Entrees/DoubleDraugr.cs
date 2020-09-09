@@ -53,59 +53,59 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public uint Calories { get; } = 843;
 
-        
+
         /// <summary>
         /// Boolean which indicates if there is a bun on the order
         /// </summary>
-        public bool Bun { get; set; }
+        public bool Bun { get { return bun; } set { bun = value; } } //bun
         private bool bun = true;
 
         /// <summary>
         /// Boolean which indicates if there is ketchup on the order
         /// </summary>
-        public bool Ketchup { get; set; } 
+        public bool Ketchup { get { return ketchup; } set { ketchup = value; } }
         private bool ketchup = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is mustard on the order
         /// </summary>
-        public bool Mustard { get; set; } 
+        public bool Mustard { get { return mustard; } set { mustard = value; } } //mustard
         private bool mustard = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is pickle on the order
         /// </summary>
-        public bool Pickle { get; set; }
+        public bool Pickle { get { return pickle; } set { pickle = value; } }
         private bool pickle = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is cheese on the order
         /// </summary>
-        public bool Cheese { get; set; }
+        public bool Cheese { get { return cheese; } set { cheese = value; } }
         private bool cheese = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is tomato on the order
         /// </summary>
-        public bool Tomato { get; set; }
+        public bool Tomato { get { return tomato; } set { tomato = value; } }
         private bool tomato = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is Lettuce on the order
         /// </summary>
-        public bool Lettuce { get; set; }
+        public bool Lettuce { get { return lettuce; } set { lettuce = value; } }
         private bool lettuce = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is Mayo on the order
         /// </summary>
-        public bool Mayo { get; set; }
+        public bool Mayo { get { return mayo; } set { mayo = value; } }
         private bool mayo = true;
 
 

@@ -59,28 +59,28 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is sausage on the order
         /// </summary>
-        public bool SausageLink { get; set; } 
+        public bool SausageLink { get { return sausageLink; } set { sausageLink = value; } } 
         private bool sausageLink = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is egg on the order
         /// </summary>
-        public bool Egg { get; set; } 
+        public bool Egg { get { return egg; } set { egg = value; } } 
         private bool egg = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is hash browns on the order
         /// </summary>
-        public bool HashBrowns { get; set; }
+        public bool HashBrowns { get { return hashBrowns; } set { hashBrowns = value; } }
         private bool hashBrowns = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is pancake on the order
         /// </summary>
-        public bool Pancake { get; set; } 
+        public bool Pancake { get { return pancake; } set { pancake = value; } } 
         private bool pancake = true;
 
 
