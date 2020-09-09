@@ -36,25 +36,25 @@ namespace BleakwindBuffet.Data.Drinks
 
         //properties
 
-        
+
 
         /// <summary>
         /// Whether or not there is Ice in the warrior water
         /// </summary>
-        public bool Ice { get; set; } 
+        public bool Ice { get { return ice; } set { ice = value; } }
         private bool ice = true;
 
         /// <summary>
         /// Whether or not there s Lemon in the warrior water
         /// </summary>
-        public bool Lemon { get; set; } 
+        public bool Lemon { get { return lemon; } set { lemon = value; } } 
         private bool lemon = false;
 
 
         /// <summary>
         /// The size of the Warrior Water
         /// </summary>
-        public Size Size { get; set; } //Size
+        public Size Size { get { return size} set { size = value; } }
         private Size size = Size.Small;
 
 

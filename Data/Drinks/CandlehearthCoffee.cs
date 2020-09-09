@@ -39,7 +39,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Candlehearth Coffee
         /// </summary>
-        public Size Size { get; set; } //Size
+        public Size Size { get { return size} set { size = value; } }
         private Size size = Size.Small;
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// If there is or is not Ice in the Candlehearth Coffee
         /// </summary>
-        public bool Ice { get; set; } //Ice
+        public bool Ice { get { return ice; } set { ice = value; } }
         private bool ice = false;
 
 

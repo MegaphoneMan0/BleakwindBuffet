@@ -40,13 +40,13 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// If there is or is not Ice in the Aretino Apple Juice
         /// </summary>
-        public bool Ice { get; set; }//setter
+        public bool Ice { get { return ice; } set { ice = value; } }
         private bool ice = false;
 
         /// <summary>
         /// The size of the Aretino Apple juice
         /// </summary>
-        public Size Size { get; set; }//Size
+        public Size Size { get { return size} set { size = value; } }//Size
         private Size size = Size.Small;
 
         
