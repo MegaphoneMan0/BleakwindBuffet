@@ -54,7 +54,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Warrior Water
         /// </summary>
-        public Size Size { get { return size} set { size = value; } }
+        public Size Size { get { return size; } set { size = value; } }
         private Size size = Size.Small;
 
 
