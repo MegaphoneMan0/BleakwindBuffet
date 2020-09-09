@@ -47,7 +47,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Markarth Milk
         /// </summary>
-        public Size Size { get { return size} set { size = value; } }
+        public Size Size { get { return size; } set { size = value; } }
         private Size size = Size.Small;
 
         /// <summary>

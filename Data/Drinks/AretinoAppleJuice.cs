@@ -46,7 +46,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Aretino Apple juice
         /// </summary>
-        public Size Size { get { return size} set { size = value; } }//Size
+        public Size Size { get { return size; } set { size = value; } }//Size
         private Size size = Size.Small;
 
         
