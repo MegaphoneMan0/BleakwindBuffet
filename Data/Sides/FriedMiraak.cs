@@ -11,7 +11,7 @@ namespace BleakwindBuffet.Data.Sides
      * Class name: FriedMiraak.cs
      * Purpose: To track Fried Miraak
      */
-    public class FriedMiraak
+    public class FriedMiraak :Side
     {
 
         //special instructions

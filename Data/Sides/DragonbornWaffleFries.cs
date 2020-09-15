@@ -40,7 +40,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// The size of the Dragonborn Waffle Fries
         /// </summary>
-        public override Size Size { get; set; } 
+        public override Size Size { get { return size; } set { size = value; } } 
         private Size size = Size.Small;
 
 
