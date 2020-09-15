@@ -1,9 +1,11 @@
 ﻿using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data.Drinks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data
 {
@@ -92,8 +94,56 @@ namespace BleakwindBuffet.Data
         {
             IEnumerable<IOrderItem> drinks = Enumerable.Empty<IOrderItem>();
 
+            AretinoAppleJuice AAJsmall = new AretinoAppleJuice();
+            AAJsmall.Size = Enums.Size.Small;
+            AretinoAppleJuice AAJmedium = new AretinoAppleJuice();
+            AAJmedium.Size = Enums.Size.Medium;
+            AretinoAppleJuice AAJlarge = new AretinoAppleJuice();
+            AAJlarge.Size = Enums.Size.Large;
+
+            CandlehearthCoffee CCsmall = new CandlehearthCoffee();
+            CCsmall.Size = Enums.Size.Small;
+            CandlehearthCoffee CCmedium = new CandlehearthCoffee();
+            CCmedium.Size = Enums.Size.Medium;
+            CandlehearthCoffee CClarge = new CandlehearthCoffee();
+            CClarge.Size = Enums.Size.Large;
+
+            MarkarthMilk MMsmall = new MarkarthMilk();
+            MMsmall.Size = Enums.Size.Small;
+            MarkarthMilk MMmedium = new MarkarthMilk();
+            MMmedium.Size = Enums.Size.Medium;
+            MarkarthMilk MMlarge = new MarkarthMilk();
+            MMlarge.Size = Enums.Size.Large;
+
+            WarriorWater WWsmall = new WarriorWater();
+            WWsmall.Size = Enums.Size.Small;
+            WarriorWater WWmedium = new WarriorWater();
+            WWmedium.Size = Enums.Size.Medium;
+            WarriorWater WWlarge = new WarriorWater();
+            WWlarge.Size = Enums.Size.Large;
 
 
+            //Now for the Sailor Soda
+            foreach (Size sizes in Enum.GetValues(typeof(Size)))
+            {
+                foreach (SodaFlavor sf in Enum.GetValues(typeof(SodaFlavor)))
+                {
+                    SailorSoda SS = new SailorSoda();
+
+                    SS.Size = sizes;
+                    SS.Flavor = sf;
+
+                    drinks.Append(SS);
+
+                }
+            }
+
+
+
+
+
+
+            return drinks;
 
         }
 
