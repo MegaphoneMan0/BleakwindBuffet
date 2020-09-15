@@ -20,7 +20,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// The special instuctions for Fried Miraak
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -38,12 +38,12 @@ namespace BleakwindBuffet.Data.Sides
         //properties
 
 
-        
+
 
         /// <summary>
         /// The size of the Fried Miraak
         /// </summary>
-        public Size Size { get; set; } 
+        public override Size Size { get; set; } 
         private Size size = Size.Small;
 
 
@@ -53,7 +53,7 @@ namespace BleakwindBuffet.Data.Sides
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known 
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -75,7 +75,7 @@ namespace BleakwindBuffet.Data.Sides
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the calories for the size is not known 
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {

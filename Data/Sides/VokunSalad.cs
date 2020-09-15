@@ -11,14 +11,14 @@ namespace BleakwindBuffet.Data.Sides
      * Class name: VokunSalad.cs
      * Purpose: To track Vokun Salad
      */
-    public class VokunSalad
+    public class VokunSalad:Side
     {
         //special instructions
 
         /// <summary>
         /// The special instuctions for Vokun Salad
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -50,7 +50,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// The size of the Vokun Salad
         /// </summary>
-        public Size Size { get; set; }
+        public override Size Size { get; set; }
         private Size size = Size.Small;
 
 
@@ -61,7 +61,7 @@ namespace BleakwindBuffet.Data.Sides
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known 
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -83,7 +83,7 @@ namespace BleakwindBuffet.Data.Sides
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the calories for the size is not known 
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
