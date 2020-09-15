@@ -10,13 +10,13 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: WarriorWater.cs
      * Purpose: To track Warrior Water
      */
-    public class WarriorWater
+    public class WarriorWater : Drink
     {
         //special instructions
         /// <summary>
         /// The special instuctions for Warrior Water
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -26,7 +26,7 @@ namespace BleakwindBuffet.Data.Drinks
 
 
                 return instructions;
-            }//get
+            }
 
         }//SpecialInstructions
 
@@ -54,7 +54,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Warrior Water
         /// </summary>
-        public Size Size { get { return size; } set { size = value; } }
+        public override Size Size { get { return size; } set { size = value; } }
         private Size size = Size.Small;
 
 
@@ -64,13 +64,13 @@ namespace BleakwindBuffet.Data.Drinks
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known 
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
                 return 0;
-            }//getter
 
+            }
         }//price
 
 
@@ -80,12 +80,12 @@ namespace BleakwindBuffet.Data.Drinks
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the calories for the size is not known 
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
                 return 0;
-            }//getter
+            }
         }//calories
 
 

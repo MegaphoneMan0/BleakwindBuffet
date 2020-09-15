@@ -11,7 +11,7 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: CandlehearthCoffee.cs
      * Purpose: To track Candlehearth Coffee
      */
-    public class CandlehearthCoffee
+    public class CandlehearthCoffee : Drink
     {
 
         //Special Instructions
@@ -20,7 +20,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The special instuctions for Candlehearth Coffee
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -29,7 +29,7 @@ namespace BleakwindBuffet.Data.Drinks
                 if (RoomForCream) instructions.Add("Add Cream");
 
                 return instructions;
-            }//get
+            }
 
         }//SpecialInstructions
 
@@ -39,7 +39,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Candlehearth Coffee
         /// </summary>
-        public Size Size { get { return size; } set { size = value; } }
+        public override Size Size { get { return size; } set { size = value; } }
         private Size size = Size.Small;
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Indicates if there is or is not room for cream in the coffee
         /// </summary>
-        public bool RoomForCream { get; set; } //cream
+        public bool RoomForCream { get { return roomForCream; } set { roomForCream = value;} } //cream
         private bool roomForCream = false;
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known 
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -78,7 +78,7 @@ namespace BleakwindBuffet.Data.Drinks
                     case Size.Large: return 1.75;
                     default: throw new NotImplementedException($"Unknown size {Size}");
                 }
-            }//getter
+            }
 
         }//price
 
@@ -89,7 +89,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the calories for the size is not known 
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -100,7 +100,7 @@ namespace BleakwindBuffet.Data.Drinks
                     case Size.Large: return 20;
                     default: throw new NotImplementedException($"Unknown size {Size}");
                 }
-            }//getter
+            }
         }//calories
 
 

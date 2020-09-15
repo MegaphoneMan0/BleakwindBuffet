@@ -11,13 +11,13 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: SailorSoda
      * Purpose: To track sailor soda
      */
-    public class SailorSoda
+    public class SailorSoda : Drink
     {
 
         /// <summary>
         /// The special instuctions for Sailor Soda
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -25,7 +25,7 @@ namespace BleakwindBuffet.Data.Drinks
                 if (Ice) instructions.Add("Add Ice");
 
                 return instructions;
-            }//get
+            }
 
         }//SpecialInstructions
 
@@ -48,13 +48,13 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The flavor of the Sailor Soda
         /// </summary>
-        public SodaFlavor Flavor { get { return flavor; } set { flavor = value; } } 
-        
+        public SodaFlavor Flavor { get { return flavor; } set { flavor = value; } }
+
 
         /// <summary>
         /// The size of the Sailor Soda
         /// </summary>
-        public Size Size { get { return size; } set { size = value; } } //Size
+        public override Size Size { get { return size; } set { size = value; } } //Size
         private Size size = Size.Small;
 
 
@@ -71,7 +71,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known 
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -82,7 +82,7 @@ namespace BleakwindBuffet.Data.Drinks
                     case Size.Large: return 2.07;
                     default: throw new NotImplementedException($"Unknown size {Size}");
                 }
-            }//getter
+            }
 
         }//price
 
@@ -93,7 +93,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the calories for the size is not known 
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -104,7 +104,7 @@ namespace BleakwindBuffet.Data.Drinks
                     case Size.Large: return 205;
                     default: throw new NotImplementedException($"Unknown size {Size}");
                 }
-            }//getter
+            }
         }//calories
 
 

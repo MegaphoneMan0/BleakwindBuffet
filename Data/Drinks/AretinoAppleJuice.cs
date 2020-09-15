@@ -14,13 +14,13 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: AretinoAppleJuice.cs
      * Purpose: To track Aretino Apple Juice
      */
-    public class AretinoAppleJuice
+    public class AretinoAppleJuice : Drink 
     {
 
         /// <summary>
         /// The special instuctions for Aretino Apple Juice
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -46,7 +46,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Aretino Apple juice
         /// </summary>
-        public Size Size { get { return size; } set { size = value; } }//Size
+        public override Size Size { get { return size; } set { size = value; } }//Size
         private Size size = Size.Small;
 
         
@@ -56,7 +56,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known 
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -78,7 +78,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// /// <exception cref="System.NotImplementedException">
         /// Thrown if the calories for the size is not known 
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
