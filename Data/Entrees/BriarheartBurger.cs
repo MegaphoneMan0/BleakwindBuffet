@@ -10,7 +10,7 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: BriarheartBurger
      * Purpose: To track briarheart burgers: Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.
      */
-    public class BriarheartBurger
+    public class BriarheartBurger : Entree
     {
 
         //specialInstructions
@@ -18,7 +18,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// The special instuctions for Briarheart Burger
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -38,18 +38,18 @@ namespace BleakwindBuffet.Data.Entrees
 
 
         //properties
-        
+
 
         /// <summary>
         /// Price of the Briarheart Burger
         /// </summary>
-        public double Price { get; } = 6.32;
+        public override double Price { get; } = 6.32;
 
 
         /// <summary>
         /// Calories of the Briarheart Burger
         /// </summary>
-        public uint Calories { get; } = 743;
+        public override uint Calories { get; } = 743;
 
         
         /// <summary>

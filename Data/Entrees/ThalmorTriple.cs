@@ -9,7 +9,7 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: ThalmorTriple.cs
      * Purpose: To track Thalmor Triple burgers: Think you are strong enough to take on the Thalmor? Inlcudes two 1/4lb patties with a 1/2lb patty inbetween with ketchup, mustard, pickle, cheese, tomato, lettuce, mayo, bacon, and an egg.
      */
-    public class ThalmorTriple
+    public class ThalmorTriple:Entree
     {
 
         //specialInstructions
@@ -17,7 +17,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// The special instuctions for the Thalmor Triple
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -54,12 +54,12 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Price of the Thalmor Triple
         /// </summary>
-        public double Price { get; } = 8.32;
+        public override double Price { get; } = 8.32;
 
         /// <summary>
         /// Calories of the Thalmor Triple
         /// </summary>
-        public uint Calories { get; } = 943;
+        public override uint Calories { get; } = 943;
 
 
         /// <summary>

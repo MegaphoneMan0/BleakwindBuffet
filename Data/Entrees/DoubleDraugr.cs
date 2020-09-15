@@ -10,7 +10,7 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: DoubleDraugr
      * Purpose: To track Double Draugr burgers: Double patty burger on a brioche bun. Comes with ketchup, mustard, pickle, cheese, tomato, lettuce, and mayo.
      */
-    public class DoubleDraugr
+    public class DoubleDraugr : Entree
     {
 
         //specialInstructions
@@ -18,7 +18,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// The special instuctions for the Double Draugr
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -46,12 +46,12 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Price of the Double Draugr
         /// </summary>
-        public double Price { get; } = 7.32;
+        public override double Price { get; } = 7.32;
 
         /// <summary>
         /// Calories of the Double Draugr
         /// </summary>
-        public uint Calories { get; } = 843;
+        public override uint Calories { get; } = 843;
 
 
         /// <summary>

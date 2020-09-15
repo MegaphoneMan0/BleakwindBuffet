@@ -9,14 +9,14 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: GardenOrcOmelette.cs
      * Purpose: To track Garden Orc Omelette: Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese.
      */
-    public class GardenOrcOmelette
+    public class GardenOrcOmelette: Entree
     {
 
 
         /// <summary>
         /// The special instuctions for the Garden Orc Omelette
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -44,13 +44,13 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Price of the Garden Orc Omelette
         /// </summary>
-        public double Price { get; } = 4.57;
+        public override double Price { get; } = 4.57;
 
 
         /// <summary>
         /// Calories of the Garden Orc Omelette
         /// </summary>
-        public uint Calories { get; } = 404;
+        public override uint Calories { get; } = 404;
 
 
         /// <summary>

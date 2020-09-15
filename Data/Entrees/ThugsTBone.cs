@@ -10,14 +10,14 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: ThugsTBone.cs
      * Purpose: To track Thugs T-Bones: Juicy T-Bone not much else to say.
      */
-    public class ThugsTBone
+    public class ThugsTBone:Entree
     {
 
         //special instuctions
         /// <summary>
         /// The special instuctions for Thugs T-Bone
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -46,11 +46,11 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// price of ThugsTBone
         /// </summary>
-        public double Price { get; set; } = 6.44;
+        public override double Price { get;  } = 6.44;
         /// <summary>
         /// calories in ThugsTBone
         /// </summary>
-        public uint Calories { get; set; } = 982;
+        public override uint Calories { get;  } = 982;
 
        
         

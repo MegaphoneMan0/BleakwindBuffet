@@ -4,12 +4,12 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    abstract class Entree
+    public abstract class Entree :IOrderItem
     {
 
-        public abstract double Price();
-        public abstract uint Calories();
-        public abstract List<string> SpecialInstructions();
+        public abstract double Price { get; }
+        public abstract uint Calories { get; }
+        public abstract List<string> SpecialInstructions { get; }
 
 
 

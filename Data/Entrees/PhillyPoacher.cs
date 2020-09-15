@@ -9,7 +9,7 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: PhillyPoacher.cs
      * Purpose: To track Philly Poacher: Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll.
      */
-    public class PhillyPoacher
+    public class PhillyPoacher : Entree
     {
 
 
@@ -17,7 +17,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// The special instuctions for the Philly Poacher
         /// </summary>
-        public List<String> SpecialInstructions
+        public override List<String> SpecialInstructions
         {
             get
             {
@@ -47,13 +47,13 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Price of the Philly Poacher
         /// </summary>
-        public double Price { get; } = 7.23;
+        public override double Price { get; } = 7.23;
 
 
         /// <summary>
         /// Calories of the Philly Poacher
         /// </summary>
-        public uint Calories { get; } = 784;
+        public override uint Calories { get; } = 784;
 
 
         /// <summary>
