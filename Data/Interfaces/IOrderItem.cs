@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BleakwindBuffet.Data
+namespace BleakwindBuffet.Data.Interfaces
 {
     public interface IOrderItem
     {

@@ -6,8 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Interfaces;
 
-namespace BleakwindBuffet.Data
+namespace BleakwindBuffet.Data.Menu
 {
     class Menu
     {
@@ -26,6 +27,7 @@ namespace BleakwindBuffet.Data
             ThugsTBone TTB = new ThugsTBone();
 
             IEnumerable<IOrderItem> entrees = Enumerable.Empty<IOrderItem>();
+
             entrees.Append(BB);
             entrees.Append(DD);
             entrees.Append(GOO);
