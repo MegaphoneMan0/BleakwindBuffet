@@ -5,7 +5,7 @@ using System.Text;
 using BleakwindBuffet.Data.Interfaces;
 
 
-namespace BleakwindBuffet.Data.Sides
+namespace BleakwindBuffet.Data.Abstract
 {
     public abstract class Side : IOrderItem
     {

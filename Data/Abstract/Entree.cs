@@ -1,34 +1,27 @@
-﻿using BleakwindBuffet.Data.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Interfaces;
 
 
-namespace BleakwindBuffet.Data.Drinks
+namespace BleakwindBuffet.Data.Abstract
 {
-    public abstract class Drink : IOrderItem
+    public abstract class Entree :IOrderItem
     {
-
         /// <summary>
-        /// Size of the drink
-        /// </summary>
-        public abstract Size Size { get; set; }
-
-        /// <summary>
-        /// Price of the drink
+        /// Price of entrees
         /// </summary>
         public abstract double Price { get; }
-
         /// <summary>
-        /// Calories of the drink
+        /// Calories of entrees
         /// </summary>
         public abstract uint Calories { get; }
-
         /// <summary>
-        /// Special Instructions for the drink
+        /// SpecialInstructions for entrees
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+
 
 
     }

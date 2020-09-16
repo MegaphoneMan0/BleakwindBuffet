@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Abstract;
 
 namespace BleakwindBuffet.Data.Entrees
 {
