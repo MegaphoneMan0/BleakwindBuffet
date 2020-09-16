@@ -83,5 +83,29 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(MOG.ToString(), name);
 
         }
+
+
+
+
+
+
+
+        [Fact]
+        public void ShouldBeAssignableToAbstractClass()
+        {
+
+            MadOtarGrits MOG = new MadOtarGrits();
+
+            Assert.IsAssignableFrom<IOrderItem>(MOG);
+            Assert.IsAssignableFrom<Side>(MOG);
+
+        }
+
+
+
+
+
+
+
     }
 }

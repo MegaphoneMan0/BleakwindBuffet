@@ -84,5 +84,25 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(DWF.ToString(), name);
 
         }
+
+
+
+
+
+        [Fact]
+        public void ShouldBeAssignableToAbstractClass()
+        {
+
+            DragonbornWaffleFries DWF = new DragonbornWaffleFries();
+
+            Assert.IsAssignableFrom<IOrderItem>(DWF);
+            Assert.IsAssignableFrom<Side>(DWF);
+
+        }
+
+
+
+
+
     }
 }
