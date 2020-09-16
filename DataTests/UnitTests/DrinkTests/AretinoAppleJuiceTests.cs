@@ -128,5 +128,26 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
 
         }//test
+
+
+
+
+        [Fact]
+        public void ShouldBeAssignableToAbstractClass()
+        {
+
+            AretinoAppleJuice AAJ = new AretinoAppleJuice();
+
+            Assert.IsAssignableFrom<IOrderItem>(AAJ);
+
+        }
+
+
+
+
+
+
+
+
     }//class
 }//namespace

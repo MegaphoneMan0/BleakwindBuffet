@@ -129,5 +129,25 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
 
         }
+
+
+
+
+
+
+
+        [Fact]
+        public void ShouldBeAssignableToAbstractClass()
+        {
+
+            MarkarthMilk MM = new MarkarthMilk();
+
+            Assert.IsAssignableFrom<IOrderItem>(MM);
+
+        }
+
+
+
+
     }
 }

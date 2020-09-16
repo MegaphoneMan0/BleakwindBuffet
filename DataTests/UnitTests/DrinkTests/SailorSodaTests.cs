@@ -180,5 +180,31 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        [Fact]
+        public void ShouldBeAssignableToAbstractClass()
+        {
+
+            SailorSoda SS = new SailorSoda();
+
+            Assert.IsAssignableFrom<IOrderItem>(SS);
+
+        }
+
+
+
+
+
     }
 }

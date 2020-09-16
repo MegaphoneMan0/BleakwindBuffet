@@ -11,7 +11,10 @@ namespace BleakwindBuffet.Data
 {
     class Menu
     {
-
+        /// <summary>
+        /// a method which returns all possible entrees
+        /// </summary>
+        /// <returns></returns>
         static IEnumerable<IOrderItem> Entrees()
         {
             BriarheartBurger BB = new BriarheartBurger();
@@ -34,7 +37,10 @@ namespace BleakwindBuffet.Data
             return entrees;
 
         }
-
+        /// <summary>
+        /// a method which returns all possible sides
+        /// </summary>
+        /// <returns></returns>
         static IEnumerable<IOrderItem> Sides()
         {
             IEnumerable<IOrderItem> sides = Enumerable.Empty<IOrderItem>();
@@ -89,7 +95,10 @@ namespace BleakwindBuffet.Data
 
         }
 
-
+        /// <summary>
+        /// A method which returns a list of all possible drinks
+        /// </summary>
+        /// <returns></returns>
         static IEnumerable<IOrderItem> Drinks()
         {
             IEnumerable<IOrderItem> drinks = Enumerable.Empty<IOrderItem>();
@@ -148,12 +157,45 @@ namespace BleakwindBuffet.Data
         }
 
 
+        /// <summary>
+        /// a method which returns all available items on the menu
+        /// </summary>
+        /// <returns></returns>
+        static IEnumerable<IOrderItem> FullMenu()
+        {
+            IEnumerable<IOrderItem> fullMenu = Enumerable.Empty<IOrderItem>();
+
+
+
+            //Entrees
+
+            IEnumerable<IOrderItem> entrees = Entrees();
+
+
+            //sides
+
+            IEnumerable<IOrderItem> sides = Sides();
+
+
+            //drinks
+
+            IEnumerable<IOrderItem> drinks = Drinks();
+
+
+
+            fullMenu =  fullMenu.Concat(entrees);
+            fullMenu = fullMenu.Concat(sides);
+            fullMenu = fullMenu.Concat(drinks);
+
+
+
+            return fullMenu;
+
+        }//fullmenu method
 
 
 
 
 
-
-
-    }
+    }//menu class
 }

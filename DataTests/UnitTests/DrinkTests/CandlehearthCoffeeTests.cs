@@ -182,5 +182,22 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
 
         }
+
+
+
+        [Fact]
+        public void ShouldBeAssignableToAbstractClass()
+        {
+
+            CandlehearthCoffee CC = new CandlehearthCoffee();
+
+            Assert.IsAssignableFrom<IOrderItem>(CC);
+
+        }
+
+
+
+
+
     }
 }
