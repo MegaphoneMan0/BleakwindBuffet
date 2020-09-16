@@ -14,7 +14,7 @@ using BleakwindBuffet.Data.Sides;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
-    public class AretinoAppleJuiceTests
+    public class MenuTests
     {
         [Fact]
         public void ShouldNotIncludeIceByDefault()
