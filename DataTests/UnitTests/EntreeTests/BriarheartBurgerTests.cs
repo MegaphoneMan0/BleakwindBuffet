@@ -155,5 +155,23 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             BriarheartBurger BB = new BriarheartBurger();
             Assert.Equal("Briarheart Burger",BB.ToString());
         }
+
+
+
+
+        [Fact]
+        public void ShouldBeAssignableToAbstractClass()
+        {
+
+            BriarheartBurger BB = new BriarheartBurger();
+
+            Assert.IsAssignableFrom<IOrderItem>(BB);
+            Assert.IsAssignableFrom<Entree>(BB);
+
+        }
+
+
+
+
     }
 }

@@ -258,5 +258,24 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
 
         }
+
+
+
+
+
+        [Fact]
+        public void ShouldBeAssignableToAbstractClass()
+        {
+
+            DoubleDraugr DD = new DoubleDraugr();
+
+            Assert.IsAssignableFrom<IOrderItem>(DD);
+            Assert.IsAssignableFrom<Entree>(DD);
+
+        }
+
+
+
+
     }
 }

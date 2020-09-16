@@ -155,5 +155,23 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
 
         }
+
+
+
+
+        [Fact]
+        public void ShouldBeAssignableToAbstractClass()
+        {
+
+            GardenOrcOmelette GOO = new GardenOrcOmelette();
+
+            Assert.IsAssignableFrom<IOrderItem>(GOO);
+            Assert.IsAssignableFrom<Entree>(GOO);
+
+        }
+
+
+
+
     }
 }
