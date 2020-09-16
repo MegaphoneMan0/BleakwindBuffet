@@ -139,6 +139,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             AretinoAppleJuice AAJ = new AretinoAppleJuice();
 
             Assert.IsAssignableFrom<IOrderItem>(AAJ);
+            Assert.IsAssignableFrom<Drink>(AAJ);
+
 
         }
 

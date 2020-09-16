@@ -143,6 +143,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             MarkarthMilk MM = new MarkarthMilk();
 
             Assert.IsAssignableFrom<IOrderItem>(MM);
+            Assert.IsAssignableFrom<Drink>(MM);
 
         }
 

@@ -136,6 +136,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             WarriorWater WW = new WarriorWater();
 
             Assert.IsAssignableFrom<IOrderItem>(WW);
+            Assert.IsAssignableFrom<Drink>(WW);
 
         }
 

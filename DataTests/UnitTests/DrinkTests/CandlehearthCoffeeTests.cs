@@ -192,6 +192,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             CandlehearthCoffee CC = new CandlehearthCoffee();
 
             Assert.IsAssignableFrom<IOrderItem>(CC);
+            Assert.IsAssignableFrom<Drink>(CC);
 
         }
 

@@ -199,6 +199,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             SailorSoda SS = new SailorSoda();
 
             Assert.IsAssignableFrom<IOrderItem>(SS);
+            Assert.IsAssignableFrom<Drink>(SS);
 
         }
 
