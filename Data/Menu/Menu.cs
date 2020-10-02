@@ -7,16 +7,17 @@ using System.Linq;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Interfaces;
+using System.Security.Cryptography;
 
 namespace BleakwindBuffet.Data.Menu
 {
-    class Menu
+    public class Menu
     {
         /// <summary>
         /// a method which returns all possible entrees
         /// </summary>
         /// <returns></returns>
-        static IEnumerable<IOrderItem> Entrees()
+        public static IEnumerable<IOrderItem> Entrees()
         {
             BriarheartBurger BB = new BriarheartBurger();
             DoubleDraugr DD = new DoubleDraugr();
@@ -43,7 +44,7 @@ namespace BleakwindBuffet.Data.Menu
         /// a method which returns all possible sides
         /// </summary>
         /// <returns></returns>
-        static IEnumerable<IOrderItem> Sides()
+        public static IEnumerable<IOrderItem> Sides()
         {
             IEnumerable<IOrderItem> sides = Enumerable.Empty<IOrderItem>();
 
@@ -62,19 +63,27 @@ namespace BleakwindBuffet.Data.Menu
             FriedMiraak FMlarge = new FriedMiraak();
             FMlarge.Size = Enums.Size.Large;
 
-            MadOtarGrits MOGsmall = new MadOtarGrits();
-            MOGsmall.Size = Enums.Size.Small;
-            MadOtarGrits MOGmedium = new MadOtarGrits();
-            MOGmedium.Size = Enums.Size.Medium;
-            MadOtarGrits MOGlarge = new MadOtarGrits();
-            MOGlarge.Size = Enums.Size.Large;
 
-            VokunSalad VSsmall = new VokunSalad();
-            VSsmall.Size = Enums.Size.Small;
-            VokunSalad VSmedium = new VokunSalad();
-            VSmedium.Size = Enums.Size.Medium;
-            VokunSalad VSlarge = new VokunSalad();
-            VSlarge.Size = Enums.Size.Large;
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                MadOtarGrits MOG = new MadOtarGrits();
+                MOG.Size = size;
+                sides.Append(MOG);
+            }
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                MadOtarGrits MOG = new MadOtarGrits();
+                MOG.Size = size;
+                sides.Append(MOG);
+            }
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                VokunSalad VS = new VokunSalad();
+                VS.Size = size;
+                sides.Append(VS);
+            }
 
             sides.Append(DWFsmall);
             sides.Append(DWFmedium);
@@ -84,13 +93,7 @@ namespace BleakwindBuffet.Data.Menu
             sides.Append(FMmedium);
             sides.Append(FMlarge);
 
-            sides.Append(MOGsmall);
-            sides.Append(MOGmedium);
-            sides.Append(MOGlarge);
-
-            sides.Append(VSsmall);
-            sides.Append(VSmedium);
-            sides.Append(VSlarge);
+            
 
 
             return sides;
@@ -101,38 +104,41 @@ namespace BleakwindBuffet.Data.Menu
         /// A method which returns a list of all possible drinks
         /// </summary>
         /// <returns></returns>
-        static IEnumerable<IOrderItem> Drinks()
+        public static IEnumerable<IOrderItem> Drinks()
         {
             IEnumerable<IOrderItem> drinks = Enumerable.Empty<IOrderItem>();
 
-            AretinoAppleJuice AAJsmall = new AretinoAppleJuice();
-            AAJsmall.Size = Enums.Size.Small;
-            AretinoAppleJuice AAJmedium = new AretinoAppleJuice();
-            AAJmedium.Size = Enums.Size.Medium;
-            AretinoAppleJuice AAJlarge = new AretinoAppleJuice();
-            AAJlarge.Size = Enums.Size.Large;
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                AretinoAppleJuice AAJ = new AretinoAppleJuice();
 
-            CandlehearthCoffee CCsmall = new CandlehearthCoffee();
-            CCsmall.Size = Enums.Size.Small;
-            CandlehearthCoffee CCmedium = new CandlehearthCoffee();
-            CCmedium.Size = Enums.Size.Medium;
-            CandlehearthCoffee CClarge = new CandlehearthCoffee();
-            CClarge.Size = Enums.Size.Large;
+                AAJ.Size = size;
+                drinks.Append(AAJ);
+            }
 
-            MarkarthMilk MMsmall = new MarkarthMilk();
-            MMsmall.Size = Enums.Size.Small;
-            MarkarthMilk MMmedium = new MarkarthMilk();
-            MMmedium.Size = Enums.Size.Medium;
-            MarkarthMilk MMlarge = new MarkarthMilk();
-            MMlarge.Size = Enums.Size.Large;
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                CandlehearthCoffee CC = new CandlehearthCoffee();
 
-            WarriorWater WWsmall = new WarriorWater();
-            WWsmall.Size = Enums.Size.Small;
-            WarriorWater WWmedium = new WarriorWater();
-            WWmedium.Size = Enums.Size.Medium;
-            WarriorWater WWlarge = new WarriorWater();
-            WWlarge.Size = Enums.Size.Large;
+                CC.Size = size;
+                drinks.Append(CC);
+            }
 
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                MarkarthMilk MM = new MarkarthMilk();
+
+                MM.Size = size;
+                drinks.Append(MM);
+            }
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                WarriorWater WW = new WarriorWater();
+
+                WW.Size = size;
+                drinks.Append(WW);
+            }
 
             //Now for the Sailor Soda
             foreach (Size sizes in Enum.GetValues(typeof(Size)))
@@ -163,7 +169,7 @@ namespace BleakwindBuffet.Data.Menu
         /// a method which returns all available items on the menu
         /// </summary>
         /// <returns></returns>
-        static IEnumerable<IOrderItem> FullMenu()
+        public static IEnumerable<IOrderItem> FullMenu()
         {
             IEnumerable<IOrderItem> fullMenu = Enumerable.Empty<IOrderItem>();
 
