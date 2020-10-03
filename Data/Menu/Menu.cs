@@ -48,27 +48,20 @@ namespace BleakwindBuffet.Data.Menu
         {
             IEnumerable<IOrderItem> sides = Enumerable.Empty<IOrderItem>();
 
-            DragonbornWaffleFries DWFsmall = new DragonbornWaffleFries();
-            DWFsmall.Size = Enums.Size.Small;
-            DragonbornWaffleFries DWFmedium = new DragonbornWaffleFries();
-            DWFmedium.Size = Enums.Size.Medium;
-            DragonbornWaffleFries DWFlarge = new DragonbornWaffleFries();
-            DWFlarge.Size = Enums.Size.Large;
-
-
-            FriedMiraak FMsmall = new FriedMiraak();
-            FMsmall.Size = Enums.Size.Small;
-            FriedMiraak FMmedium = new FriedMiraak();
-            FMmedium.Size = Enums.Size.Medium;
-            FriedMiraak FMlarge = new FriedMiraak();
-            FMlarge.Size = Enums.Size.Large;
 
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
-                MadOtarGrits MOG = new MadOtarGrits();
-                MOG.Size = size;
-                sides.Append(MOG);
+                FriedMiraak FM = new FriedMiraak();
+                FM.Size = size;
+                sides.Append(FM);
+            }
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                DragonbornWaffleFries DWF = new DragonbornWaffleFries();
+                DWF.Size = size;
+                sides.Append(DWF);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
@@ -84,14 +77,6 @@ namespace BleakwindBuffet.Data.Menu
                 VS.Size = size;
                 sides.Append(VS);
             }
-
-            sides.Append(DWFsmall);
-            sides.Append(DWFmedium);
-            sides.Append(DWFlarge);
-
-            sides.Append(FMsmall);
-            sides.Append(FMmedium);
-            sides.Append(FMlarge);
 
             
 
