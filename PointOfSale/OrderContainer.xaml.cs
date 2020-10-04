@@ -17,11 +17,14 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for OrderContainer.xaml
     /// </summary>
-    public partial class OrderContainer : Window
+    public partial class OrderContainer : UserControl
     {
         public OrderContainer()
         {
             InitializeComponent();
+
+            
+
         }
     }
 }

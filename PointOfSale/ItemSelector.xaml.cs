@@ -17,7 +17,7 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for ItemSelector.xaml
     /// </summary>
-    public partial class ItemSelector : Window
+    public partial class ItemSelector : UserControl
     {
         public ItemSelector()
         {

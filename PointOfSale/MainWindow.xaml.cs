@@ -24,7 +24,7 @@ namespace PointOfSale
         {
             InitializeComponent();
 
-
+            OrderContainer orderContainer = new OrderContainer();
 
 
 

@@ -17,7 +17,7 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for ItemCustomization.xaml
     /// </summary>
-    public partial class ItemCustomization : Window
+    public partial class ItemCustomization : UserControl
     {
         public ItemCustomization()
         {
