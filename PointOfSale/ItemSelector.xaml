@@ -25,54 +25,54 @@
         <Grid Grid.ColumnSpan="3">
 
             <!-- First set of buttons -->
-            <Button Name="BriarheartBurgerButton" Margin="7" Grid.Column="0" Grid.Row="1">
+            <Button Name="BriarheartBurgerButton" Margin="7" Grid.Column="0" Grid.Row="1" Click="BriarheartBurgerButton_Click">
                 <TextBlock Text="Briarheart Burger"/>
             </Button>
-            <Button Name="DoubleDraugrButton" Margin="7" Grid.Column="0" Grid.Row="2">
+            <Button Name="DoubleDraugrButton" Margin="7" Grid.Column="0" Grid.Row="2" Click="DoubleDraugrButton_Click">
                 <TextBlock Text="Double Draugr"/>
             </Button>
-            <Button Name="ThalmoreTripleButton" Margin="7" Grid.Column="0" Grid.Row="3">
+            <Button Name="ThalmoreTripleButton" Margin="7" Grid.Column="0" Grid.Row="3" Click="ThalmoreTripleButton_Click">
                 <TextBlock Text="Thalmore Triple"/>
             </Button>
-            <Button Name="SmokehouseSkeletonButton" Margin="7" Grid.Column="0" Grid.Row="4">
+            <Button Name="SmokehouseSkeletonButton" Margin="7" Grid.Column="0" Grid.Row="4" Click="SmokehouseSkeletonButton_Click">
                 <TextBlock Text="Smokehouse Skeleton"/>
             </Button>
-            <Button Name="GardenOrcOmletteButton" Margin="7" Grid.Column="0" Grid.Row="5">
+            <Button Name="GardenOrcOmletteButton" Margin="7" Grid.Column="0" Grid.Row="5" Click="GardenOrcOmletteButton_Click">
                 <TextBlock Text="Garden Orc Omlette"/>
             </Button>
-            <Button Name="ThugsTBoneButton" Margin="7" Grid.Column="0" Grid.Row="6">
+            <Button Name="ThugsTBoneButton" Margin="7" Grid.Column="0" Grid.Row="6" Click="ThugsTBoneButton_Click">
                 <TextBlock Text="Thugs T-Bone"/>
             </Button>
 
 
             <!-- Second set of buttons -->
-            <Button Name="SailorSodaButton" Margin="7" Grid.Column="1" Grid.Row="1">
+            <Button Name="SailorSodaButton" Margin="7" Grid.Column="1" Grid.Row="1" Click="SailorSodaButton_Click">
                 <TextBlock Text="Sailor Soda"/>
             </Button>
-            <Button Name="MarkarthMilkButton" Margin="7" Grid.Column="1" Grid.Row="2">
+            <Button Name="MarkarthMilkButton" Margin="7" Grid.Column="1" Grid.Row="2" Click="MarkarthMilkButton_Click">
                 <TextBlock Text="Markarth Milk"/>
             </Button>
-            <Button Name="AretinoAppleJuiceButton" Margin="7" Grid.Column="1" Grid.Row="3">
+            <Button Name="AretinoAppleJuiceButton" Margin="7" Grid.Column="1" Grid.Row="3" Click="AretinoAppleJuiceButton_Click">
                 <TextBlock Text="Aretino Apple Juice"/>
             </Button>
-            <Button Name="CandlehearthCoffeeButton" Margin="7" Grid.Column="1" Grid.Row="4">
+            <Button Name="CandlehearthCoffeeButton" Margin="7" Grid.Column="1" Grid.Row="4" Click="CandlehearthCoffeeButton_Click">
                 <TextBlock Text="Candlehearth Coffee"/>
             </Button>
-            <Button Name="WarriorWaterButton" Margin="7" Grid.Column="1" Grid.Row="5">
+            <Button Name="WarriorWaterButton" Margin="7" Grid.Column="1" Grid.Row="5" Click="WarriorWaterButton_Click">
                 <TextBlock Text="Warrior Water"/>
             </Button>
 
             <!-- Third set of buttons -->
-            <Button Name="VokunSaladButton" Margin="7" Grid.Column="2" Grid.Row="1">
+            <Button Name="VokunSaladButton" Margin="7" Grid.Column="2" Grid.Row="1" Click="VokunSaladButton_Click">
                 <TextBlock Text="Vokun Salad"/>
             </Button>
-            <Button Name="FriedMiraakButton" Margin="7" Grid.Column="2" Grid.Row="2">
+            <Button Name="FriedMiraakButton" Margin="7" Grid.Column="2" Grid.Row="2" Click="FriedMiraakButton_Click">
                 <TextBlock Text="Fried Miraak"/>
             </Button>
-            <Button Name="MadOtarGritsButton" Margin="7" Grid.Column="2" Grid.Row="3">
+            <Button Name="MadOtarGritsButton" Margin="7" Grid.Column="2" Grid.Row="3" Click="MadOtarGritsButton_Click">
                 <TextBlock Text="Mad Otar Grits"/>
             </Button>
-            <Button Name="DragonbornWaffleFriesButton" Margin="7" Grid.Column="2" Grid.Row="4">
+            <Button Name="DragonbornWaffleFriesButton" Margin="7" Grid.Column="2" Grid.Row="4" Click="DragonbornWaffleFriesButton_Click">
                 <TextBlock Text="Dragonborn Waffle Fries"/>
             </Button>
 

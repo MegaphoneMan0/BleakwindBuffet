@@ -74,6 +74,7 @@
     <Compile Include="ItemCustomization.xaml.cs">
       <DependentUpon>ItemCustomization.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ItemSelected.cs" />
     <Compile Include="ItemSelector.xaml.cs">
       <DependentUpon>ItemSelector.xaml</DependentUpon>
     </Compile>

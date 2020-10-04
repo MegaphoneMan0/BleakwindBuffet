@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PointOfSale;
 
 namespace PointOfSale
 {
@@ -23,5 +24,96 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
-    }
-}
+
+        public ItemSelected buttonPressed = ItemSelected.Default;
+
+        private void BriarheartBurgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.BB;
+        }
+
+        private void DoubleDraugrButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.DD;
+
+        }
+
+        private void ThalmoreTripleButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.TT;
+
+        }
+
+        private void SmokehouseSkeletonButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.SS;
+
+        }
+
+        private void GardenOrcOmletteButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.GOO;
+
+        }
+
+        private void ThugsTBoneButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.TTB;
+
+        }
+
+        private void SailorSodaButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.SaSo;
+
+        }
+
+        private void MarkarthMilkButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.MM;
+
+        }
+
+        private void AretinoAppleJuiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.AAJ;
+
+        }
+
+        private void CandlehearthCoffeeButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.CC;
+
+        }
+
+        private void WarriorWaterButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.WW;
+
+        }
+
+        private void VokunSaladButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.VS;
+
+        }
+
+        private void FriedMiraakButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.FM;
+
+        }
+
+        private void MadOtarGritsButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.MOG;
+
+        }
+
+        private void DragonbornWaffleFriesButton_Click(object sender, RoutedEventArgs e)
+        {
+            buttonPressed = ItemSelected.DWF;
+
+        }
+    }//class
+}//namespace
