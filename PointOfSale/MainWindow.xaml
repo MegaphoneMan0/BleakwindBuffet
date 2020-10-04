@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointOfSale"
         mc:Ignorable="d"
-        Title="Bleakwind Buffet Point of Sale" Height="489" Width="800">
+        Title="Bleakwind Buffet Point of Sale" Height="530" Width="850">
 
-    <local:ItemSelector>
+    <local:OrderContainer Margin="10,10,2,6">
         
-    </local:ItemSelector>
+    </local:OrderContainer>
 
 </Window>

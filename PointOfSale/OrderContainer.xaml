@@ -21,12 +21,18 @@
 
 
 
+        <local:ItemSelector Grid.ColumnSpan="3">
+
+        </local:ItemSelector>
+
+
+
         <!-- for the order output -->
 
-        <Grid Grid.Column="3" Height="411" Width="185">
+        <Grid Grid.Column="3" Width="185" Margin="8,10,7,10">
 
             <Border  BorderBrush="Black" BorderThickness="2"/>
-            <StackPanel>
+            <StackPanel Margin="0,0,10,0">
 
             </StackPanel>
 
