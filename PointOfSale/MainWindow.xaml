@@ -112,6 +112,9 @@
         <Grid Grid.Column="3" Height="411" Width="185">
             
             <Border  BorderBrush="Black" BorderThickness="2"/>
+            <TextBlock Name="OrderDisplay" Margin="8" >
+                
+            </TextBlock>
 
         </Grid>
 
