@@ -22,6 +22,21 @@ namespace PointOfSale
         public ItemCustomization()
         {
             InitializeComponent();
+
+            List<string> checkBoxContent = new List<string>();
+
+            checkBoxContent.Add("asdf");
+            checkBoxContent.Add("sdfg");
+            checkBoxContent.Add("dfgh");
+
+            DisplayCheckbox.Content = checkBoxContent;
+
+
         }
-    }
+
+
+
+
+
+    }//class
 }

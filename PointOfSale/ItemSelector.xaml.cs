@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data.Interfaces;
 using PointOfSale;
 
 namespace PointOfSale
@@ -20,16 +22,37 @@ namespace PointOfSale
     /// </summary>
     public partial class ItemSelector : UserControl
     {
+        
+       
+
+
         public ItemSelector()
         {
             InitializeComponent();
+
+            
+        }
+    
+        
+        public ItemSelected buttonPressed = ItemSelected.Default;
+        
+        
+        public void fillContent(IOrderItem foo)
+        {
+
+            foreach (var prop in foo.GetType().GetProperties())
+            {
+                
+            }
+
         }
 
-        public ItemSelected buttonPressed = ItemSelected.Default;
 
         private void BriarheartBurgerButton_Click(object sender, RoutedEventArgs e)
         {
             buttonPressed = ItemSelected.BB;
+            BriarheartBurger briarheartBurger = new BriarheartBurger();
+            fillContent(briarheartBurger);
         }
 
         private void DoubleDraugrButton_Click(object sender, RoutedEventArgs e)
@@ -115,5 +138,7 @@ namespace PointOfSale
             buttonPressed = ItemSelected.DWF;
 
         }
+
+
     }//class
 }//namespace
