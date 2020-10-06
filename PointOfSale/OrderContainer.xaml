@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
 
         
-        <local:ItemSelector Grid.ColumnSpan="3" Loaded="ItemSelector_Loaded">
+        <local:ItemSelector Grid.ColumnSpan="3">
 
         </local:ItemSelector>
 

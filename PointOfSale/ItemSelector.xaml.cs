@@ -42,7 +42,11 @@ namespace PointOfSale
 
             foreach (var prop in foo.GetType().GetProperties())
             {
-                
+                //look at prop type
+                //path will be the name of the prop for data binding
+                //props in controls are "dependancy properties"
+            
+            
             }
 
         }
