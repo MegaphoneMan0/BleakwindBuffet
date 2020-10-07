@@ -31,8 +31,8 @@
             <Button Name="DoubleDraugrButton" Margin="7" Grid.Column="0" Grid.Row="2" Click="DoubleDraugrButton_Click">
                 <TextBlock Text="Double Draugr"/>
             </Button>
-            <Button Name="ThalmoreTripleButton" Margin="7" Grid.Column="0" Grid.Row="3" Click="ThalmoreTripleButton_Click">
-                <TextBlock Text="Thalmore Triple"/>
+            <Button Name="ThalmorTripleButton" Margin="7" Grid.Column="0" Grid.Row="3" Click="ThalmorTripleButton_Click">
+                <TextBlock Text="Thalmor Triple"/>
             </Button>
             <Button Name="SmokehouseSkeletonButton" Margin="7" Grid.Column="0" Grid.Row="4" Click="SmokehouseSkeletonButton_Click">
                 <TextBlock Text="Smokehouse Skeleton"/>

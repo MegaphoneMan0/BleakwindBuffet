@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,24 +20,47 @@ namespace PointOfSale
     /// </summary>
     public partial class ItemCustomization : UserControl
     {
+        BindingList<string> customOptions;
+
         public ItemCustomization()
         {
             InitializeComponent();
 
-            List<string> checkBoxContent = new List<string>();
 
-            checkBoxContent.Add("asdf");
-            checkBoxContent.Add("sdfg");
-            checkBoxContent.Add("dfgh");
+        }
 
-            DisplayCheckbox.Content = checkBoxContent;
-
+        public ItemCustomization(BindingList<string> vs)
+        {
+            InitializeComponent();
+            customOptions = vs;
 
         }
 
 
+        private void Done_Click(object sender, RoutedEventArgs e)
+        {
+            //get all of the custom ingredients in a binding list
+            Array selectedItems = Array.Empty<string>();
+
+            DisplayBox.SelectedItems.CopyTo(selectedItems,0);
+
+            BindingList<string> selectedItemsList = new BindingList<string>();
+
+            foreach(string s in selectedItems)
+            {
+                selectedItemsList.Add(s);
+            }
 
 
+            //now we have to figure out how to give this to the order container.... huh
 
+            
+
+
+            //this closes the window
+
+            Window.GetWindow(this).Close();
+
+        }
     }//class
 }

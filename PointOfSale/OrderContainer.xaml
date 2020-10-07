@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
 
         
-        <local:ItemSelector Grid.ColumnSpan="3">
+        <local:ItemSelector Grid.ColumnSpan="3" >
 
         </local:ItemSelector>
 
@@ -31,8 +31,8 @@
         <Grid Grid.Column="3" Width="185" Margin="8,10,7,10">
 
             <Border  BorderBrush="Black" BorderThickness="2"/>
-            <StackPanel Margin="0,0,10,0">
-
+            <StackPanel Margin="0,0,10,0" Name="userOrderContainer">
+                <ListBox Name="userOrder"/>
             </StackPanel>
 
         </Grid>
