@@ -14,9 +14,11 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: MarkarthMilk
      * Purpose: To track Markarth Milk
      */
-    public class MarkarthMilk : Drink
+    public class MarkarthMilk : Drink, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
 
         //Special Instructions
 

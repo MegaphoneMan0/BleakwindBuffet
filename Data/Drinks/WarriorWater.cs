@@ -13,8 +13,12 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: WarriorWater.cs
      * Purpose: To track Warrior Water
      */
-    public class WarriorWater : Drink
+    public class WarriorWater : Drink, INotifyPropertyChanged
     {
+
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
+
         //special instructions
         /// <summary>
         /// The special instuctions for Warrior Water

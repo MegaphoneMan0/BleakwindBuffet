@@ -13,8 +13,11 @@ namespace BleakwindBuffet.Data.Sides
      * Class name: VokunSalad.cs
      * Purpose: To track Vokun Salad
      */
-    public class VokunSalad:Side
+    public class VokunSalad:Side, INotifyPropertyChanged
     {
+
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
         //special instructions
 
         /// <summary>

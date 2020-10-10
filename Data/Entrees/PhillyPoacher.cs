@@ -12,9 +12,11 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: PhillyPoacher.cs
      * Purpose: To track Philly Poacher: Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll.
      */
-    public class PhillyPoacher : Entree
+    public class PhillyPoacher : Entree, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
 
         //special instructions
         /// <summary>

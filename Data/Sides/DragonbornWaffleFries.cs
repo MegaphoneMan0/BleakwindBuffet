@@ -13,9 +13,11 @@ namespace BleakwindBuffet.Data.Sides
      * Class name: DragonbornWaffleFries.cs
      * Purpose: To track Dragonborn Waffle Fries
      */
-    public class DragonbornWaffleFries : Side
+    public class DragonbornWaffleFries : Side, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
 
         //special instructions
 

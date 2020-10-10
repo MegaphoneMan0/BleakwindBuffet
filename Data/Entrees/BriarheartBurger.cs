@@ -13,9 +13,11 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: BriarheartBurger
      * Purpose: To track briarheart burgers: Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.
      */
-    public class BriarheartBurger : Entree
+    public class BriarheartBurger : Entree, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
         //specialInstructions
 
         /// <summary>

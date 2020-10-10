@@ -45,7 +45,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Candlehearth Coffee
         /// </summary>
-        public override Size Size { get { return size; } set { size = value; } }
+        public override Size Size { get { return size; } set { size = value; PropertyChanged(this, new PropertyChangedEventArgs("Ice")); } }
         private Size size = Size.Small;
 
         /// <summary>

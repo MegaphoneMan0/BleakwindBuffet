@@ -13,9 +13,11 @@ namespace BleakwindBuffet.Data.Sides
      * Class name: MadOtarGrits.cs
      * Purpose: To track Mad Otar Grits
      */
-    public class MadOtarGrits:Side
+    public class MadOtarGrits:Side, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
         //special instructions
 
 

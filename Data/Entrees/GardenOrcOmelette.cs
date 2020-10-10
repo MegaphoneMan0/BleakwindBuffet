@@ -12,9 +12,11 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: GardenOrcOmelette.cs
      * Purpose: To track Garden Orc Omelette: Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese.
      */
-    public class GardenOrcOmelette: Entree
+    public class GardenOrcOmelette: Entree, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// The special instuctions for the Garden Orc Omelette

@@ -12,9 +12,11 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: ThugsTBone.cs
      * Purpose: To track Thugs T-Bones: Juicy T-Bone not much else to say.
      */
-    public class ThugsTBone:Entree
+    public class ThugsTBone:Entree, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
         //special instuctions
         /// <summary>
         /// The special instuctions for Thugs T-Bone

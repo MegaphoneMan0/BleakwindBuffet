@@ -12,9 +12,11 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: SmokehouseSkeleton.cs
      * Purpose: To track Smokehouse Skeleton: Put some meat on those bones with a small stack of pancakes. Includes sausage links, eggs, and hash browns on the side. Topped with the syrup of your choice.
      */
-    public class SmokehouseSkeleton :Entree
+    public class SmokehouseSkeleton :Entree, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
 
         //special instructions
 

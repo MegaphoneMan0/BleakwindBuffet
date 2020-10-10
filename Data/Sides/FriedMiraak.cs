@@ -13,9 +13,11 @@ namespace BleakwindBuffet.Data.Sides
      * Class name: FriedMiraak.cs
      * Purpose: To track Fried Miraak
      */
-    public class FriedMiraak :Side
+    public class FriedMiraak :Side, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
         //special instructions
 
 

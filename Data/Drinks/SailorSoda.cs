@@ -14,9 +14,11 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: SailorSoda
      * Purpose: To track sailor soda
      */
-    public class SailorSoda : Drink
+    public class SailorSoda : Drink, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// The special instuctions for Sailor Soda
         /// </summary>

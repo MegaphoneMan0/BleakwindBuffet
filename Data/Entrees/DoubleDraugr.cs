@@ -13,9 +13,11 @@ namespace BleakwindBuffet.Data.Entrees
      * Class name: DoubleDraugr
      * Purpose: To track Double Draugr burgers: Double patty burger on a brioche bun. Comes with ketchup, mustard, pickle, cheese, tomato, lettuce, and mayo.
      */
-    public class DoubleDraugr : Entree
+    public class DoubleDraugr : Entree, INotifyPropertyChanged
     {
 
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
         //specialInstructions
 
         /// <summary>
