@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Abstract;
+using System.ComponentModel;
 
 
 
@@ -13,8 +14,11 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: CandlehearthCoffee.cs
      * Purpose: To track Candlehearth Coffee
      */
-    public class CandlehearthCoffee : Drink
+    public class CandlehearthCoffee : Drink , INotifyPropertyChanged
     {
+
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
 
         //Special Instructions
 

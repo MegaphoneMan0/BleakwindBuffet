@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Abstract;
-
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
@@ -15,8 +15,12 @@ namespace BleakwindBuffet.Data.Drinks
      * Class name: AretinoAppleJuice.cs
      * Purpose: To track Aretino Apple Juice
      */
-    public class AretinoAppleJuice : Drink 
+    public class AretinoAppleJuice : Drink , INotifyPropertyChanged
     {
+
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
+        
 
         /// <summary>
         /// The special instuctions for Aretino Apple Juice
@@ -41,7 +45,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// If there is or is not Ice in the Aretino Apple Juice
         /// </summary>
-        public bool Ice { get { return ice; } set { ice = value; } }
+        public bool Ice { get { return ice; } set { ice = value; PropertyChanged (this, new PropertyChangedEventArgs("Ice")); } }
         private bool ice = false;
 
         /// <summary>
