@@ -97,42 +97,42 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is cheese on the order
         /// </summary>
-        public bool Cheese { get { return cheese; } set { cheese = value; } }
+        public bool Cheese { get { return cheese; } set { cheese = value; PropertyChanged(this, new PropertyChangedEventArgs("Cheese")); } }
         private bool cheese = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is tomato on the order
         /// </summary>
-        public bool Tomato { get { return tomato; } set { tomato = value; } }
+        public bool Tomato { get { return tomato; } set { tomato = value; PropertyChanged(this, new PropertyChangedEventArgs("Tomato")); } }
         private bool tomato = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is Lettuce on the order
         /// </summary>
-        public bool Lettuce { get { return lettuce; } set { lettuce = value; } }
+        public bool Lettuce { get { return lettuce; } set { lettuce = value; PropertyChanged(this, new PropertyChangedEventArgs("Lettuce")); } }
         private bool lettuce = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is Mayo on the order
         /// </summary>
-        public bool Mayo { get { return mayo; } set { mayo = value; } }
+        public bool Mayo { get { return mayo; } set { mayo = value; PropertyChanged(this, new PropertyChangedEventArgs("Mayo")); } }
         private bool mayo = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is bacon on the order
         /// </summary>
-        public bool Bacon { get { return bacon; } set { bacon = value; } } 
+        public bool Bacon { get { return bacon; } set { bacon = value; PropertyChanged(this, new PropertyChangedEventArgs("Bacon")); } } 
         private bool bacon = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is egg on the order
         /// </summary>
-        public bool Egg { get { return egg; } set { egg = value; } } 
+        public bool Egg { get { return egg; } set { egg = value; PropertyChanged(this, new PropertyChangedEventArgs("Egg")); } } 
         private bool egg = true;
 
 

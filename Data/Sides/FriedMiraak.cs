@@ -47,7 +47,8 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// The size of the Fried Miraak
         /// </summary>
-        public override Size Size { get; set; } 
+        public override Size Size { get { return size; } set { size = value; PropertyChanged(this, new PropertyChangedEventArgs("Size")); } }
+
         private Size size = Size.Small;
 
 
