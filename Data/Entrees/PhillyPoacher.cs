@@ -64,21 +64,21 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is sirloin on the order
         /// </summary>
-        public bool Sirloin { get { return sirloin; } set { sirloin = value; } }
+        public bool Sirloin { get { return sirloin; } set { sirloin = value; PropertyChanged(this, new PropertyChangedEventArgs("Sirloin")); } }
         private bool sirloin = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is onion on the order
         /// </summary>
-        public bool Onion { get { return onion; } set { onion = value; } } 
+        public bool Onion { get { return onion; } set { onion = value; PropertyChanged(this, new PropertyChangedEventArgs("Onion")); } } 
         private bool onion = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is roll on the order
         /// </summary>
-        public bool Roll { get { return roll; } set { roll = value; } } 
+        public bool Roll { get { return roll; } set { roll = value; PropertyChanged(this, new PropertyChangedEventArgs("Roll")); } } 
         private bool roll = true;
 
 

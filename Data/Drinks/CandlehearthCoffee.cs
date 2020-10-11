@@ -64,7 +64,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Indicates if there is or is not room for cream in the coffee
         /// </summary>
-        public bool RoomForCream { get { return roomForCream; } set { roomForCream = value; PropertyChanged(this, new PropertyChangedEventArgs("RoomForCream")); } } //cream
+        public bool RoomForCream { get { return roomForCream; } set { roomForCream = value; PropertyChanged(this, new PropertyChangedEventArgs("Room For Cream")); } } //cream
         private bool roomForCream = false;
 
         /// <summary>
