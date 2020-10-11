@@ -60,34 +60,34 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is a bun on the order
         /// </summary>
-        public bool Bun { get { return bun; } set { bun = value; } } //bun
+        public bool Bun { get { return bun; } set { bun = value; PropertyChanged(this, new PropertyChangedEventArgs("Bun")); } } //bun
         private bool bun = true;
 
         /// <summary>
         /// Boolean which indicates if there is ketchup on the order
         /// </summary>
-        public bool Ketchup { get { return ketchup; } set { ketchup = value; } } 
+        public bool Ketchup { get { return ketchup; } set { ketchup = value; PropertyChanged(this, new PropertyChangedEventArgs("Ketchup")); } } 
         private bool ketchup = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is mustard on the order
         /// </summary>
-        public bool Mustard { get { return mustard; } set { mustard = value; } } //mustard
+        public bool Mustard { get { return mustard; } set { mustard = value; PropertyChanged(this, new PropertyChangedEventArgs("Mustard")); } } //mustard
         private bool mustard = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is pickle on the order
         /// </summary>
-        public bool Pickle { get { return pickle; } set { pickle = value; } } 
+        public bool Pickle { get { return pickle; } set { pickle = value; PropertyChanged(this, new PropertyChangedEventArgs("Pickle")); } } 
         private bool pickle = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is cheese on the order
         /// </summary>
-        public bool Cheese { get { return cheese; } set { cheese = value; } } 
+        public bool Cheese { get { return cheese; } set { cheese = value; PropertyChanged(this, new PropertyChangedEventArgs("Cheese")); } } 
         private bool cheese = true;
 
 

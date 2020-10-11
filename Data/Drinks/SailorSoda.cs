@@ -53,20 +53,20 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The flavor of the Sailor Soda
         /// </summary>
-        public SodaFlavor Flavor { get { return flavor; } set { flavor = value; } }
+        public SodaFlavor Flavor { get { return flavor; } set { flavor = value; PropertyChanged(this, new PropertyChangedEventArgs("Flavor")); } }
 
 
         /// <summary>
         /// The size of the Sailor Soda
         /// </summary>
-        public override Size Size { get { return size; } set { size = value; } } //Size
+        public override Size Size { get { return size; } set { size = value; PropertyChanged(this, new PropertyChangedEventArgs("Size")); } } //Size
         private Size size = Size.Small;
 
 
         /// <summary>
         /// If there is or is not Ice in the Sailor Soda
         /// </summary>
-        public bool Ice { get { return ice; } set { ice = value; } } //setter
+        public bool Ice { get { return ice; } set { ice = value; PropertyChanged(this, new PropertyChangedEventArgs("Ice")); } } //setter
         private bool ice = true;
 
 

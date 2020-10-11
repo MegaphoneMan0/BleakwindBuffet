@@ -52,13 +52,13 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Markarth Milk
         /// </summary>
-        public override Size Size { get { return size; } set { size = value; } }
+        public override Size Size { get { return size; } set { size = value; PropertyChanged(this, new PropertyChangedEventArgs("Size")); } }
         private Size size = Size.Small;
 
         /// <summary>
         /// If there is or is not Ice in the Markarth Milk
         /// </summary>
-        public bool Ice { get { return ice; } set { ice = value; } }
+        public bool Ice { get { return ice; } set { ice = value; PropertyChanged(this, new PropertyChangedEventArgs("Ice")); } }
         private bool ice = false;
 
         /// <summary>
