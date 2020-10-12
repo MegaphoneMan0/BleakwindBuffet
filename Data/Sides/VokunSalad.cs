@@ -39,7 +39,14 @@ namespace BleakwindBuffet.Data.Sides
 
 
 
-
+        // This method is called by the Set accessor of each property.
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
 
 
 
@@ -55,7 +62,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// The size of the Vokun Salad
         /// </summary>
-        public override Size Size { get { return size; } set { size = value; PropertyChanged(this, new PropertyChangedEventArgs("Size")); } }
+        public override Size Size { get { return size; } set { size = value; NotifyPropertyChanged("Size"); } }
         private Size size = Size.Small;
 
 

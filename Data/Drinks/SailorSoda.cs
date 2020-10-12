@@ -53,20 +53,20 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The flavor of the Sailor Soda
         /// </summary>
-        public SodaFlavor Flavor { get { return flavor; } set { flavor = value; PropertyChanged(this, new PropertyChangedEventArgs("Flavor")); } }
+        public SodaFlavor Flavor { get { return flavor; } set { flavor = value; NotifyPropertyChanged("Flavor"); } }
 
 
         /// <summary>
         /// The size of the Sailor Soda
         /// </summary>
-        public override Size Size { get { return size; } set { size = value; PropertyChanged(this, new PropertyChangedEventArgs("Size")); } } //Size
+        public override Size Size { get { return size; } set { size = value; NotifyPropertyChanged("Size"); } } //Size
         private Size size = Size.Small;
 
 
         /// <summary>
         /// If there is or is not Ice in the Sailor Soda
         /// </summary>
-        public bool Ice { get { return ice; } set { ice = value; PropertyChanged(this, new PropertyChangedEventArgs("Ice")); } } //setter
+        public bool Ice { get { return ice; } set { ice = value; NotifyPropertyChanged("Ice"); } } //setter
         private bool ice = true;
 
 
@@ -181,7 +181,14 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
 
-
+        // This method is called by the Set accessor of each property.
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
 
 
 

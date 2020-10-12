@@ -27,6 +27,8 @@ namespace PointOfSale
 
         List<CheckBox> checkArray;
 
+        BindingList<String> selectedItemsList;
+
         public ItemCustomization()
         {
             InitializeComponent();
@@ -41,6 +43,7 @@ namespace PointOfSale
             itemToCustomize = menuItem;
             DataContext = menuItem;
             fullOrder = theList;
+            selectedItemsList = new BindingList<string>();
 
             fillContent(itemToCustomize);
 
@@ -135,6 +138,10 @@ namespace PointOfSale
             propCheckbox.Content = name;
             checkArray.Add(propCheckbox);
 
+            //also adding to the binding list
+
+            
+
         }
 
 
@@ -146,17 +153,19 @@ namespace PointOfSale
         private void Done_Click(object sender, RoutedEventArgs e)
         {
             //get all of the custom ingredients in a binding list
-            Array selectedItems = Array.Empty<string>();
+            //Array selectedItems = Array.Empty<string>();
 
-            DisplayBox.SelectedItems.CopyTo(selectedItems,0);
+            //DisplayBox.SelectedItems.CopyTo(selectedItems,0);
 
-            BindingList<string> selectedItemsList = new BindingList<string>();
+            //selectedItemsList = new BindingList<string>();
 
-            foreach(string s in selectedItems)
+            foreach(CheckBox cb in checkArray)
             {
-                selectedItemsList.Add(s);
 
-
+                if ((bool)cb.IsChecked)
+                {
+                    selectedItemsList.Add(cb.Content.ToString());
+                }
 
             }
 
