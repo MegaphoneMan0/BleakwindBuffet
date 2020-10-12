@@ -10,6 +10,7 @@ using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Interfaces;
 using BleakwindBuffet.Data.Abstract;
+using System.ComponentModel;
 
 
 
@@ -170,6 +171,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
             Assert.IsAssignableFrom<IOrderItem>(BB);
             Assert.IsAssignableFrom<Entree>(BB);
+
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(BB);
+
 
         }
 

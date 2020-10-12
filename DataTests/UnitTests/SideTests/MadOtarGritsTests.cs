@@ -10,6 +10,7 @@ using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Interfaces;
 using BleakwindBuffet.Data.Abstract;
+using System.ComponentModel;
 
 
 
@@ -101,6 +102,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 
             Assert.IsAssignableFrom<IOrderItem>(MOG);
             Assert.IsAssignableFrom<Side>(MOG);
+
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(MOG);
+
 
         }
 

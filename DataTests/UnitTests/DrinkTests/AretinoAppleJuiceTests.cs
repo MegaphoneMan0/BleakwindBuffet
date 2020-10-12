@@ -13,7 +13,7 @@ using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Interfaces;
 using BleakwindBuffet.Data.Abstract;
-
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -143,9 +143,29 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
             Assert.IsAssignableFrom<IOrderItem>(AAJ);
             Assert.IsAssignableFrom<Drink>(AAJ);
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(AAJ);
 
 
         }
+
+
+
+
+
+        [Fact]
+        public void DidThePropertyChange()
+        {
+
+            AretinoAppleJuice AAJ = new AretinoAppleJuice();
+
+        }
+
+
+
+
+
+
+
 
 
 

@@ -18,6 +18,7 @@ namespace BleakwindBuffet.Data.Drinks
     public class AretinoAppleJuice : Drink , INotifyPropertyChanged
     {
 
+
         // This BindingSource binds the list to the DataGridView control.
         public event PropertyChangedEventHandler PropertyChanged;
         

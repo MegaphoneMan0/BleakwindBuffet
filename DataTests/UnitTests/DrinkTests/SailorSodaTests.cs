@@ -15,6 +15,7 @@ using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Interfaces;
 using BleakwindBuffet.Data.Abstract;
+using System.ComponentModel;
 
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
@@ -203,6 +204,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
             Assert.IsAssignableFrom<IOrderItem>(SS);
             Assert.IsAssignableFrom<Drink>(SS);
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(SS);
+
+
 
         }
 
