@@ -158,6 +158,20 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
             AretinoAppleJuice AAJ = new AretinoAppleJuice();
 
+            //Assert.Raises<PropertyChangedEventArgs>(
+                
+                //listener => AAJ += listener,
+                //listener => AAJ -= listener,
+                //() =>
+                //{
+                //    AAJ.Size = Size.Large;
+                //}
+                
+                
+                
+                //)
+
+
         }
 
 
