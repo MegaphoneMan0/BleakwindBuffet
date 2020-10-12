@@ -110,7 +110,51 @@ namespace BleakwindBuffet.Data.Drinks
         }//calories
 
 
+        /// <summary>
+        /// This method sets all of the ingredients to default false, then adds ingredients back based on the provided list
+        /// </summary>
+        /// <param name="vs"></param>
+        public override void setIngredients(BindingList<string> vs)
+        {
+            Ice = false;
+            Size = Size.Small;
+            Decaf = false;
+            RoomForCream = false;
 
+
+
+            foreach (string s in vs)
+            {
+
+                if (s.Equals("Ice"))
+                {
+                    Ice = true;
+                }
+                if (s.Equals("Small"))
+                {
+                    Size = Size.Small;
+                }
+                if (s.Equals("Medium"))
+                {
+                    Size = Size.Medium;
+                }
+                if (s.Equals("Large"))
+                {
+                    Size = Size.Large;
+                }
+                if (s.Equals("Decaf"))
+                {
+                    Decaf = true;
+                }
+                if(s.Equals("Room For Cream"))
+                {
+                    RoomForCream = true;
+                }
+
+
+            }
+
+        }
 
         //toString
 

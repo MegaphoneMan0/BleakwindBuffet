@@ -60,36 +60,47 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is a bun on the order
         /// </summary>
-        public bool Bun { get { return bun; } set { bun = value; PropertyChanged(this, new PropertyChangedEventArgs("Bun")); } } //bun
+        public bool Bun { get { return bun; } set { bun = value; NotifyPropertyChanged("Bun"); } } //bun
         private bool bun = true;
 
         /// <summary>
         /// Boolean which indicates if there is ketchup on the order
         /// </summary>
-        public bool Ketchup { get { return ketchup; } set { ketchup = value; PropertyChanged(this, new PropertyChangedEventArgs("Ketchup")); } } 
+        public bool Ketchup { get { return ketchup; } set { ketchup = value; NotifyPropertyChanged("Ketchup"); } } 
         private bool ketchup = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is mustard on the order
         /// </summary>
-        public bool Mustard { get { return mustard; } set { mustard = value; PropertyChanged(this, new PropertyChangedEventArgs("Mustard")); } } //mustard
+        public bool Mustard { get { return mustard; } set { mustard = value; NotifyPropertyChanged("Mustard"); } } //mustard
         private bool mustard = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is pickle on the order
         /// </summary>
-        public bool Pickle { get { return pickle; } set { pickle = value; PropertyChanged(this, new PropertyChangedEventArgs("Pickle")); } } 
+        public bool Pickle { get { return pickle; } set { pickle = value; NotifyPropertyChanged("Pickle"); } } 
         private bool pickle = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is cheese on the order
         /// </summary>
-        public bool Cheese { get { return cheese; } set { cheese = value; PropertyChanged(this, new PropertyChangedEventArgs("Cheese")); } } 
+        public bool Cheese { get { return cheese; } set { cheese = value; NotifyPropertyChanged("Cheese"); } } 
         private bool cheese = true;
 
+
+        // This method is called by the Set accessor of each property.
+        // The CallerMemberName attribute that is applied to the optional propertyName
+        // parameter causes the property name of the caller to be substituted as an argument.
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
 
         /// <summary>
         /// This method sets all of the ingredients to default false, then adds ingredients back based on the provided list

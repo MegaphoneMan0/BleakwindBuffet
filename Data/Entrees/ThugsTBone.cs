@@ -56,13 +56,21 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories { get;  } = 982;
 
-       
-        
 
 
 
 
 
+
+        /// <summary>
+        /// This method sets all of the ingredients to default false, then adds ingredients back based on the provided list
+        /// </summary>
+        /// <param name="vs"></param>
+        public override void setIngredients(BindingList<string> vs)
+        {
+            
+
+        }
 
 
 

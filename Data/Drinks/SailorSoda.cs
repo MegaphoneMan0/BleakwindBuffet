@@ -115,7 +115,70 @@ namespace BleakwindBuffet.Data.Drinks
 
 
 
+        /// <summary>
+        /// This method sets all of the ingredients to default false, then adds ingredients back based on the provided list
+        /// </summary>
+        /// <param name="vs"></param>
+        public override void setIngredients(BindingList<string> vs)
+        {
+            Ice = false;
+            Size = Size.Small;
+            Flavor = SodaFlavor.Blackberry;
 
+
+
+            foreach (string s in vs)
+            {
+
+                if (s.Equals("Ice"))
+                {
+                    Ice = true;
+                }
+
+
+                if (s.Equals("Small"))
+                {
+                    Size = Size.Small;
+                }
+                if (s.Equals("Medium"))
+                {
+                    Size = Size.Medium;
+                }
+                if (s.Equals("Large"))
+                {
+                    Size = Size.Large;
+                }
+
+
+                if (s.Equals("Blackberry"))
+                {
+                    Flavor = SodaFlavor.Blackberry;
+                }
+                if (s.Equals("Cherry"))
+                {
+                    Flavor = SodaFlavor.Cherry;
+                }
+                if (s.Equals("Grapefruit"))
+                {
+                    Flavor = SodaFlavor.Grapefruit;
+                }
+                if (s.Equals("Lemon"))
+                {
+                    Flavor = SodaFlavor.Lemon;
+                }
+                if (s.Equals("Peach"))
+                {
+                    Flavor = SodaFlavor.Peach;
+                }
+                if (s.Equals("Watermelon"))
+                {
+                    Flavor = SodaFlavor.Watermelon;
+                }
+
+
+            }
+
+        }
 
 
 

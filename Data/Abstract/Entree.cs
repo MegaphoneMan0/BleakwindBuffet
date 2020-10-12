@@ -23,7 +23,10 @@ namespace BleakwindBuffet.Data.Abstract
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
 
-
+        /// <summary>
+        /// This method sets all of the ingredients to default false, then adds ingredients back based on the provided list
+        /// </summary>
+        /// <param name="vs"></param>
         public abstract void setIngredients(BindingList<string> vs);
 
 
