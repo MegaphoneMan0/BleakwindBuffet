@@ -14,11 +14,14 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        
+        
 
         <!-- Grid for the buttons -->
 
@@ -37,7 +40,7 @@
             <Button Name="SmokehouseSkeletonButton" Margin="7" Grid.Column="0" Grid.Row="4" Click="SmokehouseSkeletonButton_Click">
                 <TextBlock Text="Smokehouse Skeleton"/>
             </Button>
-            <Button Name="GardenOrcOmletteButton" Margin="7" Grid.Column="0" Grid.Row="5" Click="GardenOrcOmletteButton_Click">
+            <Button Name="GardenOrcOmeletteButton" Margin="7" Grid.Column="0" Grid.Row="5" Click="GardenOrcOmeletteButton_Click">
                 <TextBlock Text="Garden Orc Omlette"/>
             </Button>
             <Button Name="ThugsTBoneButton" Margin="7" Grid.Column="0" Grid.Row="6" Click="ThugsTBoneButton_Click">
@@ -105,7 +108,14 @@
 
         </Grid>
 
+        <Grid Grid.Column="3" Width="185" Margin="8,10,7,10">
 
+            <Border  BorderBrush="Black" BorderThickness="2"/>
+            <StackPanel Margin="0,0,10,0" Name="userOrderContainer">
+                <ListBox Name="userOrder"/>
+            </StackPanel>
+
+        </Grid>
 
     </Grid>
 </UserControl>

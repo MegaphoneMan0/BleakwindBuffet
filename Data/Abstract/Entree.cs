@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Interfaces;
+using System.ComponentModel;
+
 
 
 namespace BleakwindBuffet.Data.Abstract
@@ -20,6 +22,9 @@ namespace BleakwindBuffet.Data.Abstract
         /// SpecialInstructions for entrees
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+
+        public abstract void setIngredients(BindingList<string> vs);
 
 
 

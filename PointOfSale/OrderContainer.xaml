@@ -6,37 +6,12 @@
         xmlns:local="clr-namespace:PointOfSale"
         mc:Ignorable="d"
         Height="480" Width="800">
-    <!-- Overall grid for the 2 sections -->
 
-    <Grid >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
+    
         
         <local:ItemSelector Grid.ColumnSpan="3" >
 
         </local:ItemSelector>
 
-
-
-        <!-- for the order output -->
-
-        <Grid Grid.Column="3" Width="185" Margin="8,10,7,10">
-
-            <Border  BorderBrush="Black" BorderThickness="2"/>
-            <StackPanel Margin="0,0,10,0" Name="userOrderContainer">
-                <ListBox Name="userOrder"/>
-            </StackPanel>
-
-        </Grid>
-
-
-    </Grid>
+   
 </UserControl>

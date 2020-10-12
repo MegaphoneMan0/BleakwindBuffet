@@ -91,6 +91,47 @@ namespace BleakwindBuffet.Data.Entrees
         private bool cheese = true;
 
 
+        /// <summary>
+        /// This method sets all of the ingredients to default false, then adds ingredients back based on the provided list
+        /// </summary>
+        /// <param name="vs"></param>
+        public override void setIngredients(BindingList<string> vs)
+        {
+            Bun = false;
+            Ketchup = false;
+            Mustard = false;
+            Pickle = false;
+            Cheese = false;
+
+
+
+            foreach (string s in vs)
+            {
+
+                if (s.Equals( "Bun"))
+                {
+                    Bun = true;
+                }
+                if (s.Equals("Ketchup"))
+                {
+                    Ketchup = true;
+                }
+                if (s.Equals("Mustard"))
+                {
+                    Mustard = true;
+                }
+                if (s.Equals("Pickle"))
+                {
+                    Pickle = true;
+                }
+                if (s.Equals("Cheese"))
+                {
+                    Cheese = true;
+                }
+
+            }
+
+        }
 
 
 

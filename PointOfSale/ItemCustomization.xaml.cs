@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BleakwindBuffet.Data.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -20,7 +21,11 @@ namespace PointOfSale
     /// </summary>
     public partial class ItemCustomization : UserControl
     {
-        BindingList<string> customOptions;
+        BindingList<IOrderItem> fullOrder;
+
+        IOrderItem itemToCustomize;
+
+        List<CheckBox> checkArray;
 
         public ItemCustomization()
         {
@@ -28,13 +33,114 @@ namespace PointOfSale
 
 
         }
+        
 
-        public ItemCustomization(BindingList<string> vs)
+        public ItemCustomization(IOrderItem menuItem , BindingList<IOrderItem> theList)
         {
             InitializeComponent();
-            customOptions = vs;
+            itemToCustomize = menuItem;
+            DataContext = menuItem;
+            fullOrder = theList;
+
+            fillContent(itemToCustomize);
+
+            
+        }
+
+
+
+
+        public void fillContent(IOrderItem foo)
+        {
+
+            List<string> propList = new List<string>();
+            checkArray = new List<CheckBox>();
+
+            foreach (var prop in foo.GetType().GetProperties())
+            {
+                //look at prop type
+                //path will be the name of the prop for data binding
+                //props in controls are "dependancy properties"
+                string propString = prop.Name;
+
+                //filters out unwanted properties
+                if (propString.Equals("SpecialInstructions")) { }
+
+                else if (propString.Equals("Price")) { }
+
+
+                else if (propString.Equals("Calories")) { }
+
+                else if (propString.Equals("Size"))
+                {
+                    addToCheckArrayNormal("Small", prop);
+                    addToCheckArrayNormal("Medium", prop);
+                    addToCheckArrayNormal("Large", prop);
+
+                }
+
+                else if (propString.Equals("Flavor"))
+                {
+
+                    addToCheckArrayNormal("Blackberry", prop);
+
+
+                    addToCheckArrayNormal("Cherry", prop);
+
+
+                    addToCheckArrayNormal("Grapefruit", prop);
+
+
+                    addToCheckArrayNormal("Lemon", prop);
+
+
+                    addToCheckArrayNormal("Peach", prop);
+
+
+                    addToCheckArrayNormal("Watermelon",prop);
+
+                    
+
+                }
+
+                else
+                {
+
+                    addToCheckArrayNormal(propString, prop);
+
+                }
+
+            }//foreach
+
+            DisplayBox.ItemsSource = checkArray;
+
+            
+            
+
+
+        }//fillcontent
+        
+
+
+        private void addToCheckArrayNormal(string name, object prop)
+        {
+            CheckBox propCheckbox = new CheckBox();
+
+
+            var myBinding = new Binding(name)
+            {
+                Source = prop
+            };
+
+            propCheckbox.Content = name;
+            checkArray.Add(propCheckbox);
 
         }
+
+
+
+
+
 
 
         private void Done_Click(object sender, RoutedEventArgs e)
@@ -49,10 +155,15 @@ namespace PointOfSale
             foreach(string s in selectedItems)
             {
                 selectedItemsList.Add(s);
+
+
+
             }
 
 
-            //now we have to figure out how to give this to the order container.... huh
+            itemToCustomize.setIngredients(selectedItemsList);
+
+            fullOrder.Add(itemToCustomize);
 
             
 

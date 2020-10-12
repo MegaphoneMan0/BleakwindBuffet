@@ -21,13 +21,14 @@ namespace PointOfSale
     public partial class OrderContainer : UserControl
     {
 
-        BindingList<string> vs;
+        public BindingList<string> vs;
 
         public OrderContainer()
         {
             InitializeComponent();
 
-            userOrder.ItemsSource = vs;
+
+            
 
 
         }
