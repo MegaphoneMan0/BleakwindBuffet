@@ -71,28 +71,28 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is sausage on the order
         /// </summary>
-        public bool SausageLink { get { return sausageLink; } set { sausageLink = value; PropertyChanged(this, new PropertyChangedEventArgs("Sausage Link")); } } 
+        public bool SausageLink { get { return sausageLink; } set { sausageLink = value; NotifyPropertyChanged("Sausage Link"); } } 
         private bool sausageLink = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is egg on the order
         /// </summary>
-        public bool Egg { get { return egg; } set { egg = value; PropertyChanged(this, new PropertyChangedEventArgs("Egg")); } } 
+        public bool Egg { get { return egg; } set { egg = value; NotifyPropertyChanged("Egg"); } } 
         private bool egg = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is hash browns on the order
         /// </summary>
-        public bool HashBrowns { get { return hashBrowns; } set { hashBrowns = value; PropertyChanged(this, new PropertyChangedEventArgs("Hash Browns")); } }
+        public bool HashBrowns { get { return hashBrowns; } set { hashBrowns = value; NotifyPropertyChanged("Hash Browns"); } }
         private bool hashBrowns = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is pancake on the order
         /// </summary>
-        public bool Pancake { get { return pancake; } set { pancake = value; PropertyChanged(this, new PropertyChangedEventArgs("Pancake")); } } 
+        public bool Pancake { get { return pancake; } set { pancake = value; NotifyPropertyChanged("Pancake"); } } 
         private bool pancake = true;
 
 

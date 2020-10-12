@@ -53,26 +53,26 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// The size of the Candlehearth Coffee
         /// </summary>
-        public override Size Size { get { return size; } set { size = value; PropertyChanged(this, new PropertyChangedEventArgs("Size")); } }
+        public override Size Size { get { return size; } set { size = value; NotifyPropertyChanged("Size"); } }
         private Size size = Size.Small;
 
         /// <summary>
         /// If the coffee is or is not decaf
         /// </summary>
-        public bool Decaf { get { return decaf; } set { decaf = value; PropertyChanged(this, new PropertyChangedEventArgs("Decaf")); } } //decaf
+        public bool Decaf { get { return decaf; } set { decaf = value; NotifyPropertyChanged("Decaf"); } } //decaf
         private bool decaf = false;
 
         /// <summary>
         /// If there is or is not Ice in the Candlehearth Coffee
         /// </summary>
-        public bool Ice { get { return ice; } set { ice = value; PropertyChanged(this, new PropertyChangedEventArgs("Ice")); } }
+        public bool Ice { get { return ice; } set { ice = value; NotifyPropertyChanged("Ice"); } }
         private bool ice = false;
 
 
         /// <summary>
         /// Indicates if there is or is not room for cream in the coffee
         /// </summary>
-        public bool RoomForCream { get { return roomForCream; } set { roomForCream = value; PropertyChanged(this, new PropertyChangedEventArgs("Room For Cream")); } } //cream
+        public bool RoomForCream { get { return roomForCream; } set { roomForCream = value; NotifyPropertyChanged("Room For Cream"); } } //cream
         private bool roomForCream = false;
 
         /// <summary>

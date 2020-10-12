@@ -76,70 +76,70 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Boolean which indicates if there is a bun on the order
         /// </summary>
-        public bool Bun { get { return bun; } set { bun = value; PropertyChanged(this, new PropertyChangedEventArgs("Bun")); } } //bun
+        public bool Bun { get { return bun; } set { bun = value; NotifyPropertyChanged("Bun"); } } //bun
         private bool bun = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is ketchup on the order
         /// </summary>
-        public bool Ketchup { get { return ketchup; } set { ketchup = value; PropertyChanged(this, new PropertyChangedEventArgs("Ketchup")); } }
+        public bool Ketchup { get { return ketchup; } set { ketchup = value; NotifyPropertyChanged("Ketchup"); } }
         private bool ketchup = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is mustard on the order
         /// </summary>
-        public bool Mustard { get { return mustard; } set { mustard = value; PropertyChanged(this, new PropertyChangedEventArgs("Mustard")); } } //mustard
+        public bool Mustard { get { return mustard; } set { mustard = value; NotifyPropertyChanged("Mustard"); } } //mustard
         private bool mustard = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is pickle on the order
         /// </summary>
-        public bool Pickle { get { return pickle; } set { pickle = value; PropertyChanged(this, new PropertyChangedEventArgs("Pickle")); } }
+        public bool Pickle { get { return pickle; } set { pickle = value; NotifyPropertyChanged("Pickle"); } }
         private bool pickle = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is cheese on the order
         /// </summary>
-        public bool Cheese { get { return cheese; } set { cheese = value; PropertyChanged(this, new PropertyChangedEventArgs("Cheese")); } }
+        public bool Cheese { get { return cheese; } set { cheese = value; NotifyPropertyChanged("Cheese"); } }
         private bool cheese = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is tomato on the order
         /// </summary>
-        public bool Tomato { get { return tomato; } set { tomato = value; PropertyChanged(this, new PropertyChangedEventArgs("Tomato")); } }
+        public bool Tomato { get { return tomato; } set { tomato = value; NotifyPropertyChanged("Tomato"); } }
         private bool tomato = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is Lettuce on the order
         /// </summary>
-        public bool Lettuce { get { return lettuce; } set { lettuce = value; PropertyChanged(this, new PropertyChangedEventArgs("Lettuce")); } }
+        public bool Lettuce { get { return lettuce; } set { lettuce = value; NotifyPropertyChanged("Lettuce"); } }
         private bool lettuce = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is Mayo on the order
         /// </summary>
-        public bool Mayo { get { return mayo; } set { mayo = value; PropertyChanged(this, new PropertyChangedEventArgs("Mayo")); } }
+        public bool Mayo { get { return mayo; } set { mayo = value; NotifyPropertyChanged("Mayo"); } }
         private bool mayo = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is bacon on the order
         /// </summary>
-        public bool Bacon { get { return bacon; } set { bacon = value; PropertyChanged(this, new PropertyChangedEventArgs("Bacon")); } } 
+        public bool Bacon { get { return bacon; } set { bacon = value; NotifyPropertyChanged("Bacon"); } } 
         private bool bacon = true;
 
 
         /// <summary>
         /// Boolean which indicates if there is egg on the order
         /// </summary>
-        public bool Egg { get { return egg; } set { egg = value; PropertyChanged(this, new PropertyChangedEventArgs("Egg")); } } 
+        public bool Egg { get { return egg; } set { egg = value; NotifyPropertyChanged("Egg"); } } 
         private bool egg = true;
 
 
