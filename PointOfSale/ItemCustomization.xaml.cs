@@ -172,6 +172,7 @@ namespace PointOfSale
 
             itemToCustomize.setIngredients(selectedItemsList);
 
+
             fullOrder.Add(itemToCustomize);
 
             
