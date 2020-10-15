@@ -11,28 +11,135 @@ namespace BleakwindBuffet.Data
 {
 
 
-    class Combo : IOrderItem
+    class Combo : IOrderItem , INotifyPropertyChanged
     {
 
-        private IOrderItem Entree;
-        private IOrderItem Drink;
-        private IOrderItem Side;
+
+        /// <summary>
+        /// the entree portion of the combo
+        /// </summary>
+        public IOrderItem Entree { get { return Entree; } 
+            set 
+            { 
+                Entree = value; 
+                NotifyPropertyChanged("Entree"); 
+                NotifyPropertyChanged("Price");
+                NotifyPropertyChanged("Calories");
+                NotifyPropertyChanged("SpecialInstructions");
+
+            }
+
+        }
 
 
-        public double Price { get; }
+        /// <summary>
+        /// the drink portion of the combo
+        /// </summary>
+        public IOrderItem Drink { get { return Drink; }
+            set
+            {
+                Drink = value;
+                NotifyPropertyChanged("Drink");
+                NotifyPropertyChanged("Price");
+                NotifyPropertyChanged("Calories");
+                NotifyPropertyChanged("SpecialInstructions");
 
-        public uint Calories { get; }
+            }
 
+        }
+
+
+        /// <summary>
+        /// the side portion of the combo
+        /// </summary>
+        public IOrderItem Side { get { return Side; }
+            set
+            {
+                Side = value;
+                NotifyPropertyChanged("Side");
+                NotifyPropertyChanged("Price");
+                NotifyPropertyChanged("Calories");
+                NotifyPropertyChanged("SpecialInstructions");
+
+            }
+
+        }
+
+
+        // This BindingSource binds the list to the DataGridView control.
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// changes the event handler when a property is changed
+        /// </summary>
+        /// <param name="propertyName"></param>
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+
+        /// <summary>
+        /// The price of the combo
+        /// </summary>
+        public double Price
+        {
+            get { return Price; }
+            set
+            {
+                Price = value;
+                
+
+            }
+
+        }
+
+        /// <summary>
+        /// The calories of the combo
+        /// </summary>
+        public uint Calories
+        {
+            get { return Calories; }
+            set
+            {
+                Calories = value;
+
+
+            }
+
+        }
+
+        /// <summary>
+        /// set the ingredients of the combo (will go unused most likely in this class)
+        /// </summary>
+        /// <param name="vs"></param>
         public void setIngredients(BindingList<string> vs) 
         { 
             
         }
 
+        /// <summary>
+        /// Retruns the special instructions of all pieces of the combo
+        /// </summary>
         public List<string> SpecialInstructions { get; }
 
 
 
+        Combo()
+        {
 
+        }
+
+
+        /// <summary>
+        /// Constructor for the combo which takes all of the components of a combo as IOrderItems
+        /// </summary>
+        /// <param name="Entree"></param>
+        /// <param name="Drink"></param>
+        /// <param name="Side"></param>
         Combo(IOrderItem Entree,IOrderItem Drink, IOrderItem Side)
         {
             this.Entree = Entree;
@@ -61,6 +168,7 @@ namespace BleakwindBuffet.Data
             realSI.Concat(ssp);
 
 
+            SpecialInstructions = realSI;
 
         }
 
@@ -68,7 +176,7 @@ namespace BleakwindBuffet.Data
 
 
 
-
+        /*
 
         public List<string> SpecialInstructionsCombine() 
         {
@@ -81,7 +189,7 @@ namespace BleakwindBuffet.Data
             return vs;        
         }
 
-
+        */
 
 
     }
