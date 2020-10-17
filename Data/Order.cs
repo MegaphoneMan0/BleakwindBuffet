@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace BleakwindBuffet.Data
 {
-    class Order : ICollection<IOrderItem>,INotifyCollectionChanged,INotifyPropertyChanged
+    class Order : INotifyPropertyChanged //, INotifyCollectionChanged , ICollection<IOrderItem>
     {
 
         List<IOrderItem> itemsInTheOrder;
@@ -27,7 +27,7 @@ namespace BleakwindBuffet.Data
 
 
 
-
+        /*
 
         /// <summary>
         /// Unsure what this does
@@ -38,12 +38,12 @@ namespace BleakwindBuffet.Data
             //IEnumerator enumerator = itemsInTheOrder;
 
             //I have no idea how this is supposed to work, so I'm just going to comment it out
-            /*
+            
             foreach (IOrderItem orderItem in itemsInTheOrder)
             {
                 enumerator. = orderItem;
             }
-            */
+            
 
             //return enumerator;
 
@@ -67,7 +67,7 @@ namespace BleakwindBuffet.Data
 
 
         }
-
+        */
 
         /// <summary>
         /// if the order is or is not read only
