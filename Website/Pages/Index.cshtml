@@ -63,17 +63,29 @@
 <div class="row">
     <div class="col-md-3">
         <h2>Entrees</h2>
-        <ul>
-            <li>Briarheart Burger</li>
-            <li>Double Draugr</li>
-            <li>Thalmor Triple</li>
-            <li>Smokehouse Skeleton</li>
-            <li>Garden Orc Omelette</li>
-            <li>Philly Poacher</li>
-            <li>Thugs T-Bone</li>
+        
+        @{ 
+            IEnumerable < BleakwindBuffet.Data.Interfaces.IOrderItem > orderItems = BleakwindBuffet.Data.Menu.Menu.Entrees();
+        }
+        
+        <u1>
+            @foreach (var item in orderItems)
+            {
 
-        </ul>
+                <li>item.ToString()</li>
+
+
+                <li>item.Price</li>
+
+                <li>item.Calories</li>
+
+
+            }
+
+        </u1>
+        
     </div>
+
     <div class="col-md-3">
         <h2>Drinks</h2>
         <ul>
@@ -84,6 +96,7 @@
             <li>Warrior Water</li>
         </ul>
     </div>
+
     <div class="col-md-3">
         <h2>Sides</h2>
         <ul>
