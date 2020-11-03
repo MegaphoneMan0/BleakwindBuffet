@@ -8,6 +8,8 @@ using System.Text;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Interfaces;
 using System.Security.Cryptography;
+using BleakwindBuffet.Data.Abstract;
+using System.Net;
 
 namespace BleakwindBuffet.Data.Menu
 {
@@ -17,7 +19,7 @@ namespace BleakwindBuffet.Data.Menu
         /// a method which returns all possible entrees
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<IOrderItem> Entrees()
+        public static List<Entree> Entrees()
         {
             BriarheartBurger BB = new BriarheartBurger();
             DoubleDraugr DD = new DoubleDraugr();
@@ -27,15 +29,15 @@ namespace BleakwindBuffet.Data.Menu
             ThalmorTriple TT = new ThalmorTriple();
             ThugsTBone TTB = new ThugsTBone();
 
-            IEnumerable<IOrderItem> entrees = Enumerable.Empty<IOrderItem>();
+            List<Entree> entrees = new List<Entree>();
 
-            entrees.Append(BB);
-            entrees.Append(DD);
-            entrees.Append(GOO);
-            entrees.Append(PP);
-            entrees.Append(SS);
-            entrees.Append(TT);
-            entrees.Append(TTB);
+            entrees.Add(BB);
+            entrees.Add(DD);
+            entrees.Add(GOO);
+            entrees.Add(PP);
+            entrees.Add(SS);
+            entrees.Add(TT);
+            entrees.Add(TTB);
 
             return entrees;
 
@@ -44,38 +46,37 @@ namespace BleakwindBuffet.Data.Menu
         /// a method which returns all possible sides
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<IOrderItem> Sides()
+        public static List<Side> Sides()
         {
-            IEnumerable<IOrderItem> sides = Enumerable.Empty<IOrderItem>();
-
+            List<Side> sides = new List<Side>();
 
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
                 FriedMiraak FM = new FriedMiraak();
                 FM.Size = size;
-                sides.Append(FM);
+                sides.Add(FM);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
                 DragonbornWaffleFries DWF = new DragonbornWaffleFries();
                 DWF.Size = size;
-                sides.Append(DWF);
+                sides.Add(DWF);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
                 MadOtarGrits MOG = new MadOtarGrits();
                 MOG.Size = size;
-                sides.Append(MOG);
+                sides.Add(MOG);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
                 VokunSalad VS = new VokunSalad();
                 VS.Size = size;
-                sides.Append(VS);
+                sides.Add(VS);
             }
 
             
@@ -89,16 +90,16 @@ namespace BleakwindBuffet.Data.Menu
         /// A method which returns a list of all possible drinks
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<IOrderItem> Drinks()
+        public static List<Drink> Drinks()
         {
-            IEnumerable<IOrderItem> drinks = Enumerable.Empty<IOrderItem>();
+            List<Drink> drinks = new List<Drink>();
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
                 AretinoAppleJuice AAJ = new AretinoAppleJuice();
 
                 AAJ.Size = size;
-                drinks.Append(AAJ);
+                drinks.Add(AAJ);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
@@ -106,7 +107,7 @@ namespace BleakwindBuffet.Data.Menu
                 CandlehearthCoffee CC = new CandlehearthCoffee();
 
                 CC.Size = size;
-                drinks.Append(CC);
+                drinks.Add(CC);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
@@ -114,7 +115,7 @@ namespace BleakwindBuffet.Data.Menu
                 MarkarthMilk MM = new MarkarthMilk();
 
                 MM.Size = size;
-                drinks.Append(MM);
+                drinks.Add(MM);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
@@ -122,7 +123,7 @@ namespace BleakwindBuffet.Data.Menu
                 WarriorWater WW = new WarriorWater();
 
                 WW.Size = size;
-                drinks.Append(WW);
+                drinks.Add(WW);
             }
 
             //Now for the Sailor Soda
@@ -135,7 +136,7 @@ namespace BleakwindBuffet.Data.Menu
                     SS.Size = sizes;
                     SS.Flavor = sf;
 
-                    drinks.Append(SS);
+                    drinks.Add(SS);
 
                 }
             }
