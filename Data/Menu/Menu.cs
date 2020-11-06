@@ -197,26 +197,97 @@ namespace BleakwindBuffet.Data.Menu
 
 
 
-        public IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> orignalItems, string searchTerm)
+        //I think all of these work, but probably not
+
+        public IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> originalItems, string searchTerm)
         {
 
+            List<IOrderItem> filteredItems = new List<IOrderItem>();
 
+            if(searchTerm == null)
+            {
+                return originalItems;
+            }
+
+            foreach(IOrderItem item in originalItems)
+            {
+                if (item.ToString().Contains(searchTerm))
+                {
+                    filteredItems.Add(item);
+                }
+            }
+
+
+            return filteredItems;
 
         }
 
         public IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> originalItems, string category)
         {
 
+            List<IOrderItem> filteredItems = new List<IOrderItem>();
+
+            if (category == null)
+            {
+                return originalItems;
+            }
+
+
+            foreach(IOrderItem item in originalItems)
+            {
+                //no fuckin clue if this will work or not
+                if(item.GetType().BaseType.ToString() == category)
+                {
+                    filteredItems.Add(item);
+                }
+            }
+
+
+            return filteredItems;
+
         }
 
         public IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> originalItems, int min, int max)
         {
 
+            List<IOrderItem> filteredItems = new List<IOrderItem>();
+
+            foreach(IOrderItem item in originalItems)
+            {
+                if (item.Calories > min)
+                {
+                    if(item.Calories < max)
+                    {
+                        filteredItems.Add(item);
+                    }
+                }
+            }
+
+
+
+            return filteredItems;
+
+
         }
 
         public IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> originalItems, double min, double max)
         {
+            List<IOrderItem> filteredItems = new List<IOrderItem>();
 
+            foreach (IOrderItem item in originalItems)
+            {
+                if (item.Price > min)
+                {
+                    if (item.Price < max)
+                    {
+                        filteredItems.Add(item);
+                    }
+                }
+            }
+
+
+
+            return filteredItems;
         }
 
 
