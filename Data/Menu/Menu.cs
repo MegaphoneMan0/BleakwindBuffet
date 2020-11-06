@@ -197,9 +197,9 @@ namespace BleakwindBuffet.Data.Menu
 
 
 
-        //I think all of these work, but probably not
+        //I think all of these work, but probably not :P
 
-        public IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> originalItems, string searchTerm)
+        public static IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> originalItems, string searchTerm)
         {
 
             List<IOrderItem> filteredItems = new List<IOrderItem>();
@@ -222,7 +222,7 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
-        public IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> originalItems, string category)
+        public static IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> originalItems, string category)
         {
 
             List<IOrderItem> filteredItems = new List<IOrderItem>();
@@ -247,7 +247,7 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
-        public IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> originalItems, int min, int max)
+        public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> originalItems, int min, int max)
         {
 
             List<IOrderItem> filteredItems = new List<IOrderItem>();
@@ -270,7 +270,7 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
-        public IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> originalItems, double min, double max)
+        public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> originalItems, double min, double max)
         {
             List<IOrderItem> filteredItems = new List<IOrderItem>();
 

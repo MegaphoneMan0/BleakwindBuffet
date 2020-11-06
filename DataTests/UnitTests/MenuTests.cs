@@ -28,7 +28,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
         [Fact]
         public void shouldReturnAllEntrees()
         {
-            IEnumerable<IOrderItem> testList = Enumerable.Empty<IOrderItem>();
+            List<IOrderItem> testList = new List<IOrderItem>();
 
             BriarheartBurger BB = new BriarheartBurger();
             DoubleDraugr DD = new DoubleDraugr();
@@ -37,17 +37,17 @@ namespace BleakwindBuffet.DataTests.UnitTests
             SmokehouseSkeleton SS = new SmokehouseSkeleton();
             ThalmorTriple TT = new ThalmorTriple();
             ThugsTBone TTB = new ThugsTBone();
-            testList.Append(BB);
-            testList.Append(DD);
-            testList.Append(GOO);
-            testList.Append(PP);
-            testList.Append(SS);
-            testList.Append(TT);
-            testList.Append(TTB);
+            testList.Add(BB);
+            testList.Add(DD);
+            testList.Add(GOO);
+            testList.Add(PP);
+            testList.Add(SS);
+            testList.Add(TT);
+            testList.Add(TTB);
 
 
 
-            IEnumerable<IOrderItem> menuList = Menu.Entrees();
+            List<IOrderItem> menuList = Menu.Entrees();
 
             Assert.Equal(menuList,testList);
             
@@ -164,9 +164,6 @@ namespace BleakwindBuffet.DataTests.UnitTests
 
 
 
-
-
-
         [Fact]
         public void shouldReturnFullMenu()
         {
@@ -278,6 +275,37 @@ namespace BleakwindBuffet.DataTests.UnitTests
 
 
         }//fullMenu
+
+
+
+
+
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData("Aretino")]
+        [InlineData("Aretino Apple Juice")]
+        [InlineData("AretinoAppleJuice")]
+        public void searchShouldSearch(string searchTerm)
+        {
+
+            IEnumerable<IOrderItem> appleJuice = new List<IOrderItem>();
+            appleJuice.Append(new AretinoAppleJuice());
+
+            IEnumerable<IOrderItem> fullMenu = Menu.FullMenu();
+            
+
+
+            Assert.Equal(Menu.Search(fullMenu,searchTerm),appleJuice);
+
+        }
+
+
+
+
+
+
+
 
 
 
