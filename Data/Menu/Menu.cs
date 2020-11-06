@@ -15,11 +15,19 @@ namespace BleakwindBuffet.Data.Menu
 {
     public class Menu
     {
+
+
+
+
+
+
+
+
         /// <summary>
         /// a method which returns all possible entrees
         /// </summary>
         /// <returns></returns>
-        public static List<Entree> Entrees()
+        public static List<IOrderItem> Entrees()
         {
             BriarheartBurger BB = new BriarheartBurger();
             DoubleDraugr DD = new DoubleDraugr();
@@ -29,7 +37,7 @@ namespace BleakwindBuffet.Data.Menu
             ThalmorTriple TT = new ThalmorTriple();
             ThugsTBone TTB = new ThugsTBone();
 
-            List<Entree> entrees = new List<Entree>();
+            List<IOrderItem> entrees = new List<IOrderItem>();
 
             entrees.Add(BB);
             entrees.Add(DD);
@@ -46,9 +54,9 @@ namespace BleakwindBuffet.Data.Menu
         /// a method which returns all possible sides
         /// </summary>
         /// <returns></returns>
-        public static List<Side> Sides()
+        public static List<IOrderItem> Sides()
         {
-            List<Side> sides = new List<Side>();
+            List<IOrderItem> sides = new List<IOrderItem>();
 
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
@@ -90,9 +98,9 @@ namespace BleakwindBuffet.Data.Menu
         /// A method which returns a list of all possible drinks
         /// </summary>
         /// <returns></returns>
-        public static List<Drink> Drinks()
+        public static List<IOrderItem> Drinks()
         {
-            List<Drink> drinks = new List<Drink>();
+            List<IOrderItem> drinks = new List<IOrderItem>();
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
@@ -188,6 +196,28 @@ namespace BleakwindBuffet.Data.Menu
         }//fullmenu method
 
 
+
+        public IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> orignalItems, string searchTerm)
+        {
+
+
+
+        }
+
+        public IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> originalItems, string category)
+        {
+
+        }
+
+        public IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> originalItems, int min, int max)
+        {
+
+        }
+
+        public IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> originalItems, double min, double max)
+        {
+
+        }
 
 
 

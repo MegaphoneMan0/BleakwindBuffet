@@ -6,74 +6,217 @@
 
 
 
-<h1>Bleakwind Buffet</h1> 
+<h1>Bleakwind Buffet</h1>
 <p>We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim. Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure and earned your loot, so spend it with us!.</p>
-
-<style>
-    .itemTitle 
-    {
-        font-size: large;
-
-    }
-    .comboStyle
-    {
-
-        font-size: medium;
-
-
-    }
-</style>
 
 <div class="comboStyle">Any entree, side, and drink can be combined into a Combo with a $1 discount!!!</div>
 
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Entrees</h2>
-            
-            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Website.WebsiteMenu.entrees)
+
+<form id="website-menu">
+
+    <div id="search">
+        <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
+        <input type="submit" value="Search"/>
+
+    </div>
+
+    <div id="filters">
+
+        <h4>Order Type</h4>
+        @foreach (String orderItems in Website.WebsiteMenu.OrderItems)
+        {
+            <label>
+                <input type="checkbox" name="Order Items" value="@orderItems" checked="@Model.orderItems.Contains(orderItems)" />
+                @orderItems
+            </label>
+
+        }
+
+    </div>
+
+
+
+    @*Displays the menu-items*@
+    <div id="menu-items">
+
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Entrees</h2>
+
+                <ul class="entree-list">
+
+
+
+                @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Website.WebsiteMenu.entrees)
+                {
+                    <h4 class="list-header">@item.ToString()</h4>
+                    <li>Price: @item.Price</li>
+                    <li>Calories: @item.Calories</li>
+                }
+
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2>Drinks</h2>
+
+                <ul class="drink-list">
+
+                    @{
+                        int count = Website.WebsiteMenu.drinks.Count;
+                        List<BleakwindBuffet.Data.Interfaces.IOrderItem> items = Website.WebsiteMenu.drinks.ToList();
+                    }
+
+                    @for (int i = 0; i < (count / 2); i++)
+                    {
+                        <h4 class="list-header">@items[i].ToString()</h4>
+                        <li>Price: @items[i].Price</li>
+                        <li>Calories: @items[i].Calories</li>
+                    }
+                    
+
+
+
+
+                    @*
+                @foreach (BleakwindBuffet.Data.Abstract.Drink item in Website.WebsiteMenu.drinks)
+                {
+                    <h4>@item.ToString()</h4>
+
+
+                    <li>Price: @item.Price</li>
+                    <li>Calories: @item.Calories</li>
+
+                }
+                    *@
+                </ul>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <h2>-</h2>
+                <ul class="drink-list">
+
+
+
+
+                    @for (int i = (count / 2); i < count; i++)
+                    {
+                        <h4 class="list-header">@items[i].ToString()</h4>
+                        <li>Price: @items[i].Price</li>
+                        <li>Calories: @items[i].Calories</li>
+                    }
+
+
+
+
+                    @*
+            @foreach (BleakwindBuffet.Data.Abstract.Drink item in Website.WebsiteMenu.drinks)
+            {
+                <h4>@item.ToString()</h4>
+
+
+                <li>Price: @item.Price</li>
+                <li>Calories: @item.Calories</li>
+
+            }
+                    *@
+                </ul>
+
+            </div>
+
+            <div class="col-md-3">
+                <h2>Sides</h2>
+
+                <ul class="side-list">
+
+                    @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Website.WebsiteMenu.sides)
+                    {
+                        <h4 class="list-header">@item.ToString()</h4>
+
+
+                        <li>Price: @item.Price</li>
+                        <li>Calories: @item.Calories</li>
+
+                    }
+
+                </ul>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+@*
+
+    <div class="row">
+        <div class="col-md-3">
+            <h2>Entrees</h2>
+
+                @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Website.WebsiteMenu.entrees)
+                {
+                    <div class="itemTitle">@item.ToString()</div>
+
+                    <ul>
+                        <li>@item.Price</li>
+                        <li>@item.Calories</li>
+                    </ul>
+                }
+
+        </div>
+
+        <div class="col-md-3">
+            <h2>Drinks</h2>
+
+            @foreach (BleakwindBuffet.Data.Abstract.Drink item in Website.WebsiteMenu.drinks)
             {
                 <div class="itemTitle">@item.ToString()</div>
 
-                <ul>
-                    <li>@item.Price</li>
-                    <li>@item.Calories</li>
-                </ul>
+
+                <p>Price: @item.Price</p>
+                <p>Calories: @item.Calories</p>
+
             }
 
-</div>
-
-    <div class="col-md-3">
-        <h2>Drinks</h2>
-
-        @foreach (BleakwindBuffet.Data.Abstract.Drink item in Website.WebsiteMenu.drinks)
-        {
-            <div class="itemTitle">@item.ToString()</div>
-
-
-            <p>Price: @item.Price</p>
-            <p>Calories: @item.Calories</p>
-
-        }
 
 
 
+        </div>
 
-    </div>
+        <div class="col-md-3">
+            <h2>Sides</h2>
 
-    <div class="col-md-3">
-        <h2>Sides</h2>
+            @foreach (BleakwindBuffet.Data.Abstract.Side item in Website.WebsiteMenu.sides)
+            {
+                <div class="itemTitle">@item.ToString()</div>
 
-        @foreach (BleakwindBuffet.Data.Abstract.Side item in Website.WebsiteMenu.sides)
-        {
-            <div class="itemTitle">@item.ToString()</div>
+                <p>Price: @item.Price</p>
+                <p>Calories: @item.Calories</p>
 
-            <p>Price: @item.Price</p>
-            <p>Calories: @item.Calories</p>
-            
-        }
+            }
+
+        </div>
+
 
     </div>
-
-    
-</div>
+*@

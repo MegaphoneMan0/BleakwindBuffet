@@ -35,3 +35,88 @@ body {
         display: none;
     }
 }
+
+
+
+.title {
+    color: darkslategray;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+
+
+.itemTitle {
+    font-size: large;
+}
+
+.comboStyle {
+    font-size: medium;
+}
+
+
+h4.list-header {
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid gray;
+}
+
+ul.entree-list {
+    padding: 0;
+    margin: 0;
+   
+}
+
+    ul.entree-list > li {
+        list-style-type: none;
+        border-bottom: 1px solid lightgray;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 30px;
+    }
+
+ul.drink-list {
+    padding: 0;
+    margin: 0;
+    
+}
+
+    ul.drink-list > li {
+        list-style-type: none;
+        border-bottom: 1px solid lightgray;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 30px;
+    }
+
+
+ul.side-list {
+    padding: 0;
+    margin: 0;
+    
+}
+
+    ul.side-list > li {
+        list-style-type: none;
+        border-bottom: 1px solid lightgray;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 30px;
+    }
+
+
+
+
+
+
+
+

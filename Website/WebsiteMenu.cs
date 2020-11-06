@@ -12,9 +12,9 @@ namespace Website
     public class WebsiteMenu
     {
 
-        public static List<Entree> entrees;
-        public static List<Drink> drinks;
-        public static List<Side> sides;
+        public static List<IOrderItem> entrees;
+        public static List<IOrderItem> drinks;
+        public static List<IOrderItem> sides;
 
         static WebsiteMenu()
         {
@@ -24,6 +24,20 @@ namespace Website
             sides = Menu.Sides();
 
         }
+
+        /// <summary>
+        /// Gets the possible order Items
+        /// </summary>
+        public static string[] OrderItems
+        {
+            get => new string[]
+            {
+            "Entree",
+            "Drink",
+            "Side",
+            };
+        }
+
 
 
     }
