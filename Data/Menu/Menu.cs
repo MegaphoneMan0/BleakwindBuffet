@@ -163,31 +163,40 @@ namespace BleakwindBuffet.Data.Menu
         /// a method which returns all available items on the menu
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<IOrderItem> FullMenu()
+        public static List<IOrderItem> FullMenu()
         {
-            IEnumerable<IOrderItem> fullMenu = Enumerable.Empty<IOrderItem>();
+            List<IOrderItem> fullMenu = new List<IOrderItem>();
 
 
 
             //Entrees
 
-            IEnumerable<IOrderItem> entrees = Entrees();
+            List<IOrderItem> entrees = Entrees();
 
+            foreach(IOrderItem item in entrees)
+            {
+                fullMenu.Add(item);
+            }
 
             //sides
 
-            IEnumerable<IOrderItem> sides = Sides();
+            List<IOrderItem> sides = Sides();
 
-
+            foreach (IOrderItem item in sides)
+            {
+                fullMenu.Add(item);
+            }
             //drinks
 
-            IEnumerable<IOrderItem> drinks = Drinks();
+            List<IOrderItem> drinks = Drinks();
+            foreach (IOrderItem item in drinks)
+            {
+                fullMenu.Add(item);
+            }
 
 
 
-            fullMenu =  fullMenu.Concat(entrees);
-            fullMenu = fullMenu.Concat(sides);
-            fullMenu = fullMenu.Concat(drinks);
+            
 
 
 
@@ -222,7 +231,7 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
-        public static IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> originalItems, string category)
+        public static List<IOrderItem> FilterByCategory(List<IOrderItem> originalItems, string category)
         {
 
             List<IOrderItem> filteredItems = new List<IOrderItem>();

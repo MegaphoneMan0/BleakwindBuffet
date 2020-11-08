@@ -30,6 +30,188 @@ namespace BleakwindBuffet.DataTests.UnitTests
         {
             List<IOrderItem> testList = new List<IOrderItem>();
 
+            bool containsBB = false;
+            bool containsDD = false;
+            bool containsGOO = false;
+            bool containsPP = false;
+            bool containsSS = false;
+            bool containsTT = false;
+            bool containsTTB = false;
+
+            List<IOrderItem> menuList = Menu.Entrees();
+
+            foreach(IOrderItem item in menuList)
+            {
+
+                if(item is BriarheartBurger)
+                {
+                    containsBB = true;
+                }
+                if (item is DoubleDraugr)
+                {
+                    containsDD = true;
+                }
+                if (item is GardenOrcOmelette)
+                {
+                    containsGOO = true;
+                }
+                if (item is PhillyPoacher)
+                {
+                    containsPP = true;
+                }
+                if (item is SmokehouseSkeleton)
+                {
+                    containsSS = true;
+                }
+                if (item is ThalmorTriple)
+                {
+                    containsTT = true;
+                }
+                if (item is ThugsTBone)
+                {
+                    containsTTB = true;
+                }
+
+
+            }//foreach
+            Assert.True(containsBB);
+            Assert.True(containsDD);
+            Assert.True(containsGOO);
+            Assert.True(containsPP);
+            Assert.True(containsSS);
+            Assert.True(containsTT);
+            Assert.True(containsTTB);
+
+        }
+
+
+        [Fact]
+        public void shouldReturnAllSides()
+        {
+
+            List<IOrderItem> testList = new List<IOrderItem>();
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                FriedMiraak FM = new FriedMiraak();
+                FM.Size = size;
+                testList.Add(FM);
+            }
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                DragonbornWaffleFries DWF = new DragonbornWaffleFries();
+                DWF.Size = size;
+                testList.Add(DWF);
+            }
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                MadOtarGrits MOG = new MadOtarGrits();
+                MOG.Size = size;
+                testList.Add(MOG);
+            }
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                VokunSalad VS = new VokunSalad();
+                VS.Size = size;
+                testList.Add(VS);
+            }
+
+
+
+            List<IOrderItem> menuList = Menu.Sides();
+
+            int count = menuList.Count;
+
+            for(int i = 0; i<count; i++)
+            {
+                Assert.IsType(menuList[i].GetType(), testList[i]);
+            }
+
+
+        }
+
+
+        [Fact]
+        public void shouldReturnAllDrinks()
+        {
+
+            List<IOrderItem> testList = new List<IOrderItem>();
+
+
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                AretinoAppleJuice AAJ = new AretinoAppleJuice();
+
+                AAJ.Size = size;
+                testList.Add(AAJ);
+            }
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                CandlehearthCoffee CC = new CandlehearthCoffee();
+
+                CC.Size = size;
+                testList.Add(CC);
+            }
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                MarkarthMilk MM = new MarkarthMilk();
+
+                MM.Size = size;
+                testList.Add(MM);
+            }
+
+            foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                WarriorWater WW = new WarriorWater();
+
+                WW.Size = size;
+                testList.Add(WW);
+            }
+
+            //Now for the Sailor Soda
+            foreach (Size sizes in Enum.GetValues(typeof(Size)))
+            {
+                foreach (SodaFlavor sf in Enum.GetValues(typeof(SodaFlavor)))
+                {
+                    SailorSoda SS = new SailorSoda();
+
+                    SS.Size = sizes;
+                    SS.Flavor = sf;
+
+                    testList.Add(SS);
+
+                }
+            }
+
+            List<IOrderItem> menuList = Menu.Drinks();
+
+            int count = menuList.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                Assert.IsType(menuList[i].GetType(), testList[i]);
+            }
+
+
+
+
+
+        }//checking drinks
+
+
+
+        [Fact]
+        public void shouldReturnFullMenu()
+        {
+
+            List<IOrderItem> testList = new List<IOrderItem>();
+
             BriarheartBurger BB = new BriarheartBurger();
             DoubleDraugr DD = new DoubleDraugr();
             GardenOrcOmelette GOO = new GardenOrcOmelette();
@@ -46,172 +228,32 @@ namespace BleakwindBuffet.DataTests.UnitTests
             testList.Add(TTB);
 
 
-
-            List<IOrderItem> menuList = Menu.Entrees();
-
-            Assert.Equal(menuList,testList);
-            
-
-        }
-
-
-        [Fact]
-        public void shouldReturnAllSides()
-        {
-
-            IEnumerable<IOrderItem> testList = Enumerable.Empty<IOrderItem>();
-
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
                 FriedMiraak FM = new FriedMiraak();
                 FM.Size = size;
-                testList.Append(FM);
+                testList.Add(FM);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
                 DragonbornWaffleFries DWF = new DragonbornWaffleFries();
                 DWF.Size = size;
-                testList.Append(DWF);
+                testList.Add(DWF);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
                 MadOtarGrits MOG = new MadOtarGrits();
                 MOG.Size = size;
-                testList.Append(MOG);
+                testList.Add(MOG);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
             {
                 VokunSalad VS = new VokunSalad();
                 VS.Size = size;
-                testList.Append(VS);
-            }
-
-
-
-            IEnumerable<IOrderItem> menuList = Menu.Sides();
-            Assert.Equal(menuList, testList);
-
-
-        }
-
-
-        [Fact]
-        public void shouldReturnAllDrinks()
-        {
-
-            IEnumerable<IOrderItem> testList = Enumerable.Empty<IOrderItem>();
-
-
-
-            foreach (Size size in Enum.GetValues(typeof(Size)))
-            {
-                AretinoAppleJuice AAJ = new AretinoAppleJuice();
-
-                AAJ.Size = size;
-                testList.Append(AAJ);
-            }
-
-            foreach (Size size in Enum.GetValues(typeof(Size)))
-            {
-                CandlehearthCoffee CC = new CandlehearthCoffee();
-
-                CC.Size = size;
-                testList.Append(CC);
-            }
-
-            foreach (Size size in Enum.GetValues(typeof(Size)))
-            {
-                MarkarthMilk MM = new MarkarthMilk();
-
-                MM.Size = size;
-                testList.Append(MM);
-            }
-
-            foreach (Size size in Enum.GetValues(typeof(Size)))
-            {
-                WarriorWater WW = new WarriorWater();
-
-                WW.Size = size;
-                testList.Append(WW);
-            }
-
-            //Now for the Sailor Soda
-            foreach (Size sizes in Enum.GetValues(typeof(Size)))
-            {
-                foreach (SodaFlavor sf in Enum.GetValues(typeof(SodaFlavor)))
-                {
-                    SailorSoda SS = new SailorSoda();
-
-                    SS.Size = sizes;
-                    SS.Flavor = sf;
-
-                    testList.Append(SS);
-
-                }
-            }
-
-            IEnumerable<IOrderItem> menuList = Menu.Drinks();
-            Assert.Equal(menuList, testList);
-
-
-
-
-
-        }//checking drinks
-
-
-
-        [Fact]
-        public void shouldReturnFullMenu()
-        {
-
-            IEnumerable<IOrderItem> testList = Enumerable.Empty<IOrderItem>();
-
-            BriarheartBurger BB = new BriarheartBurger();
-            DoubleDraugr DD = new DoubleDraugr();
-            GardenOrcOmelette GOO = new GardenOrcOmelette();
-            PhillyPoacher PP = new PhillyPoacher();
-            SmokehouseSkeleton SS = new SmokehouseSkeleton();
-            ThalmorTriple TT = new ThalmorTriple();
-            ThugsTBone TTB = new ThugsTBone();
-            testList.Append(BB);
-            testList.Append(DD);
-            testList.Append(GOO);
-            testList.Append(PP);
-            testList.Append(SS);
-            testList.Append(TT);
-            testList.Append(TTB);
-
-
-            foreach (Size size in Enum.GetValues(typeof(Size)))
-            {
-                FriedMiraak FM = new FriedMiraak();
-                FM.Size = size;
-                testList.Append(FM);
-            }
-
-            foreach (Size size in Enum.GetValues(typeof(Size)))
-            {
-                DragonbornWaffleFries DWF = new DragonbornWaffleFries();
-                DWF.Size = size;
-                testList.Append(DWF);
-            }
-
-            foreach (Size size in Enum.GetValues(typeof(Size)))
-            {
-                MadOtarGrits MOG = new MadOtarGrits();
-                MOG.Size = size;
-                testList.Append(MOG);
-            }
-
-            foreach (Size size in Enum.GetValues(typeof(Size)))
-            {
-                VokunSalad VS = new VokunSalad();
-                VS.Size = size;
-                testList.Append(VS);
+                testList.Add(VS);
             }
 
 
@@ -222,7 +264,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
                 AretinoAppleJuice AAJ = new AretinoAppleJuice();
 
                 AAJ.Size = size;
-                testList.Append(AAJ);
+                testList.Add(AAJ);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
@@ -230,7 +272,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
                 CandlehearthCoffee CC = new CandlehearthCoffee();
 
                 CC.Size = size;
-                testList.Append(CC);
+                testList.Add(CC);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
@@ -238,7 +280,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
                 MarkarthMilk MM = new MarkarthMilk();
 
                 MM.Size = size;
-                testList.Append(MM);
+                testList.Add(MM);
             }
 
             foreach (Size size in Enum.GetValues(typeof(Size)))
@@ -246,7 +288,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
                 WarriorWater WW = new WarriorWater();
 
                 WW.Size = size;
-                testList.Append(WW);
+                testList.Add(WW);
             }
 
             //Now for the Sailor Soda
@@ -259,7 +301,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
                     SaSo.Size = sizes;
                     SaSo.Flavor = sf;
 
-                    testList.Append(SaSo);
+                    testList.Add(SaSo);
 
                 }
             }
@@ -267,8 +309,14 @@ namespace BleakwindBuffet.DataTests.UnitTests
 
 
 
-            IEnumerable<IOrderItem> menuList = Menu.FullMenu();
-            Assert.Equal(menuList, testList);
+            List<IOrderItem> menuList = Menu.FullMenu();
+
+            int count = menuList.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                Assert.IsType(menuList[i].GetType(), testList[i]);
+            };
 
 
 
@@ -283,26 +331,64 @@ namespace BleakwindBuffet.DataTests.UnitTests
 
         [Theory]
         [InlineData(null)]
-        [InlineData("Aretino")]
-        [InlineData("Aretino Apple Juice")]
-        [InlineData("AretinoAppleJuice")]
+        [InlineData("DoubleDraugr")]
+        
         public void searchShouldSearch(string searchTerm)
         {
 
-            IEnumerable<IOrderItem> appleJuice = new List<IOrderItem>();
-            appleJuice.Append(new AretinoAppleJuice());
-
             IEnumerable<IOrderItem> fullMenu = Menu.FullMenu();
+
+            IEnumerable<IOrderItem> filteredMenu = Menu.Search(fullMenu, searchTerm);
+
+            if (String.IsNullOrEmpty(searchTerm))
+            {
+                Assert.Equal(fullMenu, filteredMenu);
+            }
+            else
+            {
+                IEnumerable<IOrderItem> doubleDraugr = new List<IOrderItem>();
+                doubleDraugr.Append(new DoubleDraugr());
+
+                
+
+                foreach (IOrderItem item in filteredMenu)
+                {
+                    Assert.Contains(item, doubleDraugr);
+                }
+            }
             
-
-
-            Assert.Equal(Menu.Search(fullMenu,searchTerm),appleJuice);
 
         }
 
 
+        [Theory]
+        [InlineData(null)]
+        [InlineData("Entree")]
+        public void shouldFilterByCategory(string searchTerm)
+        {
+
+            List<IOrderItem> fullMenu = Menu.FullMenu();
+
+            List<IOrderItem> filteredItems = Menu.FilterByCategory(fullMenu, searchTerm);
+
+            List<IOrderItem> entreeItems = Menu.Entrees();
 
 
+            if (String.IsNullOrEmpty(searchTerm))
+            {
+                Assert.Equal(fullMenu, filteredItems);
+            }
+
+            else { 
+
+            int count = filteredItems.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                Assert.IsType(filteredItems[i].GetType(), entreeItems[i]);
+            }
+            }
+        }
 
 
 
