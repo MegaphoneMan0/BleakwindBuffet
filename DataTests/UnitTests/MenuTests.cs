@@ -392,11 +392,115 @@ namespace BleakwindBuffet.DataTests.UnitTests
 
 
 
+        [Theory]
+        [InlineData(700,900)]
+        [InlineData(800,900)]
+        public void shouldFilterByCalories(int min, int max)
+        {
+            List<IOrderItem> fullMenu = Menu.FullMenu();
+
+            List<IOrderItem> filteredItems = Menu.FilterByCalories(fullMenu, min, max);
+
+            
+            //the ones for 700 to 900
+            if(min == 700)
+            {
+                List<IOrderItem> sevenHundredItems = new List<IOrderItem>();
+                //Briarhearth Burger
+                sevenHundredItems.Add(new BriarheartBurger());
+                //Double Draugr
+                sevenHundredItems.Add(new DoubleDraugr());
+                //Philly Poacher
+                sevenHundredItems.Add(new PhillyPoacher());
+
+                int count = filteredItems.Count;
+
+                for (int i = 0; i < count; i++)
+                {
+                    Assert.IsType(filteredItems[i].GetType(), sevenHundredItems[i]);
+                }
+
+            }
+            if (min == 800)
+            {
+                List<IOrderItem> sevenHundredItems = new List<IOrderItem>();
+                
+                //Double Draugr
+                sevenHundredItems.Add(new DoubleDraugr());
+                
+
+                int count = filteredItems.Count;
+
+                for (int i = 0; i < count; i++)
+                {
+                    Assert.IsType(filteredItems[i].GetType(), sevenHundredItems[i]);
+                }
+
+            }
+
+
+
+
+        }
+
+
+        [Theory]
+        [InlineData(4.50,6.00)]
+        [InlineData(4.50,5.00)]
+        public void shouldFilterByPrice(double min, double max)
+        {
+            List<IOrderItem> fullMenu = Menu.FullMenu();
+
+            List<IOrderItem> filteredItems = Menu.FilterByPrice(fullMenu, min, max);
+
+
+            //4.5 to 6
+            if (min == 6.00)
+            {
+                List<IOrderItem> sixItems = new List<IOrderItem>();
+                //Smokehouse Skeleton
+                sixItems.Add(new SmokehouseSkeleton());
+                //Double Draugr
+                sixItems.Add(new GardenOrcOmelette());
+                
+
+                int count = filteredItems.Count;
+
+                for (int i = 0; i < count; i++)
+                {
+                    Assert.IsType(filteredItems[i].GetType(), sixItems[i]);
+                }
+
+            }
+
+
+            //4.5 to 5
+            if (min == 5.00)
+            {
+                List<IOrderItem> sixItems = new List<IOrderItem>();
+                //Double Draugr
+                sixItems.Add(new GardenOrcOmelette());
+
+
+                int count = filteredItems.Count;
+
+                for (int i = 0; i < count; i++)
+                {
+                    Assert.IsType(filteredItems[i].GetType(), sixItems[i]);
+                }
+
+            }
+
+
+
+
+        }
 
 
 
 
 
 
-        }//class
+
+    }//class
 }//namespace

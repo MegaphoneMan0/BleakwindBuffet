@@ -256,7 +256,7 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
-        public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> originalItems, int min, int max)
+        public static List<IOrderItem> FilterByCalories(List<IOrderItem> originalItems, int min, int max)
         {
 
             List<IOrderItem> filteredItems = new List<IOrderItem>();
@@ -279,7 +279,7 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
-        public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> originalItems, double min, double max)
+        public static List<IOrderItem> FilterByPrice(List<IOrderItem> originalItems, double min, double max)
         {
             List<IOrderItem> filteredItems = new List<IOrderItem>();
 
