@@ -28,7 +28,7 @@ namespace Website
         /// <summary>
         /// Gets the possible order Items
         /// </summary>
-        public static string[] OrderItems
+        public static string[] Categories
         {
             get => new string[]
             {
