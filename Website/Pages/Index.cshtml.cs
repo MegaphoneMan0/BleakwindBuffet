@@ -16,35 +16,31 @@ namespace BleakwindBuffetWebsite.Pages
 {
     public class IndexModel : PageModel
     {
-
+        [BindProperty(SupportsGet = true)]
         public string SearchTerms { get; set; }
 
+        [BindProperty(SupportsGet = true)]
         public List<IOrderItem> filteredItems { get; set; }
 
+        [BindProperty(SupportsGet = true)]
         public string category { get; set; }
 
+        [BindProperty(SupportsGet = true)]
         public int caloriesMin { get; set; }
 
+        [BindProperty(SupportsGet = true)]
         public int caloriesMax { get; set; }
 
+        [BindProperty(SupportsGet = true)]
         public double priceMin { get; set; }
 
+        [BindProperty(SupportsGet = true)]
         public double priceMax { get; set; }
 
 
-        public void OnGet(string SearchTerms, string category)
+        public void OnGet()
         {
-            this.SearchTerms = SearchTerms;
-            this.category = category;
-
-
-
-            /*
-            caloriesMin = int.Parse(Request.Query["caloriesMin"]);
-            caloriesMax = int.Parse(Request.Query["caloriesMax"]);
-            priceMin = double.Parse(Request.Query["priceMin"]);
-            priceMax = double.Parse(Request.Query["priceMax"]);
-
+            
 
 
             List<IOrderItem> fullMenu = BleakwindBuffet.Data.Menu.Menu.FullMenu();
@@ -62,7 +58,7 @@ namespace BleakwindBuffetWebsite.Pages
             }
 
 
-            */
+            
 
 
         }
