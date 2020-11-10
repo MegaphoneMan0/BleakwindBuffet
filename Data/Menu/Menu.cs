@@ -19,10 +19,6 @@ namespace BleakwindBuffet.Data.Menu
 
 
 
-
-
-
-
         /// <summary>
         /// a method which returns all possible entrees
         /// </summary>
@@ -208,7 +204,7 @@ namespace BleakwindBuffet.Data.Menu
 
         //I think all of these work, but probably not :P
 
-        public static IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> originalItems, string searchTerm)
+        public static List<IOrderItem> Search(List<IOrderItem> originalItems, string searchTerm)
         {
 
             List<IOrderItem> filteredItems = new List<IOrderItem>();
@@ -231,12 +227,12 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
-        public static List<IOrderItem> FilterByCategory(List<IOrderItem> originalItems, string category)
+        public static List<IOrderItem> FilterByCategory(List<IOrderItem> originalItems, string[] category)
         {
 
             List<IOrderItem> filteredItems = new List<IOrderItem>();
 
-            if (category == null)
+            if (category.Length == 0)
             {
                 return originalItems;
             }
@@ -245,9 +241,12 @@ namespace BleakwindBuffet.Data.Menu
             foreach(IOrderItem item in originalItems)
             {
                 //no fuckin clue if this will work or not
-                if(item.GetType().BaseType.ToString() == category)
+                foreach (string s in category)
                 {
-                    filteredItems.Add(item);
+                    if (item.GetType().BaseType.Name == s)
+                    {
+                        filteredItems.Add(item);
+                    }
                 }
             }
 
@@ -256,12 +255,22 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
-        public static List<IOrderItem> FilterByCalories(List<IOrderItem> originalItems, int min, int max)
+        public static List<IOrderItem> FilterByCalories(List<IOrderItem> originalItems, int? min, int? max)
         {
 
             List<IOrderItem> filteredItems = new List<IOrderItem>();
 
-            foreach(IOrderItem item in originalItems)
+            if (min == null)
+            {
+                return originalItems;
+            }
+
+            if (max == null)
+            {
+                return originalItems;
+            }
+
+            foreach (IOrderItem item in originalItems)
             {
                 if (item.Calories > min)
                 {
@@ -279,9 +288,19 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
-        public static List<IOrderItem> FilterByPrice(List<IOrderItem> originalItems, double min, double max)
+        public static List<IOrderItem> FilterByPrice(List<IOrderItem> originalItems, double? min, double? max)
         {
             List<IOrderItem> filteredItems = new List<IOrderItem>();
+            
+            if (min == null)
+            {
+                return originalItems;
+            }
+
+            if (max == null)
+            {
+                return originalItems;
+            }
 
             foreach (IOrderItem item in originalItems)
             {

@@ -24,11 +24,11 @@
     <div id="filters">
 
         <h4>Order Type</h4>
-        @foreach (String Category in Website.WebsiteMenu.Categories)
+        @foreach (String category in Website.WebsiteMenu.Categories)
         {
             <label>
-                <input type="radio" name="Order Items" value="@Model.category" />
-                @Category
+                <input type="checkbox" name="category" value="@category" checked="@Model.category.Contains(category)" />
+                @category
             </label>
 
         }
@@ -52,6 +52,29 @@
         </div>
 
     </div>
+
+
+
+
+    <div id="results">
+        <h1>Menu Results</h1>
+
+        <ul class="menu-list">
+            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.filteredItems)
+            {
+                <li>
+                    <div class="details">
+                        <h4 class="list-header">@item.ToString()</h4>
+                        <li>Price: @item.Price</li>
+                        <li>Calories: @item.Calories</li>
+                    </div>
+                </li>
+
+
+            }
+        </ul>
+    </div>
+
 
 
 
