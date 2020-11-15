@@ -11,6 +11,11 @@ namespace BleakwindBuffet.Data.Abstract
     public abstract class Entree :IOrderItem
     {
         /// <summary>
+        /// A description of the entree
+        /// </summary>
+        public abstract string Description { get; }
+
+        /// <summary>
         /// Price of entrees
         /// </summary>
         public abstract double Price { get; }

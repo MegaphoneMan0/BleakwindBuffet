@@ -20,7 +20,16 @@ namespace BleakwindBuffet.Data.Drinks
         // This BindingSource binds the list to the DataGridView control.
         public event PropertyChangedEventHandler PropertyChanged;
 
-        //Special Instructions
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Fair trade, fresh ground dark roast coffee.";
+            }
+        }
 
 
         /// <summary>

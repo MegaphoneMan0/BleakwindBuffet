@@ -11,6 +11,11 @@ namespace BleakwindBuffet.Data.Abstract
     public abstract class Side : IOrderItem
     {
         /// <summary>
+        /// A description of the side
+        /// </summary>
+        public abstract string Description { get; }
+
+        /// <summary>
         /// Price for sides
         /// </summary>
         public abstract double Price { get; }

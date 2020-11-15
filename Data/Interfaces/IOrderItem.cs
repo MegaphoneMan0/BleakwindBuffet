@@ -29,5 +29,10 @@ namespace BleakwindBuffet.Data.Interfaces
         /// <param name="vs"></param>
         void setIngredients(BindingList<string> vs);
 
+        /// <summary>
+        /// A description of the item
+        /// </summary>
+        string Description { get; }
+
     }
 }

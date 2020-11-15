@@ -15,6 +15,17 @@ namespace BleakwindBuffet.Data.Drinks
      */
     public class WarriorWater : Drink, INotifyPropertyChanged
     {
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "It’s water. Just water.";
+            }
+        }
+
 
         // This BindingSource binds the list to the DataGridView control.
         public event PropertyChangedEventHandler PropertyChanged;
