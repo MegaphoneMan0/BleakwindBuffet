@@ -21,6 +21,8 @@
 
     </div>
 
+    @*filters*@
+
     <div id="filters">
 
         <h4>Order Type</h4>
@@ -54,26 +56,27 @@
     </div>
 
 
-
+    @*results*@
 
     <div id="results">
         <h1>Search Results</h1>
 
-        <ul class="menu-list">
+        <div class="flex-columns">
             @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.filteredItems)
             {
-                <li>
-                    <div class="details">
-                        <h4 class="list-header">@item.ToString()</h4>
-                        <li>Price: @item.Price</li>
-                        <li>Calories: @item.Calories</li>
-                        <li>Description: @item.Description</li>
-                    </div>
-                </li>
+
+            <div class="flex-items">
+                <h4 class="list-header">@item.ToString()</h4>
+                <p>Price: @item.Price</p>
+                <p>Calories: @item.Calories</p>
+                <p>Description: @item.Description</p>
+            </div>
+
 
 
             }
-        </ul>
+        </div>
+        
     </div>
 
 

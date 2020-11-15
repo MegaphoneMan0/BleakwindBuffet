@@ -132,6 +132,26 @@ ul.menu-list {
         min-height: 50px;
     }
 
+.flex-items {
+
+}
+
+.flex-columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+   
+    
+}
+
+@media (max-width: 490px) {
+
+    .flex-columns {
+        flex-direction: column;
+    }
+
+}
+
 
 
 
