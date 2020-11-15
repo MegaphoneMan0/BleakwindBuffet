@@ -42,8 +42,14 @@ namespace BleakwindBuffetWebsite.Pages
         {
 
 
-            filteredItems = BleakwindBuffet.Data.Menu.Menu.Search(BleakwindBuffet.Data.Menu.Menu.FullMenu(), SearchTerms);
-            
+            //filteredItems = BleakwindBuffet.Data.Menu.Menu.Search(BleakwindBuffet.Data.Menu.Menu.FullMenu(), SearchTerms);
+            //with linq
+            filteredItems = BleakwindBuffet.Data.Menu.Menu.FullMenu();
+
+            if (SearchTerms != null)
+            {
+                filteredItems = filteredItems.Where()
+            }
             
 
             filteredItems = BleakwindBuffet.Data.Menu.Menu.FilterByCategory(filteredItems, category);

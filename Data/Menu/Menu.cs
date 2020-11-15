@@ -204,6 +204,12 @@ namespace BleakwindBuffet.Data.Menu
 
         //I think all of these work, but probably not :P
 
+        /// <summary>
+        /// searches the given list for the search term
+        /// </summary>
+        /// <param name="originalItems">the list to be searched</param>
+        /// <param name="searchTerm">the term to search for</param>
+        /// <returns>a list containing all items that contained the search term</returns>
         public static List<IOrderItem> Search(List<IOrderItem> originalItems, string searchTerm)
         {
 
@@ -227,6 +233,12 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
+        /// <summary>
+        /// filters the list by the given category
+        /// </summary>
+        /// <param name="originalItems">the items to be filtered</param>
+        /// <param name="category">the abstract type that will be filtered by</param>
+        /// <returns>the filtered list</returns>
         public static List<IOrderItem> FilterByCategory(List<IOrderItem> originalItems, string[] category)
         {
 
@@ -255,6 +267,13 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
+        /// <summary>
+        /// returns a filtered list of items based on their price
+        /// </summary>
+        /// <param name="originalItems">the list to be filtered</param>
+        /// <param name="min">the minimum calories</param>
+        /// <param name="max">the maximum claories</param>
+        /// <returns>the filtered list</returns>
         public static List<IOrderItem> FilterByCalories(List<IOrderItem> originalItems, int? min, int? max)
         {
 
@@ -262,12 +281,12 @@ namespace BleakwindBuffet.Data.Menu
 
             if (min == null)
             {
-                return originalItems;
+                min = 0;
             }
 
             if (max == null)
             {
-                return originalItems;
+                max = int.MaxValue;
             }
 
             foreach (IOrderItem item in originalItems)
@@ -288,19 +307,28 @@ namespace BleakwindBuffet.Data.Menu
 
         }
 
+        /// <summary>
+        /// returns a filtered list of items based on their price
+        /// </summary>
+        /// <param name="originalItems">the given items to be filtered</param>
+        /// <param name="min">the minimum price</param>
+        /// <param name="max">the maximum price</param>
+        /// <returns>the filtered list</returns>
         public static List<IOrderItem> FilterByPrice(List<IOrderItem> originalItems, double? min, double? max)
         {
             List<IOrderItem> filteredItems = new List<IOrderItem>();
-            
+
+
             if (min == null)
             {
-                return originalItems;
+                min = 0;
             }
 
             if (max == null)
             {
-                return originalItems;
+                max = double.MaxValue;
             }
+            
 
             foreach (IOrderItem item in originalItems)
             {
