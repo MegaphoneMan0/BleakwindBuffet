@@ -15,6 +15,17 @@ namespace BleakwindBuffet.Data.Sides
      */
     public class VokunSalad:Side, INotifyPropertyChanged
     {
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "A seasonal fruit salad of mellons, berries, mango, grape, apple, and oranges.";
+            }
+        }
+
 
         // This BindingSource binds the list to the DataGridView control.
         public event PropertyChangedEventHandler PropertyChanged;

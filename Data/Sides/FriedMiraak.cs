@@ -16,6 +16,17 @@ namespace BleakwindBuffet.Data.Sides
     public class FriedMiraak :Side, INotifyPropertyChanged
     {
 
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Perfectly prepared hash brown pancakes.";
+            }
+        }
+
         // This BindingSource binds the list to the DataGridView control.
         public event PropertyChangedEventHandler PropertyChanged;
         //special instructions

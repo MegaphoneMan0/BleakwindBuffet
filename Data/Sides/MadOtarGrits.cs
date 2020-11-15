@@ -16,6 +16,17 @@ namespace BleakwindBuffet.Data.Sides
     public class MadOtarGrits:Side, INotifyPropertyChanged
     {
 
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Cheesey Grits.";
+            }
+        }
+
         // This BindingSource binds the list to the DataGridView control.
         public event PropertyChangedEventHandler PropertyChanged;
         //special instructions

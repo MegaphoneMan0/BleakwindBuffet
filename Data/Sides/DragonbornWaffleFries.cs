@@ -16,6 +16,17 @@ namespace BleakwindBuffet.Data.Sides
     public class DragonbornWaffleFries : Side, INotifyPropertyChanged
     {
 
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Crispy fried potato waffle fries.";
+            }
+        }
+
         // This BindingSource binds the list to the DataGridView control.
         public event PropertyChangedEventHandler PropertyChanged;
 
