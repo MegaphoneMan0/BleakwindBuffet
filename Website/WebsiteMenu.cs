@@ -9,6 +9,11 @@ using BleakwindBuffet.Data.Menu;
 
 namespace Website
 {
+    /*
+     * Author: John Solomon
+     * Class name: WebsiteMenu.cs
+     * Purpose: WebsiteMenu provides some structures for the website to use when displaying data. This include all available items of an abstract data class and the different types of abstract data classes from the data library
+     */
     public class WebsiteMenu
     {
 

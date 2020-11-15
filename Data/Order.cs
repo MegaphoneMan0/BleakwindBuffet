@@ -10,6 +10,11 @@ using System.Collections;
 
 namespace BleakwindBuffet.Data
 {
+    /*
+     * Author: John Solomon
+     * Class name: Order.cs
+     * Purpose: To represent the full order in the POS project in the main branch. Degridated class, not used in the website branch
+     */
     class Order : INotifyPropertyChanged //, INotifyCollectionChanged , ICollection<IOrderItem>
     {
 

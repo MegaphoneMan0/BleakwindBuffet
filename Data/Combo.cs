@@ -10,7 +10,11 @@ using System.Linq;
 namespace BleakwindBuffet.Data
 {
 
-
+    /*
+     * Author: John Solomon
+     * Class name: Combo.cs
+     * Purpose: A combo class that has an entree, drink, and side
+     */
     class Combo : IOrderItem , INotifyPropertyChanged
     {
 

@@ -10,6 +10,11 @@ using Microsoft.Extensions.Logging;
 
 namespace Website
 {
+    /*
+     * Author: John Solomon
+     * Class name: Program.cs
+     * Purpose: Runs startup and creates a webHost
+     */
     public class Program
     {
         public static void Main(string[] args)

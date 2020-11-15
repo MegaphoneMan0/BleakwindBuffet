@@ -12,6 +12,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Website
 {
+    /*
+     * Author: John Solomon
+     * Class name: Startup.cs
+     * Purpose: Startup is responsible for starting the various forms and configurations to display the website pages
+     */
     public class Startup
     {
         public Startup(IConfiguration configuration)
