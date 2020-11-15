@@ -15,6 +15,17 @@ namespace BleakwindBuffet.Data.Entrees
     public class ThugsTBone:Entree, INotifyPropertyChanged
     {
 
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Juicy T-Bone, not much else to say.";
+            }
+        }
+
         // This BindingSource binds the list to the DataGridView control.
         public event PropertyChangedEventHandler PropertyChanged;
         //special instuctions

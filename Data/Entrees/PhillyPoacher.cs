@@ -15,6 +15,18 @@ namespace BleakwindBuffet.Data.Entrees
     public class PhillyPoacher : Entree, INotifyPropertyChanged
     {
 
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll.";
+            }
+        }
+
+
         // This BindingSource binds the list to the DataGridView control.
         public event PropertyChangedEventHandler PropertyChanged;
 
