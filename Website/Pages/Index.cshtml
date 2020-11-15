@@ -67,6 +67,7 @@
                         <h4 class="list-header">@item.ToString()</h4>
                         <li>Price: @item.Price</li>
                         <li>Calories: @item.Calories</li>
+                        <li>Description: @item.Description</li>
                     </div>
                 </li>
 
@@ -89,12 +90,13 @@
 
 
 
-                @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Website.WebsiteMenu.entrees)
-                {
-                    <h4 class="list-header">@item.ToString()</h4>
-                    <li>Price: @item.Price</li>
-                    <li>Calories: @item.Calories</li>
-                }
+                    @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Website.WebsiteMenu.entrees)
+                    {
+                        <h4 class="list-header">@item.ToString()</h4>
+                        <li>Price: @item.Price</li>
+                        <li>Calories: @item.Calories</li>
+                        <li>Description: @item.Description</li>
+                    }
 
                 </ul>
             </div>
@@ -113,22 +115,23 @@
                         <h4 class="list-header">@items[i].ToString()</h4>
                         <li>Price: @items[i].Price</li>
                         <li>Calories: @items[i].Calories</li>
+                        <li>Description: @items[i].Description</li>
                     }
-                    
+
 
 
 
 
                     @*
-                @foreach (BleakwindBuffet.Data.Abstract.Drink item in Website.WebsiteMenu.drinks)
-                {
-                    <h4>@item.ToString()</h4>
+        @foreach (BleakwindBuffet.Data.Abstract.Drink item in Website.WebsiteMenu.drinks)
+        {
+            <h4>@item.ToString()</h4>
 
 
-                    <li>Price: @item.Price</li>
-                    <li>Calories: @item.Calories</li>
+            <li>Price: @item.Price</li>
+            <li>Calories: @item.Calories</li>
 
-                }
+        }
                     *@
                 </ul>
 
@@ -147,21 +150,22 @@
                         <h4 class="list-header">@items[i].ToString()</h4>
                         <li>Price: @items[i].Price</li>
                         <li>Calories: @items[i].Calories</li>
+                        <li>Description: @items[i].Description</li>
                     }
 
 
 
 
                     @*
-            @foreach (BleakwindBuffet.Data.Abstract.Drink item in Website.WebsiteMenu.drinks)
-            {
-                <h4>@item.ToString()</h4>
+        @foreach (BleakwindBuffet.Data.Abstract.Drink item in Website.WebsiteMenu.drinks)
+        {
+            <h4>@item.ToString()</h4>
 
 
-                <li>Price: @item.Price</li>
-                <li>Calories: @item.Calories</li>
+            <li>Price: @item.Price</li>
+            <li>Calories: @item.Calories</li>
 
-            }
+        }
                     *@
                 </ul>
 
@@ -179,6 +183,7 @@
 
                         <li>Price: @item.Price</li>
                         <li>Calories: @item.Calories</li>
+                        <li>Description: @item.Description</li>
 
                     }
 

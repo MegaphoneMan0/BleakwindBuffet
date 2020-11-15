@@ -17,7 +17,13 @@ namespace BleakwindBuffet.Data
      */
     class Combo : IOrderItem , INotifyPropertyChanged
     {
-
+        public string Description
+        {
+            get
+            {
+                return "Combo";
+            }
+        }
 
         /// <summary>
         /// the entree portion of the combo
