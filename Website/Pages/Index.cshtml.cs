@@ -11,6 +11,9 @@ using BleakwindBuffet.Data.Abstract;
 using System.ComponentModel.DataAnnotations;
 using BleakwindBuffet.Data.Interfaces;
 using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http2.HPack;
+using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Menu;
+
 
 namespace BleakwindBuffetWebsite.Pages
 {
@@ -44,19 +47,19 @@ namespace BleakwindBuffetWebsite.Pages
 
             //filteredItems = BleakwindBuffet.Data.Menu.Menu.Search(BleakwindBuffet.Data.Menu.Menu.FullMenu(), SearchTerms);
             //with linq
-            filteredItems = BleakwindBuffet.Data.Menu.Menu.FullMenu();
+            filteredItems = Menu.FullMenu();
 
             if (SearchTerms != null)
             {
-                filteredItems = filteredItems.Where()
+                filteredItems = filteredItems.Where(IOrderItem => IOrderItem.ToString() != null && IOrderItem.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
             }
             
 
-            filteredItems = BleakwindBuffet.Data.Menu.Menu.FilterByCategory(filteredItems, category);
+            filteredItems = Menu.FilterByCategory(filteredItems, category);
 
-            filteredItems = BleakwindBuffet.Data.Menu.Menu.FilterByCalories(filteredItems, caloriesMin, caloriesMax);
+            filteredItems = Menu.FilterByCalories(filteredItems, caloriesMin, caloriesMax);
 
-            filteredItems = BleakwindBuffet.Data.Menu.Menu.FilterByPrice(filteredItems, priceMin, priceMax);
+            filteredItems = Menu.FilterByPrice(filteredItems, priceMin, priceMax);
             
 
 
