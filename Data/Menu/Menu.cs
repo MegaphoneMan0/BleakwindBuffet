@@ -13,6 +13,11 @@ using System.Net;
 
 namespace BleakwindBuffet.Data.Menu
 {
+    /*
+     * Author: John Solomon
+     * Class name: Menu.cs
+     * Purpose: Represents the entire menu of data objects available in BleakwindBuffet.Data, as well as several methods for retrieving and modifying said objects
+     */
     public class Menu
     {
 

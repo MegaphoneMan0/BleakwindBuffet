@@ -17,6 +17,11 @@ using BleakwindBuffet.Data.Menu;
 
 namespace BleakwindBuffetWebsite.Pages
 {
+    /*
+     * Author: John Solomon
+     * Class name: Index.cshtml.cs
+     * Purpose: Is the model for index.cshtml
+     */
     public class IndexModel : PageModel
     {
         [BindProperty(SupportsGet = true)]
