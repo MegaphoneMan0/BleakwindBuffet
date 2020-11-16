@@ -61,22 +61,25 @@
     <div id="results">
         <h1>Search Results</h1>
 
-        <div class="flex-columns">
-            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.filteredItems)
-            {
+        <div class="col-md-3">
 
-            <div class="flex-items">
-                <h4 class="list-header">@item.ToString()</h4>
-                <p>Price: @item.Price</p>
-                <p>Calories: @item.Calories</p>
-                <p>Description: @item.Description</p>
+            <div class="flex-columns">
+                @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.filteredItems)
+                {
+
+                    <div class="flex-items">
+                        <h4 class="list-header">@item.ToString()</h4>
+                        <p>Price: @item.Price</p>
+                        <p>Calories: @item.Calories</p>
+                        <p>Description: @item.Description</p>
+                    </div>
+
+
+                }
             </div>
 
 
-
-            }
         </div>
-        
     </div>
 
 

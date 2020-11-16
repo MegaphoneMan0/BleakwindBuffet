@@ -49,12 +49,9 @@ namespace BleakwindBuffetWebsite.Pages
             //with linq
             filteredItems = Menu.FullMenu();
 
-            if (SearchTerms != null)
-            {
-                filteredItems = filteredItems.Where(IOrderItem => IOrderItem.ToString() != null && IOrderItem.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
-            }
-            
 
+            linqSearch();
+            
             filteredItems = Menu.FilterByCategory(filteredItems, category);
 
             filteredItems = Menu.FilterByCalories(filteredItems, caloriesMin, caloriesMax);
@@ -62,10 +59,25 @@ namespace BleakwindBuffetWebsite.Pages
             filteredItems = Menu.FilterByPrice(filteredItems, priceMin, priceMax);
             
 
-
-            
-
-
         }
+
+
+        private void linqSearch()
+        {
+            if (SearchTerms != null)
+            {
+                filteredItems = filteredItems.Where(IOrderItem => IOrderItem.ToString() != null && IOrderItem.ToString().ToLower().Contains(SearchTerms.ToLower())).ToList();
+            }
+        }
+
+        private void linqFilterByCategory()
+        {
+            if (category != null)
+            {
+                filteredItems = filteredItems.Where(IOrderItem => IOrderItem.GetType().BaseType.Name != null && IOrderItem.GetType().BaseType.Name.ToLower().Contains(category.ToLower())).ToList();
+            }
+        }
+
+
     }
 }
