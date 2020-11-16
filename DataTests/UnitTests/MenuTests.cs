@@ -327,7 +327,9 @@ namespace BleakwindBuffet.DataTests.UnitTests
 
 
 
-
+        //These were replaced by LINQ methods
+        //degradated code
+        /*
 
         [Theory]
         [InlineData(null)]
@@ -336,9 +338,9 @@ namespace BleakwindBuffet.DataTests.UnitTests
         public void searchShouldSearch(string searchTerm)
         {
 
-            IEnumerable<IOrderItem> fullMenu = Menu.FullMenu();
+            List<IOrderItem> fullMenu = Menu.FullMenu();
 
-            IEnumerable<IOrderItem> filteredMenu = Menu.Search(fullMenu, searchTerm);
+            IEnumerable<IOrderItem> filteredMenu = Menu.Search(fullMenu, searchTerm).ToList();
 
             if (String.IsNullOrEmpty(searchTerm))
             {
@@ -360,7 +362,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
 
         }
 
-
+        
         [Theory]
         [InlineData(null)]
         [InlineData("Entree")]
@@ -391,7 +393,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
         }
 
 
-
+        
         [Theory]
         [InlineData(700,900)]
         [InlineData(800,900)]
@@ -498,7 +500,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
 
 
 
-
+        */
 
 
 

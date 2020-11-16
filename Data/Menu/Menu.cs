@@ -202,6 +202,10 @@ namespace BleakwindBuffet.Data.Menu
 
 
 
+        //THESE WERE REPLACED BY LINQ METHODS
+        //DEGRADATED CODE
+        /*
+
         //I think all of these work, but probably not :P
 
         /// <summary>
@@ -345,6 +349,8 @@ namespace BleakwindBuffet.Data.Menu
 
             return filteredItems;
         }
+
+        */
 
 
 
