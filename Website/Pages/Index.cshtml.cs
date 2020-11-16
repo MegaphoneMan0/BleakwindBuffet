@@ -66,6 +66,7 @@ namespace BleakwindBuffetWebsite.Pages
         {
             if (SearchTerms != null)
             {
+                
                 filteredItems = filteredItems.Where(IOrderItem => IOrderItem.ToString() != null && IOrderItem.ToString().ToLower().Contains(SearchTerms.ToLower())).ToList();
             }
         }
@@ -74,7 +75,10 @@ namespace BleakwindBuffetWebsite.Pages
         {
             if (category != null)
             {
-                filteredItems = filteredItems.Where(IOrderItem => IOrderItem.GetType().BaseType.Name != null && IOrderItem.GetType().BaseType.Name.ToLower().Contains(category.ToLower())).ToList();
+                foreach (string s in category)
+                {
+                    filteredItems = filteredItems.Where(IOrderItem => IOrderItem.GetType().BaseType.Name != null && IOrderItem.GetType().BaseType.Name.ToLower().Contains(s.ToLower())).ToList();
+                }
             }
         }
 
