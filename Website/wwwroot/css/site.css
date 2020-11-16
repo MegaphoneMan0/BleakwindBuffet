@@ -133,7 +133,10 @@ ul.menu-list {
     }
 
 .flex-items {
-
+    /*flex: 1 0 21%;*/
+    margin: 5px;
+    height: 250px;
+    width: 300px;
 }
 
 .flex-columns {

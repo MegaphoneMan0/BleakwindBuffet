@@ -54,10 +54,11 @@ namespace BleakwindBuffetWebsite.Pages
 
             linqFilterByCategory();
 
-            filteredItems = Menu.FilterByCalories(filteredItems, caloriesMin, caloriesMax);
+            //filteredItems = Menu.FilterByCalories(filteredItems, caloriesMin, caloriesMax);
+            linqFilterByCalories();
 
-            filteredItems = Menu.FilterByPrice(filteredItems, priceMin, priceMax);
-            
+            //filteredItems = Menu.FilterByPrice(filteredItems, priceMin, priceMax);
+            linqFilterByPrice();
 
         }
 
@@ -108,6 +109,9 @@ namespace BleakwindBuffetWebsite.Pages
             }
         }
 
+        /// <summary>
+        /// Filters by the category
+        /// </summary>
         private void linqFilterByCategory()
         {
             if (category != null)
@@ -118,6 +122,49 @@ namespace BleakwindBuffetWebsite.Pages
                 }
             }
         }
+
+        /// <summary>
+        /// filters by calories
+        /// </summary>
+        private void linqFilterByCalories()
+        {
+            if (caloriesMin == null)
+            {
+                caloriesMin = 0;
+            }
+
+            if (caloriesMax == null)
+            {
+                //max for the form item
+                caloriesMax = 1000;
+            }
+
+            filteredItems = filteredItems.Where(IOrderItem => IOrderItem.Calories != null && IOrderItem.Calories>caloriesMin && IOrderItem.Calories<caloriesMax).ToList();
+        }
+
+        /// <summary>
+        /// filters by price
+        /// </summary>
+        private void linqFilterByPrice()
+        {
+            if (priceMin == null)
+            {
+                priceMin = 0;
+            }
+
+            if (priceMax == null)
+            {
+                priceMax = 11;
+            }
+
+            filteredItems = filteredItems.Where(IOrderItem => IOrderItem.Price != null && IOrderItem.Price > priceMin && IOrderItem.Price < priceMax).ToList();
+
+
+        }
+
+
+
+
 
 
     }
