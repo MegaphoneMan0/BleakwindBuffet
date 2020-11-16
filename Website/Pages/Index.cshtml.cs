@@ -69,18 +69,47 @@ namespace BleakwindBuffetWebsite.Pages
         {
             if (SearchTerms != null)
             {
+                filteredItems = new List<IOrderItem>();
+                //first I need to break all of the search terms in to a list of strings
+                string[] terms = SearchTerms.Split(' ');
+
+
+                foreach(string s in terms) { 
+
                 //first, we get two seperate lists, the list of items with the titles that have the search term and the list of items with descriptions that have the search term
-                //the titles just go in the overall list, the descriptions go in their own thing
-                
-                filteredItems = filteredItems.Where(IOrderItem => IOrderItem.ToString() != null && IOrderItem.ToString().ToLower().Contains(SearchTerms.ToLower())).ToList();
+
+                List<IOrderItem> titleSearch = new List<IOrderItem>();
+                titleSearch = Menu.FullMenu().Where(IOrderItem => IOrderItem.ToString() != null && IOrderItem.ToString().ToLower().Contains(s.ToLower())).ToList();
                 List<IOrderItem> descriptionSearch = new List<IOrderItem>();
-                descriptionSearch = Menu.FullMenu().Where(IOrderItem => IOrderItem.Description != null && IOrderItem.Description.ToLower().Contains(SearchTerms.ToLower())).ToList();
+                descriptionSearch = Menu.FullMenu().Where(IOrderItem => IOrderItem.Description != null && IOrderItem.Description.ToLower().Contains(s.ToLower())).ToList();
 
-                //then, we go through the descriptions and add items to filtered items accordingly
+                    //then, we go through the descriptions and add items to filtered items accordingly
 
-                
+                    foreach (IOrderItem orderItem in titleSearch)
+                    {
+                        if (filteredItems.Count == 0)
+                        {
+                            filteredItems.Add(orderItem);
+                        }
 
-                foreach(IOrderItem orderItem in descriptionSearch)
+                        //default false
+                        bool inThere = false;
+
+                        foreach (IOrderItem firstOrderItem in filteredItems)
+                        {
+                            if (firstOrderItem.GetType() == orderItem.GetType())
+                            {
+                                inThere = true;
+                            }
+                        }
+
+                        if (!inThere)
+                        {
+                            filteredItems.Add(orderItem);
+                        }
+                    }
+
+                    foreach (IOrderItem orderItem in descriptionSearch)
                 {
                     if (filteredItems.Count == 0)
                     {
@@ -105,7 +134,7 @@ namespace BleakwindBuffetWebsite.Pages
                 }
 
 
-
+                }
             }
         }
 
