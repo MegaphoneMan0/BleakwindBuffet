@@ -51,8 +51,8 @@ namespace BleakwindBuffetWebsite.Pages
 
 
             linqSearch();
-            
-            filteredItems = Menu.FilterByCategory(filteredItems, category);
+
+            linqFilterByCategory();
 
             filteredItems = Menu.FilterByCalories(filteredItems, caloriesMin, caloriesMax);
 
@@ -61,13 +61,50 @@ namespace BleakwindBuffetWebsite.Pages
 
         }
 
-
+        /// <summary>
+        /// This method searches for the search term in the title OR the discription
+        /// </summary>
         private void linqSearch()
         {
             if (SearchTerms != null)
             {
+                //first, we get two seperate lists, the list of items with the titles that have the search term and the list of items with descriptions that have the search term
+                //the titles just go in the overall list, the descriptions go in their own thing
                 
                 filteredItems = filteredItems.Where(IOrderItem => IOrderItem.ToString() != null && IOrderItem.ToString().ToLower().Contains(SearchTerms.ToLower())).ToList();
+                List<IOrderItem> descriptionSearch = new List<IOrderItem>();
+                descriptionSearch = Menu.FullMenu().Where(IOrderItem => IOrderItem.Description != null && IOrderItem.Description.ToLower().Contains(SearchTerms.ToLower())).ToList();
+
+                //then, we go through the descriptions and add items to filtered items accordingly
+
+                
+
+                foreach(IOrderItem orderItem in descriptionSearch)
+                {
+                    if (filteredItems.Count == 0)
+                    {
+                        filteredItems.Add(orderItem);
+                    }
+
+                    //default false
+                    bool inThere = false;
+
+                    foreach(IOrderItem firstOrderItem in filteredItems)
+                    {
+                        if (firstOrderItem.GetType() == orderItem.GetType())
+                        {
+                            inThere = true;
+                        }
+                    }
+                    
+                    if (!inThere)
+                    {
+                        filteredItems.Add(orderItem);
+                    }
+                }
+
+
+
             }
         }
 
